@@ -1,6 +1,16 @@
-### Hi there 👋
+## Hi there 👋
+##### Thank you for visiting my profile.
 
-![My stats](https://github-readme-stats.vercel.app/api?username=sinisimattia)
+I'm currently working on building free, open and inclusive online platforms for managing anything from a blog to a school.
+
+___
+
+Have any cool ideas? **Let's talk about them!** I'm always open to collaboration on any sorts of projects.
+
+Contact me here [mattia@snisni.it](mailto:mattia@snisni.it)
+
+
+![Here are my stats, if you're interested](https://github-readme-stats.vercel.app/api?username=sinisimattia)
 
 <!--
 **sinisimattia/sinisimattia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
