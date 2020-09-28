@@ -1,6 +1,8 @@
 ## Hi there 👋
 ##### Thank you for visiting my profile.
 
+![lamps](https://i.ibb.co/G5Pwy4T/Lamps.gif)
+
 I'm currently working on building free, open and inclusive online platforms for managing anything from a blog to a school.
 
 ___
