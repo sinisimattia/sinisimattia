@@ -11,8 +11,11 @@ Have any cool ideas? **Let's talk about them!** I'm always open to collaboration
 
 Contact me here [mattia@snisni.it](mailto:mattia@snisni.it)
 
+<div align='center'>
 
 ![Here are my stats, if you're interested](https://github-readme-stats.vercel.app/api?username=sinisimattia)
+
+</div>
 
 <!--
 **sinisimattia/sinisimattia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
