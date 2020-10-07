@@ -17,9 +17,11 @@ Contact me here [mattia@snisni.it](mailto:mattia@snisni.it)
 
 </div>
 
-<a href="https://www.buymeacoffee.com/sinisimattia" target="_blank">
-  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-black.png" alt="Buy Me A Coffee" height="50px" width="auto" >
-</a>
+<div align="center">
+  <a href="https://www.buymeacoffee.com/sinisimattia" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-black.png" alt="Buy Me A Coffee" height="50px" width="auto" >
+  </a>
+</div>
 
 <!--
 **sinisimattia/sinisimattia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
