@@ -10,10 +10,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="bulma.min.css" rel="stylesheet" preload />
+
+    <style>
+        .banner {
+            position: relative;
+        }
+
+        .banner::after {
+            content: "";
+            background-image: url(./mattia.codes.banner.png);
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            background-size: cover;
+            opacity: 0.2;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="hero is-large">
+    <div class="hero is-large banner">
         <div class="hero-body">
             <div class="container">
                 <h1 class="title is-1">Hi there 👋</h1>
