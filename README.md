@@ -7,7 +7,7 @@ I'm currently working on building free, open and inclusive online platforms for 
 
 ___
 
-Have any cool ideas? **Let's talk about them!** I'm always open to collaboration on any sorts of projects.
+Have any cool ideas? **Let's talk about them!** I'm always open to collaboration on all sorts of projects.
 
 Contact me here [mattia@snisni.it](mailto:mattia@snisni.it)
 
