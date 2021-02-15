@@ -7,7 +7,8 @@ ___
 
 Have any cool ideas? **Let's talk about them!** I'm always open to collaboration on all sorts of projects.
 
-Contact me here [mattia@snisni.it](mailto:mattia@snisni.it)
+Contact me here [mattia@snisni.it](mailto:mattia@snisni.it) 📪
+or visit my site at [mattia.codes](https://mattia.codes) 🔗
 
 <div align='center'>
 
