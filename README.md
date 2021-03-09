@@ -12,7 +12,7 @@ or visit my site at [mattia.codes](https://mattia.codes) 🔗
 
 <div align='center'>
 
-![Here are my stats, if you're interested](https://github-readme-stats.vercel.app/api?username=sinisimattia)
+![Here are my stats, if you're interested](https://github-readme-stats.vercel.app/api?username=sinisimattia) [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sinisimattia&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 
 </div>
 
