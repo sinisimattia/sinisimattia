@@ -1,10 +1,6 @@
 ## Hi there 👋
 ##### Thank you for visiting my profile.
 
-<a href="https://mattia.codes">
-	<img src="https://i.ibb.co/RhyTj9v/billboard.png" alt width="300"/>	
-</a>
-
 I'm currently working on building free, open and inclusive online platforms for managing anything from a blog to a school.
 
 ___
