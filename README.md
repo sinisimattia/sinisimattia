@@ -10,7 +10,7 @@
     <a href="https://links.mattia.codes">Socials</a> •
     <a href="https://mattia.codes">Website</a> •
     <a href="https://blog.mattia.codes">Blog</a> •
-    <a href="https://curriculum.mattia.codes/">CV</a> 
+    <a href="http://curriculum.mattia.codes/">CV</a> 
   </h4>
 </div>
 
