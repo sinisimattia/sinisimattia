@@ -1,9 +1,22 @@
-## Hi there 👋
-##### Thank you for visiting my profile.
+<div align="center">
+  <img width="500px" src="https://i.ibb.co/5FdnhrT/LOLLYPOP-BANNER-no-bg.png" />
+ </div>
 
-I'm currently working on building free, open and inclusive online platforms for managing anything from a blog to a school.
+<div align="center">
+  <h1> Hi there 👋 </h1>
+  <h3> Thank you for visiting my profile. </h3>
+
+  <h4>
+    <a href="https://links.mattia.codes">Socials</a> •
+    <a href="https://mattia.codes">Website</a> •
+    <a href="https://blog.mattia.codes">Blog</a> •
+    <a href="https://curriculum.mattia.codes/">CV</a> 
+  </h4>
+</div>
 
 ___
+
+I'm currently working on building free, open and inclusive online platforms for managing anything from a blog to a school.
 
 Have any cool ideas? **Let's talk about them!** I'm always open to collaboration on all sorts of projects.
 
