@@ -3,15 +3,15 @@
  </div>
 
 <div align="center">
-  <h1> Hi there 👋 </h1>
-  <h3> Thank you for visiting my profile. </h3>
+  <h3> Hi there 👋 </h3>
+  <h4> Thank you for visiting my profile. </h4>
 
-  <h4>
+  <h5>
     <a href="http://links.mattia.codes">Socials</a> •
     <a href="https://mattia.codes">Website</a> •
     <a href="https://blog.mattia.codes">Blog</a> •
     <a href="http://curriculum.mattia.codes/">CV</a> 
-  </h4>
+  </h5>
 </div>
 
 ___
