@@ -7,7 +7,7 @@
   <h3> Thank you for visiting my profile. </h3>
 
   <h4>
-    <a href="https://links.mattia.codes">Socials</a> •
+    <a href="http://links.mattia.codes">Socials</a> •
     <a href="https://mattia.codes">Website</a> •
     <a href="https://blog.mattia.codes">Blog</a> •
     <a href="http://curriculum.mattia.codes/">CV</a> 
