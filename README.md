@@ -29,14 +29,10 @@ or visit my site at [mattia.codes](https://mattia.codes) 🔗
 
 <div align='center'>
 
-![Here are my stats, if you're interested](https://github-readme-stats.vercel.app/api?username=sinisimattia) [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sinisimattia&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
+![Here are my stats, if you're interested](https://github-readme-stats.vercel.app/api?username=sinisimattia&border_color=000000)
 
-</div>
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sinisimattia&layout=compact&border_color=000000)](https://github.com/anuraghazra/github-readme-stats)
 
-<div align="center">
-  <a href="https://www.buymeacoffee.com/sinisimattia" target="_blank">
-    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-black.png" alt="Buy Me A Coffee" height="50px" width="auto" >
-  </a>
 </div>
 
 <!--
