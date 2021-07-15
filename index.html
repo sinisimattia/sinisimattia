@@ -16,6 +16,10 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 
     <style>
+		* {
+			border: none !important;
+		}
+
         .banner {
             position: relative;
         }
@@ -64,6 +68,14 @@
         .terminal .header span:nth-child(3){
             background: linear-gradient(rgb(6, 184, 0), rgb(0, 255, 85));
         }
+
+		.splide__slide {
+			opacity: .2;
+		}
+
+		.splide__slide.is-active {
+			opacity: 1;
+		}
     </style>
 </head>
 
@@ -132,8 +144,8 @@
 
             <div>
 				<div id="sites">
-					<div class="is-flex title is-1">
-						<div>
+					<div class="is-flex is-align-items-center title is-1">
+						<div class="is-flex-grow-1">
 							<div id="domains-carousel" class="splide">
 								<div class="splide__track">
 									<ul class="splide__list has-text-info has-text-right">
@@ -154,7 +166,7 @@
 				<div>
 					<div id="sites-carousel" class="splide">
 						<div class="splide__track">
-							<ul class="splide__list">
+							<ul class="splide__list has-text-left">
 								<li class="splide__slide">
 									<div>
 										<div class="card">

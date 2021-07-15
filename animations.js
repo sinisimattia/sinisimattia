@@ -17,6 +17,7 @@ var typed = new Typed('#type', {
 });
 
 var domainsCarousel = new Splide( '#domains-carousel', {
+	type: 'loop',
 	height: '4rem',
 	direction: 'ttb',
 	arrows: false,
@@ -31,14 +32,15 @@ var domainsCarousel = new Splide( '#domains-carousel', {
 
 var sitesCarousel = new Splide( '#sites-carousel', {
 	type: 'loop',
-	height: '500px',
+	height: '520px',
+	direction: 'rtl',
 	arrows: false,
 	pagination: false,
 	autoplay: true,
 	interval: 5000,
 	pauseOnHover: true,
 	pauseOnFocus: true,
-	perPage:3,
+	perPage: 3,
 	gap: 20,
 });
 
