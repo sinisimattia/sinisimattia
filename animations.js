@@ -42,6 +42,14 @@ var sitesCarousel = new Splide( '#sites-carousel', {
 	pauseOnFocus: true,
 	perPage: 3,
 	gap: 20,
+	breakpoints: {
+		1000: {
+			perPage: 2
+		},
+		700: {
+			perPage: 1
+		}
+	}
 });
 
 domainsCarousel.sync(sitesCarousel).mount();
