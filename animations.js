@@ -18,7 +18,7 @@ var typed = new Typed('#type', {
 
 var domainsCarousel = new Splide( '#domains-carousel', {
 	type: 'loop',
-	height: '4rem',
+	height: '3.5rem',
 	direction: 'ttb',
 	arrows: false,
 	pagination: false,
@@ -32,7 +32,7 @@ var domainsCarousel = new Splide( '#domains-carousel', {
 
 var sitesCarousel = new Splide( '#sites-carousel', {
 	type: 'loop',
-	height: '520px',
+	height: '500px',
 	direction: 'rtl',
 	arrows: false,
 	pagination: false,

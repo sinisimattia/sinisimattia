@@ -1,0 +1,61 @@
+* {
+	border: none !important;
+}
+
+.banner {
+	position: relative;
+}
+
+.banner::after {
+	content: "";
+	background-image: url(./mattia.codes.banner.png);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: cover;
+	opacity: 0.2;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+}
+
+.terminal {
+	font-family: monospace;
+}
+
+.terminal .header span {
+	background: rgba(255, 255, 255, 0.2);
+	margin-inline-end: 10px;
+	padding: 2px;
+
+	display: block;
+
+	height: 13px;
+	width: 13px;
+
+	border-radius: 100%;
+}
+
+.terminal .header span:nth-child(1){
+	background: linear-gradient(rgb(255, 0, 0), rgb(255, 81, 0));
+}
+
+.terminal .header span:nth-child(2){
+	background: linear-gradient(rgb(255, 145, 0), rgb(255, 230, 0));
+}
+
+.terminal .header span:nth-child(3){
+	background: linear-gradient(rgb(6, 184, 0), rgb(0, 255, 85));
+}
+
+.splide__slide {
+	opacity: .2;
+	transition: opacity 1s;
+}
+
+.splide__slide.is-active {
+	opacity: 1;
+}
