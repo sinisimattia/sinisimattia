@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@latest/css/bulma.min.css" preload>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 
     <style>
         .banner {
@@ -129,6 +131,16 @@
             </div>
 
             <div>
+				<div id="domains-carousel" class="splide">
+					<div class="splide__track">
+						<ul class="splide__list">
+							<li class="splide__slide">Slide 01</li>
+							<li class="splide__slide">Slide 02</li>
+							<li class="splide__slide">Slide 03</li>
+						</ul>
+					</div>
+				</div>
+
                 <div class="columns is-vcentered">    
                     <div class="column items-center">
                         <div class="card">
@@ -139,11 +151,6 @@
                             </div>
                             <div class="card-content">
                               <div class="media">
-                                <div class="media-left">
-                                  <figure class="image is-48x48">
-                                    <img class="is-rounded" src="https://i.ibb.co/t32rbFR/Hashnode.png" alt="Hashnode Logo">
-                                  </figure>
-                                </div>
                                 <div class="media-content">
                                   <p class="title is-4">Hashnode Blog</p>
                                   <a class="subtitle is-6 is-block" href="https://blog.mattia.codes">blog.mattia.codes</a>
@@ -210,7 +217,7 @@
             <div class="hero-body">
                 <div class="container">
                     <p class="subtitle is-3">Do you have any cool ideas? <strong>Let's talk about them!</strong></p>
-                    <p class="subtitle is-4">I'm always open to collaboration on all sorts of projects. 📌</p>
+                    <p class="subtitle is-4">I'm always open to collaboration on all types of projects. 📌</p>
                 </div>
             </div>
         </div>
@@ -250,6 +257,11 @@
             startDelay: 3000,
 
         });
+
+		var carousel = new Splide( '#domains-carousel', {
+			direction: 'ttb',
+			height   : '10rem',
+		} ).mount();
     </script>
 
 </body>
