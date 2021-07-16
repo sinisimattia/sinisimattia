@@ -19,7 +19,9 @@ var typed = new Typed('#type', {
 var domainsCarousel = new Splide( '#domains-carousel', {
 	type: 'loop',
 	height: '3.5rem',
+	fixedWidth: '240px',
 	direction: 'ttb',
+	reverse: true,
 	arrows: false,
 	pagination: false,
 	drag: false,
@@ -34,6 +36,7 @@ var sitesCarousel = new Splide( '#sites-carousel', {
 	type: 'loop',
 	height: '500px',
 	direction: 'rtl',
+	focus: 'center',
 	arrows: false,
 	pagination: false,
 	autoplay: true,
@@ -44,7 +47,7 @@ var sitesCarousel = new Splide( '#sites-carousel', {
 	gap: 20,
 	breakpoints: {
 		1000: {
-			perPage: 2
+			perPage: 2,
 		},
 		700: {
 			perPage: 1
