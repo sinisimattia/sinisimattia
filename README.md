@@ -10,7 +10,7 @@
     <a href="http://links.mattia.codes">Socials</a> •
     <a href="https://mattia.codes">Website</a> •
     <a href="https://blog.mattia.codes">Blog</a> •
-    <a href="http://curriculum.mattia.codes/">CV</a> 
+    <a href="https://work.mattia.codes/">Curriculum</a> 
   </h5>
 </div>
 
@@ -28,18 +28,3 @@ or visit my site at [mattia.codes](https://mattia.codes) 🔗
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sinisimattia&layout=compact&border_color=000000)](https://github.com/anuraghazra/github-readme-stats)
 
 </div>
-
-<!--
-**sinisimattia/sinisimattia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
