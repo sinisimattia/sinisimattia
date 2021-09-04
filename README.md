@@ -5,12 +5,22 @@ I'm currently working on building free, open and inclusive online platforms for 
 
 ___
 
-Have any cool ideas? **Let's talk about them!** I'm always open to collaboration on any sorts of projects.
+Have any cool ideas? **Let's talk about them!** I'm always open to collaboration on all sorts of projects.
 
-Contact me here [mattia@snisni.it](mailto:mattia@snisni.it)
+Contact me here [mattia@snisni.it](mailto:mattia@snisni.it) 📪
+or visit my site at [mattia.codes](https://mattia.codes) 🔗
 
+<div align='center'>
 
 ![Here are my stats, if you're interested](https://github-readme-stats.vercel.app/api?username=sinisimattia)
+
+</div>
+
+<div align="center">
+  <a href="https://www.buymeacoffee.com/sinisimattia" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-black.png" alt="Buy Me A Coffee" height="50px" width="auto" >
+  </a>
+</div>
 
 <!--
 **sinisimattia/sinisimattia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
