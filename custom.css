@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
 * {
 	border: none !important;
+}
+
+.title {
+	font-family: 'Space Mono', sans-serif;
 }
 
 .card {
@@ -53,13 +59,4 @@
 
 .terminal .header span:nth-child(3){
 	background: linear-gradient(rgb(6, 184, 0), rgb(0, 255, 85));
-}
-
-.splide__slide {
-	opacity: .2;
-	transition: opacity 1s;
-}
-
-.splide__slide.is-active {
-	opacity: 1;
 }
