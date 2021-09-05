@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
 
 * {
 	border: none !important;
@@ -33,7 +34,8 @@
 }
 
 .terminal {
-	font-family: monospace;
+	font-family: 'Fira Code', monospace;
+	font-variant-ligatures: normal;
 }
 
 .terminal .header span {
