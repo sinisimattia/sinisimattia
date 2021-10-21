@@ -34,23 +34,21 @@ async function gql(query, variables={}) {
 gql(GET_USER_ARTICLES, { page: 0, username })
     .then(result => {
         const articles = result.data.user.publication.posts;
-        let container = document.createElement('div');
+        let container = document.createElement('ul');
+
+		container.classList = []
 
         articles.forEach(article => {
-            let title = document.createElement('h2');
+			let item = document.createElement('li');
+            let title = document.createElement('a');
             title.innerText = article.title;
+			title.href = `${url}/${article.slug}`;
 
-            let brief = document.createElement('p');
-            brief.innerText = article.brief;
-
-            let link = document.createElement('a');
-            link.innerText = 'Read more...';
-            link.href = `${url}/${article.slug}`;
-
-            container.appendChild(title);
-            container.appendChild(brief);
-            container.appendChild(link);
+			item.appendChild(title);
+            container.appendChild(item);
         })
 
-        document.getElementById('articles').appendChild(container);
+		var main = document.getElementById('articles');
+		main.innerHTML = '';
+        main.appendChild(container);
 });
