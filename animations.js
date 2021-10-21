@@ -1,6 +1,6 @@
 var typed = new Typed('#type', {
 	strings: [
-		"I like to develop open source.",
+		"I like to develop open source software.",
 		"I like to write about programming.",
 		"I like to try new stuff.",
 		"I like to experiment.",
