@@ -62,3 +62,8 @@
 .terminal .header span:nth-child(3){
 	background: linear-gradient(rgb(6, 184, 0), rgb(0, 255, 85));
 }
+
+.terminal ul {
+	list-style: circle;
+	padding-left: 30px;
+}
