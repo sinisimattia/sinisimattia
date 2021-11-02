@@ -9,7 +9,7 @@
   <h5>
     <a href="https://mattia.codes">Website</a> •
     <a href="https://blog.mattia.codes">Blog</a> •
-    <a href="https://work.mattia.codes/">Curriculum</a> 
+    <a href="https://projects.mattia.codes/">Curriculum</a> 
   </h5>
 </div>
 

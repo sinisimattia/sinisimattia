@@ -6,50 +6,44 @@
 	<title>Hi, I'm Mattia</title>
 
 	<meta name="author" content="Mattia Sinisi" />
-	<meta name="description" content="Hi, my name is Mattia. I'm a developer and this is my presentation page!" />
+	<meta name="description" content="Hi, my name is Mattia. I'm a developer and this is my personal homepage!" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<meta property="og:title" content="Hi there 👋 I'm Mattia" />
 	<meta property="og:description" content="I'm a developer who likes to experiment.">
-	<meta property="og:image" content="https://i.ibb.co/KsDPDWX/Hi-there.png">
+	<meta property="og:image" content="./images/preview.png">
 	<meta property="og:url" content="https://mattia.codes">
 
 	<link rel="stylesheet" preload href="https://cdn.jsdelivr.net/npm/bulma@latest/css/bulma.min.css">
 	<link rel="stylesheet" preload href="/custom.css">
 
-	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
 	<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+	
+	<script src="/gql.js"></script>
 	<script src="/data.js"></script>
 </head>
 
 <body>
-	<div class="hero is-medium banner">
+	<div class="hero is-medium main banner">
 		<div class="hero-body">
 			<div class="container">
-				<h1 class="title is-1">Hi there 👋</h1>
-				<h2 class="subtitle is-3">My name is <strong>Mattia Sinisi</strong>.</h2>
+				<div class="columns is-vcentered">
+					<div class="column has-text-centered">
+						<div>
+							<h1 class="title colorful">Hi there!</h1>
+							<h2 class="subtitle is-2 has-text-centered">My name is <strong class="colorful handwritten">Mattia Sinisi</strong>.</h2>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 
 	<main class="section">
 		<div class="content container">
-			<div class="section is-medium is-hidden-mobile">
-				<div class="terminal box has-text-white has-background-dark">
-					<div class="header is-flex mb-4">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-					<div id="type" class="is-inline"></div>
-				</div>
-			</div>
-
 			<section class="subtitle is-5">
 				<p>I'm a junior <b>Full-Stack developer</b> who's always experimenting and trying new stuff.</p>
-				<p>I'm currently working on building free, open source and inclusive online platforms for managing
-					anything
-					from a blog to a school.</p>
+				
 				<br>
 				<p>Here are the <strong>languages, frameworks and/or libraries</strong> that I'm more comfortable in
 					using:
@@ -70,39 +64,41 @@
 		</div>
 	</main>
 
-	<section x-data="links" class="hero is-dark is-medium has-background-black">
-		<div class="hero-body">
-			<div class="container">
-				<div class="columns is-desktop is-vcentered">
-					<div class="column is-one-fifth-desktop">
-						<h3 class="title is-2">You can find me here. -></h3>
-						<p>I went crazy with my third-level domains.</p>
-					</div>
-
-					<div class="column">
-						<div class="terminal box">
-							<div class="header is-flex mb-4">
-								<span></span>
-								<span></span>
-								<span></span>
-							</div>
-
-							<div>
-								<p class="mb-2">
-									<span>$</span>
-									<span class="has-text-success">-> ~ </span>
-									<span>grep </span>
-									<span class="has-text-info">*.mattia.codes</span>
-								</p>
-								<ul>
-									<template x-for="link in links">
-										<li>
-											<a class="has-text-link" x-bind:href="link.url" x-text="link.name">blog.mattia.codes</a>
-											<span class="has-text-grey"> => </span>
-											<span x-text="link.descr"></span>
-										</li>
-									</template>
-								</ul>
+	<section x-data="links" class="container">
+		<div class="hero with-pattern is-info is-rounded is-medium">
+			<div class="hero-body">
+				<div class="container">
+					<div class="columns is-desktop is-vcentered">
+						<div class="column is-one-fifth-desktop">
+							<h3 class="title is-2">You can find me here -></h3>
+							<p>I like third-level domains.</p>
+						</div>
+	
+						<div class="column">
+							<div class="terminal box">
+								<div class="header is-flex mb-4">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+	
+								<div>
+									<p class="mb-2">
+										<span>$</span>
+										<span class="has-text-success">-> ~ </span>
+										<span>grep </span>
+										<span class="has-text-info">*.mattia.codes</span>
+									</p>
+									<ul>
+										<template x-for="link in links">
+											<li>
+												<a class="has-text-link" x-bind:href="link.url" x-bind:target="link.name" x-text="link.name"></a>
+												<span class="has-text-grey"> => </span>
+												<span x-text="link.descr"></span>
+											</li>
+										</template>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -111,49 +107,42 @@
 		</div>
 	</section>
 
-	<section class="hero is-medium is-info">
+	<section x-data="projects" class="hero is-medium">
 		<div class="hero-body">
 			<div class="container">
-				<div class="columns">
-					<div class="column"></div>
-					<div class="column is-two-thirds">
-						<div class="mb-2">
-							<p class="title is-3">My articles on <strong>Hashnode</strong></p>
+				<h3 class="title is-1 mb-4">Personal Projects</h3>
+
+				<div class="columns is-desktop is-centered is-multiline">
+					<template x-for="project in projects">
+						<div class="column">
+							<div class="card">
+								<div x-show="project.thumbnail" class="card-image">
+								  <figure class="image is-4by3">
+									<img x-bind:src="project.thumbnail" alt="thumbnail">
+								  </figure>
+								</div>
+								<div class="card-content">
+								  <div class="media">
+									<div x-show="project.logo" class="media-left">
+									  <figure class="image is-48x48 project-logo">
+										<img x-bind:src="project.logo" alt="logo">
+									  </figure>
+									</div>
+									<div class="media-content">
+									  <p class="title is-3" x-text="project.name"></p>
+									  <p class="subtitle is-6" x-text="project.subtitle"></p>
+									</div>
+								  </div>
+							  
+								  <div class="content" x-text="project.descr"></div>
+								</div>
+
+								<div class="card-footer">
+									<a x-bind:href="project.url" x-bind:target="project.name" class="card-footer-item">Visit site</a>
+								</div>
+							  </div>
 						</div>
-						<div class="terminal box">
-							<div class="header is-flex mb-4">
-								<span></span>
-								<span></span>
-								<span></span>
-							</div>
-		
-							<div id="articles">
-								<small>Loading articles...</small>
-							</div>
-						</div>
-					</div>
-					<div class="column"></div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="hero is-medium">
-		<div class="hero-body">
-			<div class="container">
-				<div class="columns is-desktop is-vcentered">
-					<div class="column">
-						<img src="https://i.ibb.co/FxXMVD1/tapi-logo.png" alt="tapi.js" />
-						<h3 class="subtitle is-5">My latest OSS project for <strong>TypeScript</strong> developers.</h3>
-
-						<p>It allows you to convert incoming JSON data into typed objects.</p>
-
-						<a href="https://tapi.js.org" class="button is-large is-info is-rounded mt-6">Get started</a>
-					</div>
-
-					<div class="column is-one-half">
-						<img src="https://i.ibb.co/stfLH8B/tepi-demo.png" alt="Code snippet example of what it can do" />
-					</div>
+					</template>
 				</div>
 			</div>
 		</div>
@@ -164,32 +153,37 @@
 			<div class="columns is-desktop">
 				<div class="column is-two-thirds">
 					<div>
-						<p class="subtitle is-3">Do you have any cool ideas? <strong>Let's talk about
-								them!</strong></p>
-						<p class="subtitle is-4">I'm always open to collaborate on all sorts of projects. 📌</p>
+						<h3 class="title is-4">Do you have any cool ideas?</h3>
+						<p class="subtitle is-5">I'm always open to collaborate on all sorts of projects. 📌</p>
 					</div>
 				</div>
 
 				<div class="column">
 					<div>
-						<p>Shoot me a message! I would love to drink a coffee and discuss your projects. ☕</p>
-						<ul class="mt-6">
-							<li>💌 <strong><a href="mailto:mattia@snisni.it"
-										class="has-text-dark">mattia@snisni.it</a></strong></li>
-							<li>🐙 <strong><a href="https://github.com/sinisimattia"
-										class="has-text-dark">GitHub</a></strong></li>
-							<li>👔 <strong><a href="https://linkedin.com/in/sinisimattia"
-										class="has-text-dark">LinkedIn</a></strong></li>
+						<p class="title is-5">Let's connect ☕</p>
+						<ul x-data="{links: footerLinks}">
+							<template x-for="link in links">
+								<li>
+									<a
+										x-bind:href="link.url"
+										x-text="link.name"
+										target="_blank"
+										class="has-text-weight-semibold"
+									/>
+								</li>
+							</template>
 						</ul>
 					</div>
 				</div>
 			</div>
+
+			<div x-data="{today: today}">
+				<div class="mt-6 has-text-centered">
+					<small class="is-block">Copyright &copy; <strong>Mattia Sinisi</strong> <span x-text="today.getFullYear()"></span></small>
+				</div>
+			</div>
 		</div>
 	</section>
-
-	<script src="/animations.js"></script>
-	<script src="/articles.js"></script>
-
 </body>
 
 </html>
