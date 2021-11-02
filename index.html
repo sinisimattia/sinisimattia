@@ -18,6 +18,8 @@
 	<link rel="stylesheet" preload href="/custom.css">
 
 	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+	<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+	<script src="/data.js"></script>
 </head>
 
 <body>
@@ -66,10 +68,9 @@
 				<p>I wouldn't consider myself as a <strong>Linux</strong> 🐧 fanboy but I do love it quite a lot.</p>
 			</section>
 		</div>
-
 	</main>
 
-	<section class="hero is-dark is-medium has-background-black">
+	<section x-data="links" class="hero is-dark is-medium has-background-black">
 		<div class="hero-body">
 			<div class="container">
 				<div class="columns is-desktop is-vcentered">
@@ -94,30 +95,13 @@
 									<span class="has-text-info">*.mattia.codes</span>
 								</p>
 								<ul>
-									<li>
-										<a class="has-text-link" href="https://blog.mattia.codes">blog.mattia.codes</a>
-										<span class="has-text-grey"> => </span>
-										<span>A blog about programming OSS</span>
-									</li>
-
-									<li>
-										<a class="has-text-link" href="https://work.mattia.codes">work.mattia.codes</a>
-										<span class="has-text-grey"> => </span>
-										<span>My online curriculum</span>
-									</li>
-
-									<li>
-										<a class="has-text-link" href="https://talk.mattia.codes">talk.mattia.codes</a>
-										<span class="has-text-grey"> => </span>
-										<span>A way for you to contact me</span>
-									</li>
-
-									<li>
-										<a class="has-text-link"
-											href="http://projects.mattia.codes">projects.mattia.codes</a>
-										<span class="has-text-grey"> => </span>
-										<span>A collection of personal projects</span>
-									</li>
+									<template x-for="link in links">
+										<li>
+											<a class="has-text-link" x-bind:href="link.url" x-text="link.name">blog.mattia.codes</a>
+											<span class="has-text-grey"> => </span>
+											<span x-text="link.descr"></span>
+										</li>
+									</template>
 								</ul>
 							</div>
 						</div>
