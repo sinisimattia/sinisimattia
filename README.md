@@ -26,4 +26,6 @@ or visit my site at [mattia.codes](https://mattia.codes) 🔗
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sinisimattia&layout=compact&border_color=000000)](https://github.com/anuraghazra/github-readme-stats)
 
+![Trophies](https://github-profile-trophy.vercel.app/?username=sinisimattia)
+  
 </div>
