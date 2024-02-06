@@ -1,32 +1,6 @@
-const username = 'sinisimattia';
-const url = 'https://blog.mattia.codes';
-const apiUrl = 'https://api.hashnode.com';
 const today = new Date();
 
 const isMobile = /Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)
-
-const GET_USER_ARTICLES = `
-    query GetUserArticles($page: Int!, $username: String!) {
-        user(username: $username) {
-            publication {
-                posts(page: $page) {
-                    title
-                    brief
-                    slug
-                }
-            }
-        }
-    }
-`;
-
-async function getArticles() {
-	let result = await gql(GET_USER_ARTICLES, { page: 0, username });
-	let posts = result.data.user.publication.posts;
-	return posts.map(a => {
-		a.url = `${url}/${a.slug}`
-		return a;
-	});
-}
 
 const links = [
 	{
@@ -77,16 +51,8 @@ const footerLinks = [
 		name: "🚀 start2Impact",
 		url: "https://talent.start2impact.it/profile/mattia-sinisi"
 	},
-	{
-		name: "📝 Download my greeting card!",
-		url: "/poster.pdf",
-	},
+	// {
+	// 	name: "📝 Download my greeting card!",
+	// 	url: "/poster.pdf",
+	// },
 ];
-
-const phrases = [
-	"I like to develop open source software.",
-	"I like to write about programming.",
-	"I like to try new stuff.",
-	"I like to experiment.",
-	"Let's talk!"
-]

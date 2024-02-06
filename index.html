@@ -18,9 +18,8 @@
 	<link rel="stylesheet" preload href="/custom.css">
 
 	<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-	
-	<script src="/gql.js"></script>
 	<script src="/data.js"></script>
+	<script src="/3d.js" type="module"></script>
 </head>
 
 <body>
@@ -28,10 +27,28 @@
 		<div class="hero-body">
 			<div class="container">
 				<div class="columns is-vcentered">
-					<div class="column has-text-centered">
-						<div>
-							<h1 class="title colorful">Hi there!</h1>
-							<h2 class="subtitle is-2 has-text-centered">My name is <strong class="colorful handwritten">Mattia Sinisi</strong>.</h2>
+					<div class="column is-one-third">
+						<div class="terminal box">
+							<div class="header is-flex mb-4">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+							
+							<div id="sceneWrapper" class="block m-auto">
+								<canvas id="scene3d"></canvas>
+							</div>
+						</div>
+					</div>
+					<div class="column is-auto">
+						<div class="terminal box">
+							<div class="header is-flex mb-4">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+							<h1 class="title">Welcome</h1>
+							<h2 class="title is-2">My name is <strong class="colorful">Mattia Sinisi</strong>.</h2>
 						</div>
 					</div>
 				</div>
@@ -42,7 +59,7 @@
 	<main class="section">
 		<div class="content container">
 			<section class="subtitle is-5">
-				<p>I'm a junior <b>Full-Stack developer</b> who's always experimenting and trying new stuff.</p>
+				<p>I'm a <b>Full-Stack developer</b> who's always experimenting and trying new stuff.</p>
 				
 				<br>
 				<p>Here are the <strong>languages, frameworks and/or libraries</strong> that I'm more comfortable in
@@ -110,11 +127,11 @@
 	<section x-data="projects" class="hero is-medium">
 		<div class="hero-body">
 			<div class="container">
-				<h3 class="title is-1 mb-4">Personal Projects</h3>
+				<h3 class="title is-1 mb-4 has-text-centered">Personal Projects</h3>
 
 				<div class="columns is-desktop is-centered is-multiline">
 					<template x-for="project in projects">
-						<div class="column">
+						<div class="column is-one-third">
 							<div class="card">
 								<div x-show="project.thumbnail" class="card-image">
 								  <figure class="image is-4by3">
@@ -153,8 +170,8 @@
 			<div class="columns is-desktop">
 				<div class="column is-two-thirds">
 					<div>
-						<h3 class="title is-4">Do you have any cool ideas?</h3>
-						<p class="subtitle is-5">I'm always open to collaborate on all sorts of projects. 📌</p>
+						<h3 class="title is-4">Do you have any cool ideas? 💡</h3>
+						<p class="subtitle is-5">I'm always open to collaborate on all sorts of projects.</p>
 					</div>
 				</div>
 
