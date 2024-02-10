@@ -38,9 +38,7 @@
 }
 
 .main.banner h1 {
-	font-size: 10vw;
 	font-weight: bolder;
-	
 }
 
 .banner::after {
@@ -115,6 +113,6 @@
 
 
 #scene3d {
-	border: 1px dotted gray !important;
+	border: 1px dashed gray !important;
 	border-radius: 10px;
 }

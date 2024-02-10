@@ -54,6 +54,7 @@ class SpinningAvatarScene {
 		this.tools.renderer.physicallyCorrectLights = true
 		this.tools.renderer.outputEncoding = THREE.sRGBEncoding
 		this.tools.renderer.setSize(this.config.dimensions.width, this.config.dimensions.height)
+		this.tools.renderer.setPixelRatio( window.devicePixelRatio );
 
 		this.tools.modelLoader = new GLTFLoader()
 
@@ -66,6 +67,10 @@ class SpinningAvatarScene {
 		this.elements.wrapper.style.width = this.config.dimensions.width + 'px'
 		this.elements.target.height = this.config.dimensions.height
 		this.elements.target.width = this.config.dimensions.width
+		this.content.camera.aspect = this.config.dimensions.width / this.config.dimensions.height
+
+		this.content.camera.updateProjectionMatrix()
+		this.tools.renderer.setSize(this.config.dimensions.width, this.config.dimensions.height)
 	}
 
 	loadModels() {
@@ -100,30 +105,39 @@ class SpinningAvatarScene {
 	}
 
 	listeners = {
-		onResize: () => {
-			this.elements.target.height = this.config.dimensions.height
-			this.elements.target.width = this.config.dimensions.width
-			this.content.camera.aspect = this.elements.target.width / this.elements.target.height
-			this.content.camera.updateProjectionMatrix()
-			this.tools.renderer.setSize(this.elements.target.width, this.elements.target.height)
+		onResize: (event) => {
+			const newHeight = Number.parseFloat(this.elements.wrapper.style.height.replace('px', ''))
+			const newWidth = Number.parseFloat(this.elements.wrapper.style.width.replace('px', ''))
+
+			console.log(newHeight, newWidth)
+
+			if (newHeight && newWidth) {
+				this.config.dimensions.height = newHeight
+				this.config.dimensions.width = newWidth
+			}
+
+			this.setUp()
 			this.render()
 		},
 	}
 }
 
-// RESIZEABLE
 
-const scene = new SpinningAvatarScene
+if (!isMobile) {
+	const scene = new SpinningAvatarScene
 
-// USER INTERACTION
-// const controls = new OrbitControls(scene.content.camera, scene.tools.renderer.domElement)
-// controls.enableDamping = true
-// controls.target.set(0, 1.5, 0)
+	// USER INTERACTION
+	// const controls = new OrbitControls(scene.content.camera, scene.tools.renderer.domElement)
+	// controls.enableDamping = true
+	// controls.target.set(0, 1.5, 0)
 
-// var minPan = new THREE.Vector3( - 2, - 2, - 2 );
-// var maxPan = new THREE.Vector3( 2, 2, 2 );
+	// var minPan = new THREE.Vector3( - 2, - 2, - 2 );
+	// var maxPan = new THREE.Vector3( 2, 2, 2 );
 
-// controls.target.clamp(minPan, maxPan)
+	// controls.target.clamp(minPan, maxPan)
 
-scene.animate()
-window.addEventListener('resize', scene.listeners.onResize, false)
+	scene.animate()
+	window.addEventListener('resize', scene.listeners.onResize, false)
+
+
+}
