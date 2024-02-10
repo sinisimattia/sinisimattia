@@ -74,8 +74,27 @@ class SpinningAvatarScene {
 	}
 
 	loadModels() {
+		const glassesMaterial = new THREE.MeshPhongMaterial({
+			shininess: 100,
+			specular: '#ffffff',
+			color: '#000000',
+			emissive: '#000000',
+			shininess: 100,
+			wireframe: false,
+		})
 		this.tools.modelLoader.load( 'me.glb', (gltf) => {
 			this.content.models.Avatar = gltf.scene
+
+			this.content.models.Avatar.traverse((o) => {
+				if (o.isMesh) {
+					if (o.name == 'Wolf3D_Glasses') {
+						o.material = glassesMaterial
+					}
+
+					console.log(o)
+				};
+			});
+
 			this.content.scene.add(this.content.models.Avatar)
 
 			this.content.models.Avatar.position.y = 0
@@ -97,7 +116,7 @@ class SpinningAvatarScene {
 		// controls.update()
 
 		if (this.content.models.Avatar) {
-			this.content.models.Avatar.rotation.y += 0.004
+			this.content.models.Avatar.rotation.y += 0.01
 		}
 		
 		
