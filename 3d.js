@@ -142,21 +142,17 @@ class SpinningAvatarScene {
 }
 
 
-if (!isMobile) {
-	const scene = new SpinningAvatarScene
+const scene = new SpinningAvatarScene
 
-	// USER INTERACTION
-	// const controls = new OrbitControls(scene.content.camera, scene.tools.renderer.domElement)
-	// controls.enableDamping = true
-	// controls.target.set(0, 1.5, 0)
+// USER INTERACTION
+// const controls = new OrbitControls(scene.content.camera, scene.tools.renderer.domElement)
+// controls.enableDamping = true
+// controls.target.set(0, 1.5, 0)
 
-	// var minPan = new THREE.Vector3( - 2, - 2, - 2 );
-	// var maxPan = new THREE.Vector3( 2, 2, 2 );
+// var minPan = new THREE.Vector3( - 2, - 2, - 2 );
+// var maxPan = new THREE.Vector3( 2, 2, 2 );
 
-	// controls.target.clamp(minPan, maxPan)
+// controls.target.clamp(minPan, maxPan)
 
-	scene.animate()
-	window.addEventListener('resize', scene.listeners.onResize, false)
-
-
-}
+scene.animate()
+window.addEventListener('resize', scene.listeners.onResize, false)
