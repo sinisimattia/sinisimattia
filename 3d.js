@@ -142,7 +142,10 @@ class SpinningAvatarScene {
 }
 
 
-const scene = new SpinningAvatarScene
+// UNCOMMENT THIS TO ACTIVATE SCENE
+// const scene = new SpinningAvatarScene
+// scene.animate()
+// window.addEventListener('resize', scene.listeners.onResize, false)
 
 // USER INTERACTION
 // const controls = new OrbitControls(scene.content.camera, scene.tools.renderer.domElement)
@@ -153,6 +156,3 @@ const scene = new SpinningAvatarScene
 // var maxPan = new THREE.Vector3( 2, 2, 2 );
 
 // controls.target.clamp(minPan, maxPan)
-
-scene.animate()
-window.addEventListener('resize', scene.listeners.onResize, false)
