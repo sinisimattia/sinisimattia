@@ -44,7 +44,7 @@
 
 .banner::after {
 	content: "";
-	background-image: url(./images/mattia.codes.banner.png);
+	/* background-image: url(./images/mattia.codes.banner.png); */
 	background-repeat: no-repeat;
 	background-position: bottom center;
 	background-size: cover;
