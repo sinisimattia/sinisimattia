@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="EN">
+<html lang="en">
 
 <head>
 	<title>Hi, I'm Mattia</title>
@@ -77,12 +77,12 @@
 				<div class="container">
 					<div class="columns is-desktop is-vcentered">
 						<div class="column is-one-fifth-desktop">
-							<h3 class="title is-2">You can find me here -></h3>
+							<h3 class="title is-2">You can find me here</h3>
 							<p>I like third-level domains.</p>
 						</div>
 	
 						<div class="column">
-							<div class="terminal box">
+							<div class="terminal box is-dark">
 								<div class="header is-flex mb-4">
 									<span></span>
 									<span></span>
@@ -94,13 +94,13 @@
 										<span>$</span>
 										<span class="has-text-success">-> ~ </span>
 										<span>grep </span>
-										<span class="has-text-dark">*.mattia.codes</span>
+										<span class="has-text-success">*.mattia.codes</span>
 									</p>
 									<ul>
 										<template x-for="link in links">
 											<li>
 												<a class="has-text-link" x-bind:href="link.url" x-bind:target="link.name" x-text="link.name"></a>
-												<span class="has-text-grey"> => </span>
+												<span class="has-text-light"> => </span>
 												<span x-text="link.descr"></span>
 											</li>
 										</template>

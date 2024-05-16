@@ -5,7 +5,9 @@
 :root {
 	--primary: rgb(199, 0, 109);
 	--secondary: rgb(255, 102, 0);
+	--dark: rgb(26, 26, 26);
 	--bulma-primary: var(--primary);
+	--bulma-dark: var(--dark);
 }
 
 * {
@@ -61,6 +63,18 @@
 .terminal {
 	font-family: 'Fira Code', monospace;
 	font-variant-ligatures: normal;
+}
+
+.terminal.box.is-dark {
+	background-color: var(--dark);
+}
+
+.terminal.box.is-dark * {
+	color: white;
+}
+
+.terminal.box.is-dark .has-text-link {
+	color: rgb(0, 187, 255) !important;
 }
 
 .terminal .header span {
