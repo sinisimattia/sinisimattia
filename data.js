@@ -47,10 +47,10 @@ const footerLinks = [
 		name: "🐙 GitHub",
 		url: "https://github.com/sinisimattia"
 	},
-	{
-		name: "🚀 start2Impact",
-		url: "https://talent.start2impact.it/profile/mattia-sinisi"
-	},
+	// {
+	// 	name: "🚀 start2Impact",
+	// 	url: "https://talent.start2impact.it/profile/mattia-sinisi"
+	// },
 	// {
 	// 	name: "📝 Download my greeting card!",
 	// 	url: "/poster.pdf",
