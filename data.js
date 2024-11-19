@@ -4,14 +4,14 @@ const isMobile = /Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.use
 
 const links = [
 	{
-		name: "blog.mattia.codes",
+		name: "blog.snisni.it",
 		descr: "A blog about programming OSS",
-		url: "https://blog.mattia.codes",
+		url: "https://blog.snisni.it",
 	},
 	{
-		name: "tris.mattia.codes",
+		name: "tris.snisni.it",
 		descr: "A fun game of tic-tac-vue",
-		url: "https://tris.mattia.codes",
+		url: "https://tris.snisni.it",
 	},
 ];
 

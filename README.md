@@ -7,9 +7,9 @@
   <h4> Thank you for visiting my profile. </h4>
 
   <h5>
-    <a href="https://mattia.codes">Website</a> •
-    <a href="https://blog.mattia.codes">Blog</a> •
-    <a href="https://projects.mattia.codes/">Curriculum</a> 
+    <a href="https://snisni.it">Website</a> •
+    <a href="https://blog.snisni.it">Blog</a> •
+    <a href="https://projects.snisni.it/">Curriculum</a> 
   </h5>
 </div>
 
@@ -20,7 +20,7 @@ I'm currently working on building free, open and inclusive online platforms for 
 Have any cool ideas? **Let's talk about them!** I'm always open to collaboration on all sorts of projects.
 
 Contact me here [mattia@snisni.it](mailto:mattia@snisni.it) 📪
-or visit my site at [mattia.codes](https://mattia.codes) 🔗
+or visit my site at [snisni.it](https://snisni.it) 🔗
 
 <div align='center'>
 
