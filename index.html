@@ -23,7 +23,7 @@
 </head>
 
 <body>
-	<div class="hero is-medium main banner">
+	<div class="hero is-large main banner">
 		<div class="hero-body">
 			<div class="container">
 				<div class="columns is-vcentered">
@@ -37,7 +37,7 @@
 					<div class="column is-auto">
 						<div class="">
 							<span class="">Welcome! My name is</>
-							<h1 class="title is-1"><strong class="colorful">Mattia Sinisi</strong></h1>
+							<h1 class="title is-1"><strong class="colorful">Mattia Sinisi </strong></h1>
 						</div>
 					</div>
 				</div>
@@ -46,115 +46,63 @@
 	</div>
 
 	<main class="section container container-sm">
-		<div class="content container">
-			<section class="subtitle is-5">
-				<p>I'm a <b>Full-Stack developer</b> who's always experimenting and trying new stuff.</p>
-				<br>
-				<p>Here are the <strong>languages, frameworks, libraries and tools</strong> that I'm more comfortable using:</p>
-				<ul>
-					<li>📒 <strong>JavaScript (+ TypeScript)</strong>: Vue, Nuxt, Svelte, Sapper, Nest, and most of the popular build tools</li>
-					<li>🐘 <strong>PHP</strong>: Laravel, Symfony</li>
-					<li>💎 <strong>Ruby</strong>: Ruby On Rails, Jekyll</li>
-					<li>🧰 <strong>C#</strong>: ASP.NET, .net Core, dotnet, .NET Framework or however it will be called next</li>
-					<li>🐹 <strong>Go</strong>: Hugo</li>
-					<li>🐳 <strong>Docker</strong></li>
-				</ul>
-				<br>
-				<p>I wouldn't consider myself as a <strong>Linux</strong> 🐧 fan but I do love it quite a lot.</p>
-			</section>
-		</div>
-	</main>
+		<div class="columns">
+			<div class="column">
+				<section class="content">
+					<p>I'm a <b>Full-Stack developer</b> who's always experimenting and trying new stuff.</p>
+					<br>
+					<p>Here are the <strong>languages, frameworks, libraries and tools</strong> that I'm more comfortable using:</p>
+					<ul>
+						<li>📒 <strong>JavaScript (+ TypeScript)</strong>: Vue, Nuxt, Svelte, Sapper, Nest, and most of the popular build tools</li>
+						<li>🐘 <strong>PHP</strong>: Laravel, Symfony</li>
+						<li>💎 <strong>Ruby</strong>: Ruby On Rails, Jekyll</li>
+						<li>🧰 <strong>C#</strong>: ASP.NET, .net Core, dotnet, .NET Framework or however it will be called next</li>
+						<li>🐹 <strong>Go</strong>: Hugo</li>
+						<li>🐳 <strong>Docker</strong></li>
+						<li>🟧 <strong>AWS Cloud</strong>: Infrastructure design and CDK development</li>
+					</ul>
+					<br>
+					<p>I wouldn't consider myself as a <strong>Linux</strong> 🐧 fan but I do love it quite a lot.</p>
+				</section>
+			</div>
 
-	<section x-data="links" class="container">
-		<div class="hero with-pattern is-light is-rounded is-medium">
-			<div class="hero-body">
-				<div class="container">
-					<div class="columns is-desktop is-vcentered">
-						<div class="column is-one-fifth-desktop">
-							<h3 class="title is-2">You can find me here</h3>
-							<p>I like third-level domains.</p>
+			<div class="column">
+				<section x-data="links">
+					<div class="terminal box is-dark">
+						<div class="header is-flex mb-4">
+							<span></span>
+							<span></span>
+							<span></span>
 						</div>
-	
-						<div class="column">
-							<div class="terminal box is-dark">
-								<div class="header is-flex mb-4">
-									<span></span>
-									<span></span>
-									<span></span>
-								</div>
-	
-								<div>
-									<p class="mb-2">
-										<span>$</span>
-										<span class="has-text-success">-> ~ </span>
-										<span>grep </span>
-										<span class="has-text-success">*.snisni.it</span>
-									</p>
-									<ul>
-										<template x-for="link in links">
-											<li>
-												<a class="has-text-link" x-bind:href="link.url" x-bind:target="link.name" x-text="link.name"></a>
-												<span class="has-text-light"> => </span>
-												<span x-text="link.descr"></span>
-											</li>
-										</template>
-									</ul>
-								</div>
-							</div>
+
+						<div>
+							<p class="mb-2">
+								<span>$</span>
+								<span class="has-text-success">-> ~ </span>
+								<span>cat domains.txt | grep <span class="has-text-success">*.snisni.it</span></span>
+							</p>
+							<ul>
+								<template x-for="link in links">
+									<li>
+										<a class="has-text-link" x-bind:href="link.url" x-bind:target="link.name" x-text="link.name"></a>
+										<span class="has-text-light"> => </span>
+										<span x-text="link.descr"></span>
+									</li>
+								</template>
+							</ul>
 						</div>
 					</div>
-				</div>
+				</section>
 			</div>
 		</div>
-	</section>
-
-	<section x-data="projects" class="hero is-medium">
-		<div class="hero-body">
-			<div class="container">
-				<h3 class="title is-1 mb-4 has-text-centered">Personal Projects</h3>
-
-				<div class="columns is-desktop is-centered is-multiline">
-					<template x-for="project in projects">
-						<div class="column is-one-third">
-							<div class="card">
-								<div x-show="project.thumbnail" class="card-image">
-								  <figure class="image is-4by3">
-									<img x-bind:src="project.thumbnail" alt="thumbnail">
-								  </figure>
-								</div>
-								<div class="card-content">
-								  <div class="media">
-									<div x-show="project.logo" class="media-left">
-									  <figure class="image is-48x48 project-logo">
-										<img x-bind:src="project.logo" alt="logo">
-									  </figure>
-									</div>
-									<div class="media-content">
-									  <p class="title is-3" x-text="project.name"></p>
-									  <p class="subtitle is-6" x-text="project.subtitle"></p>
-									</div>
-								  </div>
-							  
-								  <div class="content" x-text="project.descr"></div>
-								</div>
-
-								<div class="card-footer">
-									<a x-bind:href="project.url" x-bind:target="project.name" class="card-footer-item">Visit site</a>
-								</div>
-							  </div>
-						</div>
-					</template>
-				</div>
-			</div>
-		</div>
-	</section>
+	</main>
 
 	<section class="footer">
 		<div class="container">
 			<div class="columns is-desktop">
 				<div class="column is-two-thirds">
 					<div>
-						<h3 class="title is-4">Do you have any cool ideas? 💡</h3>
+						<h3 class="title is-3">Do you have any cool ideas? 💡</h3>
 						<p class="subtitle is-5">I'm always open to collaborate on all sorts of projects.</p>
 					</div>
 				</div>

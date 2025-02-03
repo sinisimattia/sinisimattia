@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
 	--primary: rgb(199, 0, 109);
@@ -8,6 +7,9 @@
 	--dark: rgb(26, 26, 26);
 	--bulma-primary: var(--primary);
 	--bulma-dark: var(--dark);
+	--bulma-body-color: var(--dark);
+	--bulma-strong-color: var(--bulma-body-color);
+	--bulma-scheme-main: rgb(255, 255, 255);
 }
 
 * {
@@ -15,21 +17,19 @@
 }
 
 .title {
-	font-family: 'Space Mono', sans-serif;
+	font-family: 'Work Sans', sans-serif;
 }
 
 .card {
 	display: block !important;
 }
 
-.banner {
-	position: relative;
+.box {
+	--bulma-box-shadow: 0 20px 10px -15px rgba(0, 0, 0, .5);
 }
 
-.handwritten {
-	font-family: 'Nanum Pen Script', serif !important;
-	text-rendering: geometricPrecision;
-	letter-spacing: 0em
+.banner {
+	position: relative;
 }
 
 .colorful {
@@ -42,6 +42,7 @@
 
 .main.banner h1 {
 	font-weight: bolder;
+	font-size: 10vw;
 }
 
 .banner::after {
