@@ -49,6 +49,7 @@
 		<div class="columns">
 			<div class="column">
 				<section class="content">
+					<h2 class="title is-2">About me</h2>
 					<p>I'm a <b>Full-Stack developer</b> who's always experimenting and trying new stuff.</p>
 					<br>
 					<p>Here are the <strong>languages, frameworks, libraries and tools</strong> that I'm more comfortable using:</p>
@@ -62,12 +63,29 @@
 						<li>🟧 <strong>AWS Cloud</strong>: Infrastructure design and CDK development</li>
 					</ul>
 					<br>
-					<p>I wouldn't consider myself as a <strong>Linux</strong> 🐧 fan but I do love it quite a lot.</p>
+				</section>
+
+				<section>
+					<div class="terminal box">
+						<div class="header is-flex mb-4">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+
+						<div>
+							<p class="mb-2">
+								<p>Also, I wouldn't consider myself as a <strong>Linux</strong> 🐧 fan but I do work almost exclusively on it.</p>
+							</p>
+						</div>
+					</div>
 				</section>
 			</div>
 
 			<div class="column">
 				<section x-data="links">
+					<h2 class="title is-2">Other sites</h2>
+
 					<div class="terminal box is-dark">
 						<div class="header is-flex mb-4">
 							<span></span>
@@ -128,7 +146,7 @@
 
 			<div x-data="{today: today}">
 				<div class="mt-6 has-text-centered">
-					<small class="is-block">Copyright &copy; <strong>Mattia Sinisi</strong> <span x-text="today.getFullYear()"></span></small>
+					<p class="is-block">Copyright &copy; <strong>Mattia Sinisi</strong> <span x-text="today.getFullYear()"></span></p>
 				</div>
 			</div>
 		</div>
