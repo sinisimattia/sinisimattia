@@ -13,6 +13,11 @@ const links = [
 		descr: "A fun game of tic-tac-vue",
 		url: "https://tris.snisni.it",
 	},
+	{
+		name: "munchkin-counter.snisni.it",
+		descr: "It's better than the other one",
+		url: "https://munchkin-counter.snisni.it",
+	},
 ];
 
 const footerLinks = [
