@@ -5,9 +5,9 @@ theme: minima
 #
 title: SNISNI
 
-author:
-  name: Mattia Sinisi
-  email: mattia@snisni.it
+# author:
+#   name: Mattia Sinisi
+#   email: mattia@snisni.it
 #
 # The `>` after `description:` means to ignore line-breaks until next key. If
 #   you wish to omit the line-break after the end of text, use `>-` instead.
