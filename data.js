@@ -8,14 +8,15 @@ const links = [
 		descr: "A blog about programming OSS",
 		url: "https://blog.snisni.it",
 	},
+];
+
+const games = [
 	{
-		name: "tris.snisni.it",
-		descr: "A fun game of tic-tac-vue",
+		name: "Tic-Tac-Vue",
 		url: "https://tris.snisni.it",
 	},
 	{
-		name: "munchkin-counter.snisni.it",
-		descr: "It's better than the other one",
+		name: "Munchkin Counter",
 		url: "https://munchkin-counter.snisni.it",
 	},
 ];

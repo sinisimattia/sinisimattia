@@ -37,7 +37,7 @@
 					<div class="column is-auto">
 						<div class="">
 							<span class="">Welcome! My name is</>
-							<h1 class="title is-1"><strong class="colorful">Mattia Sinisi </strong></h1>
+								<h1 class="title is-1"><strong class="colorful">Mattia Sinisi </strong></h1>
 						</div>
 					</div>
 				</div>
@@ -52,12 +52,15 @@
 					<h2 class="title is-2">About me</h2>
 					<p>I'm a <b>Full-Stack developer</b> who's always experimenting and trying new stuff.</p>
 					<br>
-					<p>Here are the <strong>languages, frameworks, libraries and tools</strong> that I'm more comfortable using:</p>
+					<p>Here are the <strong>languages, frameworks, libraries and tools</strong> that I'm more
+						comfortable using:</p>
 					<ul>
-						<li>📒 <strong>JavaScript (+ TypeScript)</strong>: Vue, Nuxt, Svelte, Sapper, Nest, and most of the popular build tools</li>
+						<li>📒 <strong>JavaScript (+ TypeScript)</strong>: Vue, Nuxt, Svelte, Sapper, Nest, and most of
+							the popular build tools</li>
 						<li>🐘 <strong>PHP</strong>: Laravel, Symfony</li>
 						<li>💎 <strong>Ruby</strong>: Ruby On Rails, Jekyll</li>
-						<li>🧰 <strong>C#</strong>: ASP.NET, .net Core, dotnet, .NET Framework or however it will be called next</li>
+						<li>🧰 <strong>C#</strong>: ASP.NET, .net Core, dotnet, .NET Framework or however it will be
+							called next</li>
 						<li>🐹 <strong>Go</strong>: Hugo</li>
 						<li>🐳 <strong>Docker</strong></li>
 						<li>🟧 <strong>AWS Cloud</strong>: Infrastructure design and CDK development</li>
@@ -75,7 +78,8 @@
 
 						<div>
 							<p class="mb-2">
-								<p>Also, I wouldn't consider myself as a <strong>Linux</strong> 🐧 fan but I do work almost exclusively on it.</p>
+							<p>Also, I wouldn't consider myself as a <strong>Linux</strong> 🐧 fan but I do work almost
+								exclusively on it.</p>
 							</p>
 						</div>
 					</div>
@@ -83,9 +87,9 @@
 			</div>
 
 			<div class="column">
-				<section x-data="links">
-					<h2 class="title is-2">Other sites</h2>
+				<h2 class="title is-2">Other projects</h2>
 
+				<section x-data="links">
 					<div class="terminal box is-dark">
 						<div class="header is-flex mb-4">
 							<span></span>
@@ -102,9 +106,36 @@
 							<ul>
 								<template x-for="link in links">
 									<li>
-										<a class="has-text-link" x-bind:href="link.url" x-bind:target="link.name" x-text="link.name"></a>
+										<a class="has-text-link" x-bind:href="link.url" x-bind:target="link.name"
+											x-text="link.name"></a>
 										<span class="has-text-light"> => </span>
 										<span x-text="link.descr"></span>
+									</li>
+								</template>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section x-data="games">
+					<div class="terminal box is-dark">
+						<div class="header is-flex mb-4">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+
+						<div>
+							<p class="mb-2">
+								<span>$</span>
+								<span class="has-text-success">-> ~ </span>
+								<span>ls <span class="has-text-success">games/</span></span>
+							</p>
+							<ul>
+								<template x-for="link in games">
+									<li>
+										<a class="has-text-link" x-bind:href="link.url" x-bind:target="link.name"
+											x-text="link.name"></a>
 									</li>
 								</template>
 							</ul>
@@ -131,12 +162,8 @@
 						<ul x-data="{links: footerLinks}">
 							<template x-for="link in links">
 								<li>
-									<a
-										x-bind:href="link.url"
-										x-text="link.name"
-										target="_blank"
-										class="has-text-weight-semibold"
-									/>
+									<a x-bind:href="link.url" x-text="link.name" target="_blank"
+										class="has-text-weight-semibold" />
 								</li>
 							</template>
 						</ul>
@@ -146,7 +173,8 @@
 
 			<div x-data="{today: today}">
 				<div class="mt-6 has-text-centered">
-					<p class="is-block">Copyright &copy; <strong>Mattia Sinisi</strong> <span x-text="today.getFullYear()"></span></p>
+					<p class="is-block">Copyright &copy; <strong>Mattia Sinisi</strong> <span
+							x-text="today.getFullYear()"></span></p>
 				</div>
 			</div>
 		</div>
