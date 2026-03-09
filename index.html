@@ -3,14 +3,15 @@
 <html lang="en">
 
 <head>
-	<title>Hi, I'm Mattia</title>
+	<title>SNISNI</title>
 
 	<meta name="author" content="Mattia Sinisi" />
-	<meta name="description" content="Hi, my name is Mattia. I'm a developer and this is my personal homepage!" />
+	<meta name="description"
+		content="Hi, my name is Mattia. I'm a Full-Stack web developer and this is my personal website!" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<meta property="og:title" content="Hi there 👋 I'm Mattia" />
-	<meta property="og:description" content="I'm a developer who likes to experiment.">
+	<meta property="og:title" content="SNISNI" />
+	<meta property="og:description" content="Mattia Sinisi's personal website">
 	<meta property="og:image" content="./images/preview.png">
 	<meta property="og:url" content="https://snisni.it">
 
@@ -19,38 +20,30 @@
 
 	<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 	<script src="/data.js"></script>
-	<!-- <script src="/3d.js" type="module"></script> -->
 </head>
 
 <body>
-	<div class="hero is-large main banner">
-		<div class="hero-body">
-			<div class="container">
-				<div class="columns is-vcentered">
-					<!-- <div class="column is-one-third">
-						<div>
-							<div id="sceneWrapper" class="block m-auto">
-								<canvas id="scene3d"></canvas>
-							</div>
-						</div>
-					</div> -->
-					<div class="column is-auto">
-						<div class="">
-							<span class="">Welcome! My name is</>
-								<h1 class="title is-1"><strong class="colorful">Mattia Sinisi </strong></h1>
+	<header class="section">
+		<div class="hero is-small is-dark is-rounded banner">
+			<div class="hero-body">
+				<div class="container">
+					<div class="columns is-vcentered">
+						<div class="column is-auto has-text-centered">
+							<h1 class="title is-1"><strong class="">SNISNI</strong></h1>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</header>
 
-	<main class="section container container-sm">
+	<main class="container">
 		<div class="columns">
 			<div class="column">
 				<section class="content">
 					<h2 class="title is-2">About me</h2>
-					<p>I'm a <b>Full-Stack developer</b> who's always experimenting and trying new stuff.</p>
+					<p>My name is <strong>Mattia Sinisi</strong> and I'm a <b>Full-Stack developer</b> who's always
+						experimenting and trying new stuff.</p>
 					<br>
 					<p>Here are the <strong>languages, frameworks, libraries and tools</strong> that I'm more
 						comfortable using:</p>
@@ -65,10 +58,7 @@
 						<li>🐳 <strong>Docker</strong></li>
 						<li>🟧 <strong>AWS Cloud</strong>: Infrastructure design and CDK development</li>
 					</ul>
-					<br>
-				</section>
 
-				<section>
 					<div class="terminal box">
 						<div class="header is-flex mb-4">
 							<span></span>
@@ -87,86 +77,93 @@
 			</div>
 
 			<div class="column">
-				<h2 class="title is-2">Other projects</h2>
+				<section class="content">
+					<h2 class="title is-2">Other projects</h2>
 
-				<section x-data="links">
-					<div class="terminal box is-dark">
-						<div class="header is-flex mb-4">
-							<span></span>
-							<span></span>
-							<span></span>
-						</div>
+					<section x-data="links">
+						<div class="terminal box is-dark">
+							<div class="header is-flex mb-4">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
 
-						<div>
-							<p class="mb-2">
-								<span>$</span>
-								<span class="has-text-success">-> ~ </span>
-								<span>grep <span class="has-text-success">*.snisni.it</span></span>
-							</p>
-							<ul>
-								<template x-for="link in links">
-									<li>
-										<a class="has-text-link" x-bind:href="link.url" x-bind:target="link.name"
-											x-text="link.name"></a>
-										<span class="has-text-light"> => </span>
-										<span x-text="link.descr"></span>
-									</li>
-								</template>
-							</ul>
+							<div>
+								<p class="mb-2">
+									<span>$</span>
+									<span class="has-text-success">-> ~ </span>
+									<span>grep <span class="has-text-success">*.snisni.it</span></span>
+								</p>
+								<ul>
+									<template x-for="link in links">
+										<li>
+											<a class="has-text-link" x-bind:href="link.url" x-bind:target="link.name"
+												x-text="link.name"></a>
+											<span class="has-text-light"> => </span>
+											<span x-text="link.descr"></span>
+										</li>
+									</template>
+								</ul>
+							</div>
 						</div>
-					</div>
-				</section>
+					</section>
 
-				<section x-data="games">
-					<div class="terminal box is-dark">
-						<div class="header is-flex mb-4">
-							<span></span>
-							<span></span>
-							<span></span>
-						</div>
+					<section x-data="games">
+						<div class="terminal box is-dark">
+							<div class="header is-flex mb-4">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
 
-						<div>
-							<p class="mb-2">
-								<span>$</span>
-								<span class="has-text-success">-> ~ </span>
-								<span>ls <span class="has-text-success">games/</span></span>
-							</p>
-							<ul>
-								<template x-for="link in games">
-									<li>
-										<a class="has-text-link" x-bind:href="link.url" x-bind:target="link.name"
-											x-text="link.name"></a>
-									</li>
-								</template>
-							</ul>
+							<div>
+								<p class="mb-2">
+									<span>$</span>
+									<span class="has-text-success">-> ~ </span>
+									<span>ls <span class="has-text-success">games/</span></span>
+								</p>
+								<ul>
+									<template x-for="link in games">
+										<li>
+											<a class="has-text-link" x-bind:href="link.url" x-bind:target="link.name"
+												x-text="link.name"></a>
+										</li>
+									</template>
+								</ul>
+							</div>
 						</div>
-					</div>
+					</section>
 				</section>
 			</div>
 		</div>
 	</main>
 
-	<section class="footer">
+	<footer class="section footer mt-6">
 		<div class="container">
-			<div class="columns is-desktop">
-				<div class="column is-two-thirds">
-					<div>
-						<h3 class="title is-3">Do you have any cool ideas? 💡</h3>
-						<p class="subtitle is-5">I'm always open to collaborate on all sorts of projects.</p>
+			<div class="level is-desktop">
+				<div class="level-left">
+					<div class="level-item">
+						<div>
+							<h3 class="title is-3">Do you have any cool ideas? 💡</h3>
+							<p class="subtitle is-5">Let's connect!</p>
+							<ul class="mt-3" x-data="{links: footerLinks}">
+								<template x-for="link in links">
+									<li>
+										<a x-bind:href="link.url" x-text="link.name" target="_blank"
+											class="has-text-weight-semibold" />
+									</li>
+								</template>
+							</ul>
+						</div>
 					</div>
 				</div>
 
-				<div class="column">
-					<div>
-						<p class="title is-5">Let's connect ☕</p>
-						<ul x-data="{links: footerLinks}">
-							<template x-for="link in links">
-								<li>
-									<a x-bind:href="link.url" x-text="link.name" target="_blank"
-										class="has-text-weight-semibold" />
-								</li>
-							</template>
-						</ul>
+				<div class="leve-right">
+					<div class="level-item">
+						<figure class="image is-128x128">
+							<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2V2ZzZ1b2drdjk1bmRhd21peG1qYjNwZGpiNGw2ODhpem1kajg3eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/DRnROoPNu7T15aFJHN/giphy.gif"
+								alt />
+						</figure>
 					</div>
 				</div>
 			</div>
@@ -178,7 +175,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</footer>
 </body>
 
 </html>

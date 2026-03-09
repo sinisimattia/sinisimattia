@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
 	--primary: rgb(199, 0, 109);
@@ -10,6 +10,9 @@
 	--bulma-body-color: var(--dark);
 	--bulma-strong-color: var(--bulma-body-color);
 	--bulma-scheme-main: var(--bulma-white);
+	--bulma-title-color: var(--dark);
+	--bulma-subtitle-color: rgb(127, 127, 127);
+	--bulma-link-text: rgb(0, 76, 255);
 }
 
 .footer {
@@ -21,16 +24,7 @@
 }
 
 .title {
-	font-family: 'Work Sans', sans-serif;
-	--bulma-title-color: rgb(37, 37, 37);
-}
-
-.subtitle {
-	--bulma-subtitle-color: rgb(127, 127, 127);
-}
-
-a {
-	--bulma-link-text: rgb(0, 76, 255);
+	font-family: "Work Sans", sans-serif;
 }
 
 .card {
@@ -38,12 +32,18 @@ a {
 }
 
 .box {
-	--bulma-box-shadow: 0 20px 10px -15px rgba(0, 0, 0, .5) !important;
+	--bulma-box-shadow: 0 20px 10px -15px rgba(0, 0, 0, 0.5) !important;
 	margin-bottom: 15px;
 }
 
 .banner {
 	position: relative;
+}
+
+.banner .title.is-1 {
+	font-family: "Climate Crisis", sans-serif;
+	font-weight: bolder;
+	font-size: 10vw !important;
 }
 
 .colorful {
@@ -54,34 +54,13 @@ a {
 	color: transparent !important;
 }
 
-.main.banner h1 {
-	font-weight: bolder;
-	font-size: 10vw;
-}
-
-.banner::after {
-	content: "";
-	/* background-image: url(./images/mattia.codes.banner.png); */
-	background-repeat: no-repeat;
-	background-position: bottom center;
-	background-size: cover;
-	opacity: 0.2;
-
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	z-index: -1;
-}
-
 .terminal {
-	font-family: 'Fira Code', monospace;
+	font-family: "Fira Code", monospace;
 	font-variant-ligatures: normal;
 }
 
 .terminal.box {
-	border: 1px solid rgba(128, 128, 128, .5) !important;
+	border: 1px solid rgba(128, 128, 128, 0.5) !important;
 	color: var(--bulma-body-color);
 }
 
@@ -111,15 +90,15 @@ a {
 	border-radius: 100%;
 }
 
-.terminal .header span:nth-child(1){
+.terminal .header span:nth-child(1) {
 	background: linear-gradient(rgb(255, 0, 0), rgb(255, 81, 0));
 }
 
-.terminal .header span:nth-child(2){
+.terminal .header span:nth-child(2) {
 	background: linear-gradient(rgb(255, 145, 0), rgb(255, 230, 0));
 }
 
-.terminal .header span:nth-child(3){
+.terminal .header span:nth-child(3) {
 	background: linear-gradient(rgb(6, 184, 0), rgb(0, 255, 85));
 }
 
@@ -134,7 +113,7 @@ a {
 }
 
 .project-logo {
-	filter: drop-shadow(0 5px 7px rgba(0, 0, 0, .2));
+	filter: drop-shadow(0 5px 7px rgba(0, 0, 0, 0.2));
 }
 
 .hero.is-rounded {
@@ -145,12 +124,10 @@ a {
 	--bulma-content-heading-color: var(--bulma-body-color);
 }
 
-
 /********************************************************************************/
 .with-pattern {
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='rgba(255, 255, 255, .2)' fill-opacity='0.4'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
-
 
 #scene3d {
 	border: 1px dashed gray !important;
