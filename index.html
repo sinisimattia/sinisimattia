@@ -37,29 +37,33 @@
 		</div>
 	</header>
 
-	<main class="container">
-		<div class="columns">
-			<div class="column">
-				<section class="content">
-					<h2 class="title is-2">About me</h2>
-					<p>My name is <strong>Mattia Sinisi</strong> and I'm a <b>Full-Stack developer</b> who's always
-						experimenting and trying new stuff.</p>
-					<br>
-					<p>Here are the <strong>languages, frameworks, libraries and tools</strong> that I'm more
-						comfortable using:</p>
-					<ul>
-						<li>📒 <strong>JavaScript (+ TypeScript)</strong>: Vue, Nuxt, Svelte, Sapper, Nest, and most of
-							the popular build tools</li>
-						<li>🐘 <strong>PHP</strong>: Laravel, Symfony</li>
-						<li>💎 <strong>Ruby</strong>: Ruby On Rails, Jekyll</li>
-						<li>🧰 <strong>C#</strong>: ASP.NET, .net Core, dotnet, .NET Framework or however it will be
-							called next</li>
-						<li>🐹 <strong>Go</strong>: Hugo</li>
-						<li>🐳 <strong>Docker</strong></li>
-						<li>🟧 <strong>AWS Cloud</strong>: Infrastructure design and CDK development</li>
-					</ul>
+	<main class="section container">
+		<section class="content">
+			<p>My name is <strong>Mattia Sinisi</strong> (a.k.a. SNISNI).</p>
 
-					<div class="terminal box">
+			<p> I'm a <b>Full-Stack Web Developer</b> who's
+				always
+				experimenting and trying new stuff.</p>
+
+			<p>These are the <strong>languages, frameworks, libraries and tools</strong> that I'm more
+				comfortable using:</p>
+			<ul>
+				<li>📒 <strong>JavaScript (+ TypeScript)</strong>: Vue, Nuxt, Svelte, Sapper, Nest, and most of
+					the popular build tools</li>
+				<li>🐘 <strong>PHP</strong>: Laravel, Symfony</li>
+				<li>💎 <strong>Ruby</strong>: Ruby On Rails, Jekyll</li>
+				<li>🧰 <strong>C#</strong>: ASP.NET, .net Core, dotnet, .NET Framework or however it will be
+					called next</li>
+				<li>🐹 <strong>Go</strong>: Hugo</li>
+				<li>🐳 <strong>Docker</strong></li>
+				<li>🟧 <strong>AWS Cloud</strong>: Infrastructure design and CDK development</li>
+			</ul>
+		</section>
+
+		<section>
+			<div class="columns">
+				<div class="column">
+					<div class="terminal box is-dark" x-data="links">
 						<div class="header is-flex mb-4">
 							<span></span>
 							<span></span>
@@ -68,74 +72,51 @@
 
 						<div>
 							<p class="mb-2">
-							<p>Also, I wouldn't consider myself as a <strong>Linux</strong> 🐧 fan but I do work almost
-								exclusively on it.</p>
+								<span>$</span>
+								<span class="has-text-success">-> ~ </span>
+								<span>grep <span class="has-text-success">*.snisni.it</span></span>
 							</p>
+							<ul>
+								<template x-for="link in links">
+									<li>
+										<a class="has-text-link" x-bind:href="link.url" x-bind:target="link.name"
+											x-text="link.name"></a>
+										<span class="has-text-light"> => </span>
+										<span x-text="link.descr"></span>
+									</li>
+								</template>
+							</ul>
 						</div>
 					</div>
-				</section>
-			</div>
+				</div>
 
-			<div class="column">
-				<section class="content">
-					<h2 class="title is-2">Other projects</h2>
-
-					<section x-data="links">
-						<div class="terminal box is-dark">
-							<div class="header is-flex mb-4">
-								<span></span>
-								<span></span>
-								<span></span>
-							</div>
-
-							<div>
-								<p class="mb-2">
-									<span>$</span>
-									<span class="has-text-success">-> ~ </span>
-									<span>grep <span class="has-text-success">*.snisni.it</span></span>
-								</p>
-								<ul>
-									<template x-for="link in links">
-										<li>
-											<a class="has-text-link" x-bind:href="link.url" x-bind:target="link.name"
-												x-text="link.name"></a>
-											<span class="has-text-light"> => </span>
-											<span x-text="link.descr"></span>
-										</li>
-									</template>
-								</ul>
-							</div>
+				<div class="column">
+					<div class="terminal box is-dark" x-data="games">
+						<div class="header is-flex mb-4">
+							<span></span>
+							<span></span>
+							<span></span>
 						</div>
-					</section>
 
-					<section x-data="games">
-						<div class="terminal box is-dark">
-							<div class="header is-flex mb-4">
-								<span></span>
-								<span></span>
-								<span></span>
-							</div>
-
-							<div>
-								<p class="mb-2">
-									<span>$</span>
-									<span class="has-text-success">-> ~ </span>
-									<span>ls <span class="has-text-success">games/</span></span>
-								</p>
-								<ul>
-									<template x-for="link in games">
-										<li>
-											<a class="has-text-link" x-bind:href="link.url" x-bind:target="link.name"
-												x-text="link.name"></a>
-										</li>
-									</template>
-								</ul>
-							</div>
+						<div>
+							<p class="mb-2">
+								<span>$</span>
+								<span class="has-text-success">-> ~ </span>
+								<span>ls <span class="has-text-success">games/</span></span>
+							</p>
+							<ul>
+								<template x-for="link in games">
+									<li>
+										<a class="has-text-link" x-bind:href="link.url" x-bind:target="link.name"
+											x-text="link.name"></a>
+									</li>
+								</template>
+							</ul>
 						</div>
-					</section>
-				</section>
+					</div>
+				</div>
 			</div>
-		</div>
+		</section>
 	</main>
 
 	<footer class="section footer mt-6">
