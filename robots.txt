@@ -1,2 +1,5 @@
 User-Agent: *
-Disallow: /pages
+Allow: /
+Disallow: /pages/
+
+Sitemap: https://snisni.it/sitemap.xml
