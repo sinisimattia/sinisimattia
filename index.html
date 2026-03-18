@@ -48,29 +48,16 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="preconnect" href="https://cdn.jsdelivr.net">
-
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@latest/css/bulma.min.css">
 	<link rel="stylesheet" href="/custom.css">
 
 	<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-	<script src="/data.js"></script>
 </head>
 
 <body>
-	<header class="section">
-		<div class="hero is-small is-dark is-rounded banner">
-			<div class="hero-body">
-				<div class="container">
-					<div class="columns is-vcentered">
-						<div class="column is-auto has-text-centered">
-							<h1 class="title is-1"><strong>SNISNI</strong><span class="is-sr-only"> - Mattia Sinisi,
-									Full-Stack Web Developer</span></h1>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+	<header class="section container banner">
+		<span class="title">SNISNI</span>
+		<h1 class="is-sr-only">Mattia Sinisi —
+			Full-Stack Web Developer</h1>
 	</header>
 
 	<main class="section container">
@@ -99,15 +86,15 @@
 		<section>
 			<div class="columns">
 				<div class="column">
-					<div class="terminal box is-dark" x-data="links">
-						<div class="header is-flex mb-4">
+					<div class="terminal is-dark" x-data="links">
+						<div class="header">
 							<span></span>
 							<span></span>
 							<span></span>
 						</div>
 
 						<div>
-							<p class="mb-2">
+							<p class="line">
 								<span>$</span>
 								<span class="has-text-success">-> ~ </span>
 								<span>grep <span class="has-text-success">*.snisni.it</span></span>
@@ -121,18 +108,13 @@
 										<span x-text="link.descr"></span>
 									</li>
 								</template>
-								<noscript>
-									<li><a class="has-text-link" href="https://blog.snisni.it">blog.snisni.it</a><span
-											class="has-text-light"> => </span><span>A blog about programming OSS</span>
-									</li>
-								</noscript>
 							</ul>
 						</div>
 					</div>
 				</div>
 
 				<div class="column">
-					<div class="terminal box is-dark" x-data="games">
+					<div class="terminal is-dark" x-data="games">
 						<div class="header is-flex mb-4">
 							<span></span>
 							<span></span>
@@ -152,11 +134,6 @@
 											x-text="link.name"></a>
 									</li>
 								</template>
-								<noscript>
-									<li><a class="has-text-link" href="https://tris.snisni.it">Tic-Tac-Vue</a></li>
-									<li><a class="has-text-link" href="https://munchkin-counter.snisni.it">Munchkin
-											Counter</a></li>
-								</noscript>
 							</ul>
 						</div>
 					</div>
@@ -165,52 +142,60 @@
 		</section>
 	</main>
 
-	<footer class="section footer mt-6">
+	<footer class="section footer">
 		<div class="container">
-			<div class="level is-desktop">
-				<div class="level-left">
-					<div class="level-item">
-						<div>
-							<h3 class="title is-3">Do you have any cool ideas? 💡</h3>
-							<p class="subtitle is-5">Let's connect!</p>
-							<ul class="mt-3" x-data="{links: footerLinks}">
-								<template x-for="link in links">
-									<li>
-										<a x-bind:href="link.url" x-text="link.name" target="_blank"
-											class="has-text-weight-semibold" />
-									</li>
-								</template>
-								<noscript>
-									<li><a href="mailto:mattia@snisni.it"
-											class="has-text-weight-semibold">mattia@snisni.it</a></li>
-									<li><a href="https://www.linkedin.com/in/sinisimattia"
-											class="has-text-weight-semibold" target="_blank">LinkedIn</a></li>
-									<li><a href="https://github.com/sinisimattia" class="has-text-weight-semibold"
-											target="_blank">GitHub</a></li>
-								</noscript>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-				<div class="leve-right">
-					<div class="level-item">
-						<figure class="image is-128x128">
-							<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2V2ZzZ1b2drdjk1bmRhd21peG1qYjNwZGpiNGw2ODhpem1kajg3eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/DRnROoPNu7T15aFJHN/giphy.gif"
-								alt="Sparkling stars signifying creativity" />
-						</figure>
-					</div>
-				</div>
+			<div>
+				<h3 class="title">Do you have any cool ideas? 💡</h3>
+				<p class="subtitle is-5">Let's connect!</p>
+				<ul class="mt-3" x-data="{links: contactLinks}">
+					<template x-for="link in links">
+						<li>
+							<a x-bind:href="link.url" x-text="link.name" target="_blank"
+								class="has-text-weight-semibold" />
+						</li>
+					</template>
+				</ul>
 			</div>
 
-			<div x-data="{today: today}">
-				<div class="mt-6 has-text-centered">
-					<p class="is-block">Copyright &copy; <strong>Mattia Sinisi</strong> <span
-							x-text="today.getFullYear()"></span></p>
-				</div>
-			</div>
+			<p>Copyright &copy; <strong>Mattia Sinisi</strong></p>
 		</div>
 	</footer>
+
+	<script>
+		const links = [
+			{
+				name: "blog.snisni.it",
+				descr: "A blog about programming OSS",
+				url: "https://blog.snisni.it",
+			},
+		];
+
+		const games = [
+			{
+				name: "Tic-Tac-Vue",
+				url: "https://tris.snisni.it",
+			},
+			{
+				name: "Munchkin Counter",
+				url: "https://munchkin-counter.snisni.it",
+			},
+		];
+
+		const contactLinks = [
+			{
+				name: "💌 mattia@snisni.it",
+				url: "mailto:mattia@snisni.it",
+			},
+			{
+				name: "💼 LinkedIn",
+				url: "https://www.linkedin.com/in/sinisimattia"
+			},
+			{
+				name: "🐙 GitHub",
+				url: "https://github.com/sinisimattia"
+			},
+		];
+	</script>
 </body>
 
 </html>
