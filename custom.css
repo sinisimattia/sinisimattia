@@ -12,7 +12,6 @@
 	--color-body: var(--color-dark);
 	--color-strong: var(--color-dark);
 	--color-title: var(--color-dark);
-	--color-subtitle: rgb(127, 127, 127);
 	--color-link: rgb(0, 76, 255);
 	--color-link-light: rgb(0, 187, 255);
 	--color-success: #48c78e;
@@ -125,18 +124,6 @@ h3.title {
 	font-size: 2rem;
 }
 
-.subtitle {
-	font-size: 1.25rem;
-	font-weight: 400;
-	color: var(--color-subtitle);
-	line-height: 1.25;
-	margin-bottom: 0.5em;
-}
-
-.subtitle.is-5 {
-	font-size: 1.25rem;
-}
-
 .content {
 	line-height: 1.6;
 }
@@ -158,34 +145,12 @@ h3.title {
 /* Components */
 
 .footer {
-	background-color: var(--color-light);
+	background: linear-gradient(to bottom, var(--color-light), transparent);
 	margin-top: 1.5rem;
 }
 
 .footer .has-text-centered {
 	margin-top: 1.5rem;
-}
-
-.level {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-@media screen and (max-width: 768px) {
-	.level.is-desktop {
-		flex-direction: column;
-		align-items: flex-start;
-	}
-}
-
-.level-left {
-	display: flex;
-	flex-shrink: 0;
-}
-
-.level-item {
-	flex-shrink: 0;
 }
 
 .image {
@@ -270,23 +235,16 @@ h3.title {
 .terminal {
 	font-family: "Fira Code", monospace;
 	font-variant-ligatures: normal;
-	border: 1px solid var(--color-border);
+	border: 1px solid var(--color-dark);
 	border-radius: 15px;
 	padding: 1.25rem;
 	box-shadow: 0 20px 10px -15px var(--color-shadow);
 	margin-bottom: 15px;
-}
-
-.terminal.is-dark {
-	border: 1px solid var(--color-dark);
 	background-color: var(--color-dark);
-}
-
-.terminal.is-dark * {
 	color: var(--color-white);
 }
 
-.terminal.is-dark [href] {
+.terminal [href] {
 	color: var(--color-link-light) !important;
 }
 

@@ -86,7 +86,7 @@
 		<section>
 			<div class="columns">
 				<div class="column">
-					<div class="terminal is-dark" x-data="links">
+					<div class="terminal" x-data="links">
 						<div class="header">
 							<span></span>
 							<span></span>
@@ -114,7 +114,7 @@
 				</div>
 
 				<div class="column">
-					<div class="terminal is-dark" x-data="games">
+					<div class="terminal" x-data="games">
 						<div class="header is-flex mb-4">
 							<span></span>
 							<span></span>
@@ -145,8 +145,7 @@
 	<footer class="section footer">
 		<div class="container">
 			<div>
-				<h3 class="title">Do you have any cool ideas? 💡</h3>
-				<p class="subtitle is-5">Let's connect!</p>
+				<h2 class="title">Let's connect 💡</h2>
 				<ul class="mt-3" x-data="{links: contactLinks}">
 					<template x-for="link in links">
 						<li>
