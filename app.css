@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979&family=Fira+Code:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* Variables */
 :root {
@@ -13,7 +12,7 @@
 	--color-strong: var(--color-dark);
 	--color-title: var(--color-dark);
 	--color-link: rgb(0, 76, 255);
-	--color-link-light: rgb(0, 187, 255);
+	--color-link-light: rgb(100, 210, 255);
 	--color-success: #48c78e;
 	--color-shadow: rgba(0, 0, 0, 0.5);
 	--color-shadow-light: rgba(0, 0, 0, 0.2);
