@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Anti-Patterns"
 subtitle: "How you're screwing yourself over without even knowing it."
 date: 2021-09-21 12:57:19 +0000

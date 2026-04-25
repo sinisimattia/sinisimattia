@@ -1,3 +1,5 @@
 ---
-layout: home
+title: Blog
+layout: posts
+permalink: /blog/
 ---

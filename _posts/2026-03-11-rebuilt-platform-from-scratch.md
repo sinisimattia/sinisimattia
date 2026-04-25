@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "We rebuilt our platform from scratch: here's what we learnt"
 subtitle: "The design patterns, crucial decisions and approaches that made our new codebase cleaner and more easily maintainable"
 date: 2026-03-11 08:22:53 +0000

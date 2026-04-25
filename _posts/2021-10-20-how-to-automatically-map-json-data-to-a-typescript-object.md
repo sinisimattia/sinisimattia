@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "How to automatically map JSON data to a TypeScript object"
 subtitle: "Interpreting data doesn't have to be that hard. You can do it in a single line."
 date: 2021-10-20 10:20:00 +0000

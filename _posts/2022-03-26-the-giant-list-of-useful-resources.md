@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "The Giant List of useful resources"
 subtitle: "200+ resources for developers"
 date: 2022-03-26 13:14:32 +0000
