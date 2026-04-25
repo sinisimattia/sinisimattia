@@ -8,8 +8,7 @@ description: "I'm sure that many of us developers, to make our work easier, had 
 read_time: 6
 header:
   teaser: "https://cdn.hashnode.com/res/hashnode/image/upload/v1615910694511/X1PnVmMmJ.png"
-  overlay_image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1615910694511/X1PnVmMmJ.png"
-  overlay_filter: 0.5
+  image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1615910694511/X1PnVmMmJ.png"
 canonical_url: "https://blog.snisni.it/what-a-good-framework-should-do"
 tags:
   - "programming-ciovqvfcb008mb253jrczo9ye"

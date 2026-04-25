@@ -9,8 +9,7 @@ seo_title: "We rebuilt our codebase from scratch! Here's what we learnt"
 read_time: 22
 header:
   teaser: "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/z03mWBdAq5I/upload/e2d4a042df846220f48fe3df790005e0.jpeg"
-  overlay_image: "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/z03mWBdAq5I/upload/e2d4a042df846220f48fe3df790005e0.jpeg"
-  overlay_filter: 0.5
+  image: "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/z03mWBdAq5I/upload/e2d4a042df846220f48fe3df790005e0.jpeg"
 canonical_url: "https://blog.snisni.it/rebuilt-platform-from-scratch"
 ---
 

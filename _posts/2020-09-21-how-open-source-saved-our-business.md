@@ -8,8 +8,7 @@ description: "Introduction I'd like to start by giving a little background infor
 read_time: 2
 header:
   teaser: "https://cdn.hashnode.com/res/hashnode/image/upload/v1600696864089/LojFFo33i.png"
-  overlay_image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1600696864089/LojFFo33i.png"
-  overlay_filter: 0.5
+  image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1600696864089/LojFFo33i.png"
 canonical_url: "https://blog.snisni.it/how-open-source-saved-our-business"
 ---
 

@@ -9,8 +9,7 @@ description: "Introduction Interacting with JSON APIs, files, configs, etc. does
 read_time: 3
 header:
   teaser: "https://cdn.hashnode.com/res/hashnode/image/upload/v1632295482139/JoGRvoq0T.png"
-  overlay_image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1632295482139/JoGRvoq0T.png"
-  overlay_filter: 0.5
+  image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1632295482139/JoGRvoq0T.png"
 canonical_url: "https://blog.snisni.it/how-to-automatically-map-json-data-to-a-typescript-object"
 tags:
   - "typescript"

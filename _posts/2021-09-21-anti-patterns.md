@@ -10,8 +10,7 @@ seo_title: "An introduction to Anti-Patterns"
 read_time: 5
 header:
   teaser: "https://cdn.hashnode.com/res/hashnode/image/upload/v1622981965080/4jov40VMh.png"
-  overlay_image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1622981965080/4jov40VMh.png"
-  overlay_filter: 0.5
+  image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1622981965080/4jov40VMh.png"
 canonical_url: "https://blog.snisni.it/anti-patterns"
 tags:
   - "design-patterns"

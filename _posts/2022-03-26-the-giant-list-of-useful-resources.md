@@ -9,8 +9,7 @@ description: "200+ hand-selected resources for developers and other digital prof
 read_time: 9
 header:
   teaser: "https://cdn.hashnode.com/res/hashnode/image/upload/v1648291259318/QcxVlmgcd.png"
-  overlay_image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1648291259318/QcxVlmgcd.png"
-  overlay_filter: 0.5
+  image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1648291259318/QcxVlmgcd.png"
 canonical_url: "https://blog.snisni.it/the-giant-list-of-useful-resources"
 tags:
   - "resources"

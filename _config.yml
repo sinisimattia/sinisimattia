@@ -25,12 +25,6 @@ author:
     - label: "Website"
       icon: "fas fa-fw fa-globe"
       url: "https://snisni.it"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/sinisimattia"
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/sinisimattia"
 
 # Default front matter
 defaults:
@@ -39,7 +33,8 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
+      show_overlay_excerpt: false
       read_time: true
       share: true
       related: true
@@ -48,4 +43,5 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: true
+      author_profile: false
+      show_overlay_excerpt: false
