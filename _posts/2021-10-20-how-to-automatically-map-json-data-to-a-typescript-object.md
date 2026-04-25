@@ -7,8 +7,10 @@ last_modified_at: 2021-10-28 09:35:41 +0000
 author: "Mattia Sinisi"
 description: "Introduction Interacting with JSON APIs, files, configs, etc. doesn't have to be such a hassle. Keeping your code clean and maintainable can be difficult when using loosely-typed data that can change at any time and, as I've talked about in my previo..."
 read_time: 3
-image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1632295482139/JoGRvoq0T.png"
-cover_image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1632295482139/JoGRvoq0T.png"
+header:
+  teaser: "https://cdn.hashnode.com/res/hashnode/image/upload/v1632295482139/JoGRvoq0T.png"
+  overlay_image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1632295482139/JoGRvoq0T.png"
+  overlay_filter: 0.5
 canonical_url: "https://blog.snisni.it/how-to-automatically-map-json-data-to-a-typescript-object"
 tags:
   - "typescript"

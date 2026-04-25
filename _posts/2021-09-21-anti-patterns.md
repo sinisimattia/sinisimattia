@@ -8,8 +8,10 @@ author: "Mattia Sinisi"
 description: "Keep your code clean and maintainable by avoiding these common mistakes."
 seo_title: "An introduction to Anti-Patterns"
 read_time: 5
-image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1622981965080/4jov40VMh.png"
-cover_image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1622981965080/4jov40VMh.png"
+header:
+  teaser: "https://cdn.hashnode.com/res/hashnode/image/upload/v1622981965080/4jov40VMh.png"
+  overlay_image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1622981965080/4jov40VMh.png"
+  overlay_filter: 0.5
 canonical_url: "https://blog.snisni.it/anti-patterns"
 tags:
   - "design-patterns"

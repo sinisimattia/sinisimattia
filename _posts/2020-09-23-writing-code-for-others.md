@@ -6,8 +6,10 @@ last_modified_at: 2021-10-22 13:04:34 +0000
 author: "Mattia Sinisi"
 description: "Today I'd like to talk about collaboration in developer teams of all sizes. Introduction When everyone begins coding it's most likely that they'll learn and experiment all by themselves, that's perfectly fine, It's how I and almost anyone I know firs..."
 read_time: 3
-image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1600872384129/jvGNhnjKi.png"
-cover_image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1600872384129/jvGNhnjKi.png"
+header:
+  teaser: "https://cdn.hashnode.com/res/hashnode/image/upload/v1600872384129/jvGNhnjKi.png"
+  overlay_image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1600872384129/jvGNhnjKi.png"
+  overlay_filter: 0.5
 canonical_url: "https://blog.snisni.it/writing-code-for-others"
 tags:
   - "programming-cikxvrcrl00bwh453cmkktotz"

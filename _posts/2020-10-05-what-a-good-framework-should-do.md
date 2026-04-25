@@ -6,8 +6,10 @@ last_modified_at: 2021-03-16 16:05:03 +0000
 author: "Mattia Sinisi"
 description: "I'm sure that many of us developers, to make our work easier, had to use - or in some cases build - a variety of frameworks that aim to simplify our workflow. A framework, by definition, is a bit of support logic that helps the developer; following t..."
 read_time: 6
-image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1615910694511/X1PnVmMmJ.png"
-cover_image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1615910694511/X1PnVmMmJ.png"
+header:
+  teaser: "https://cdn.hashnode.com/res/hashnode/image/upload/v1615910694511/X1PnVmMmJ.png"
+  overlay_image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1615910694511/X1PnVmMmJ.png"
+  overlay_filter: 0.5
 canonical_url: "https://blog.snisni.it/what-a-good-framework-should-do"
 tags:
   - "programming-ciovqvfcb008mb253jrczo9ye"

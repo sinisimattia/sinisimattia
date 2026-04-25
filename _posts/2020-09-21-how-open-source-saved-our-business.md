@@ -6,8 +6,10 @@ last_modified_at: 2021-10-22 13:04:46 +0000
 author: "Mattia Sinisi"
 description: "Introduction I'd like to start by giving a little background information about my work experience. Like many developers trying to make a name for themselves, I too started as a freelancer; my work consisted of simple client applications or RESTful AP..."
 read_time: 2
-image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1600696864089/LojFFo33i.png"
-cover_image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1600696864089/LojFFo33i.png"
+header:
+  teaser: "https://cdn.hashnode.com/res/hashnode/image/upload/v1600696864089/LojFFo33i.png"
+  overlay_image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1600696864089/LojFFo33i.png"
+  overlay_filter: 0.5
 canonical_url: "https://blog.snisni.it/how-open-source-saved-our-business"
 ---
 

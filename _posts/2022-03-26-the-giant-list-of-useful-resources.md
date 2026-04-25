@@ -7,8 +7,10 @@ last_modified_at: 2022-05-10 16:04:32 +0000
 author: "Mattia Sinisi"
 description: "200+ hand-selected resources for developers and other digital professionals"
 read_time: 9
-image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1648291259318/QcxVlmgcd.png"
-cover_image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1648291259318/QcxVlmgcd.png"
+header:
+  teaser: "https://cdn.hashnode.com/res/hashnode/image/upload/v1648291259318/QcxVlmgcd.png"
+  overlay_image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1648291259318/QcxVlmgcd.png"
+  overlay_filter: 0.5
 canonical_url: "https://blog.snisni.it/the-giant-list-of-useful-resources"
 tags:
   - "resources"
