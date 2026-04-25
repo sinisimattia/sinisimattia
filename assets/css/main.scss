@@ -1,0 +1,15 @@
+---
+# Custom MM stylesheet — overrides typography to Work Sans + Fira Code.
+---
+
+@charset "utf-8";
+
+$serif: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$sans-serif: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$monospace: "Fira Code", Menlo, Consolas, Monaco, monospace;
+
+$global-font-family: $sans-serif;
+$header-font-family: $sans-serif;
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
