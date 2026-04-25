@@ -5,6 +5,8 @@ theme: minima
 #
 title: SNISNI
 
+permalink: /:slug/
+
 # author:
 #   name: Mattia Sinisi
 #   email: mattia@snisni.it
