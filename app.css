@@ -50,11 +50,7 @@ b {
 
 a {
 	color: var(--color-link);
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
+	text-decoration: none !important;
 }
 
 figure {
