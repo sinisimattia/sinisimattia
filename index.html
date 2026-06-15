@@ -2,6 +2,11 @@
 
 <html lang="en">
 
+<!--
+This file has everything bundled-in for MAXIMUM portability (but worse readability, I know)
+-->
+
+
 <head>
 	<meta charset="utf-8">
 	<title>Mattia Sinisi - Full-Stack Web Developer</title>
@@ -55,103 +60,72 @@
 
 <body>
 	<header class="section container banner">
-		<span class="title">SNISNI</span>
-		<h1 class="is-sr-only">Mattia Sinisi —
-			Full-Stack Web Developer</h1>
+		<small>Mattia Sinisi a.k.a.</small>
+		<h1 class="title">SNISNI</h1>
+		<summary class="subtitle">Full-Stack Web Developer, Artist, Photographer & Blogger</summary>
+		<span class="is-sr-only">Mattia Sinisi —
+			Full-Stack Web Developer</span>
 	</header>
 
 	<main class="section container">
-		<section class="content">
-			<p>My name is <strong>Mattia Sinisi</strong> (a.k.a. SNISNI).</p>
-
-			<p> I'm a <b>Full-Stack Web Developer</b> who's
-				always
-				experimenting and trying new stuff.</p>
-
-			<p>Here's a breakdown of the <strong>tech I work with</strong>, organized by area:</p>
-
-			<h3 class="skills-heading">Languages &amp; Frameworks</h3>
-			<ul>
-				<li>📒 <strong>JavaScript (+ TypeScript)</strong>: Vue, Nuxt, Svelte, Sapper, Nest, and most of
-					the popular build tools</li>
-				<li>🐘 <strong>PHP</strong>: Laravel, Symfony</li>
-				<li>💎 <strong>Ruby</strong>: Ruby On Rails, Jekyll</li>
-				<li>🧰 <strong>C#</strong>: ASP.NET, .net Core, dotnet, .NET Framework or however it will be
-					called next</li>
-				<li>🐹 <strong>Go</strong>: Hugo</li>
-			</ul>
-
-			<h3 class="skills-heading">Tools &amp; Infrastructure</h3>
-			<ul>
-				<li>🐳 <strong>Docker</strong></li>
-				<li>🟧 <strong>AWS Cloud</strong>: Infrastructure design and CDK development</li>
-				<li>🐰 <strong>RabbitMQ</strong>: message broker for async workflows</li>
-			</ul>
-
-			<h3 class="skills-heading">Concepts, Architectures &amp; Design Patterns</h3>
-			<ul>
-				<li>📡 <strong>Event-Driven Design</strong>: messaging and async workflows</li>
-				<li>🧭 <strong>Domain-Driven Design</strong>: modeling complex business domains</li>
-				<li>🔌 <strong>RESTful API Design</strong>: clean, resource-oriented HTTP APIs</li>
-				<li>🕸️ <strong>GraphQL</strong>: flexible, schema-driven APIs</li>
-			</ul>
+		<section x-data="{ work: work }">
+			<h2 class="title">Work</h2>
+			<div class="columns">
+				<template x-for="group in work" :key="group.title">
+					<div class="column">
+						<div class="skill-card">
+							<h3 class="skill-card-title" x-text="group.title"></h3>
+							<ul class="skill-list">
+								<template x-for="skill in group.skills" :key="skill.name">
+									<li>
+										<span class="skill-emoji" x-text="skill.emoji"></span>
+										<span class="tag" x-text="skill.name"></span>
+										<template x-if="skill.description">
+											<span class="skill-descr" x-text="skill.description"></span>
+										</template>
+									</li>
+								</template>
+							</ul>
+						</div>
+					</div>
+				</template>
+			</div>
 		</section>
 
-		<section>
+		<section x-data="{ extras: extras }">
+			<h2 class="title">Extras</h2>
+
 			<div class="columns">
-				<div class="column">
-					<div class="terminal" x-data="links">
-						<div class="header">
-							<span></span>
-							<span></span>
-							<span></span>
-						</div>
+				<template x-for="card in extras" :key="card.title">
+					<div class="column">
+						<div class="brand-card" x-bind:class="card.variant">
+							<div class="card-body">
+								<div class="card-emoji" x-text="card.emoji"></div>
+								<p class="eyebrow" x-text="card.eyebrow"></p>
+								<h3 class="card-title" x-text="card.title"></h3>
+								<p x-text="card.description"></p>
+							</div>
 
-						<div>
-							<p class="line">
-								<span>$</span>
-								<span class="has-text-success">-> ~ </span>
-								<span>grep <span class="has-text-success">*.snisni.it</span></span>
-							</p>
-							<ul>
-								<template x-for="link in links">
-									<li>
-										<a class="has-text-link" x-bind:href="link.url" x-bind:target="link.name"
-											x-text="link.name"></a>
-										<span class="has-text-light"> => </span>
-										<span x-text="link.descr"></span>
-									</li>
-								</template>
-							</ul>
+							<!-- Card with a single call-to-action link -->
+							<template x-if="card.cta">
+								<a class="pill" x-bind:class="{ 'is-solid': card.cta.solid }" x-bind:href="card.cta.url"
+									target="_blank" rel="noopener" x-text="card.cta.label"></a>
+							</template>
+
+							<!-- Card with a list of links -->
+							<template x-if="card.links">
+								<ul class="pill-list">
+									<template x-for="link in card.links" :key="link.url">
+										<li>
+											<a class="pill" x-bind:href="link.url" target="_blank" rel="noopener"
+												x-text="link.name"></a>
+										</li>
+									</template>
+								</ul>
+							</template>
 						</div>
 					</div>
-				</div>
-
-				<div class="column">
-					<div class="terminal" x-data="games">
-						<div class="header is-flex mb-4">
-							<span></span>
-							<span></span>
-							<span></span>
-						</div>
-
-						<div>
-							<p class="mb-2">
-								<span>$</span>
-								<span class="has-text-success">-> ~ </span>
-								<span>ls <span class="has-text-success">games/</span></span>
-							</p>
-							<ul>
-								<template x-for="link in games">
-									<li>
-										<a class="has-text-link" x-bind:href="link.url" x-bind:target="link.name"
-											x-text="link.name"></a>
-									</li>
-								</template>
-							</ul>
-						</div>
-					</div>
-				</div>
+				</template>
 			</div>
 		</section>
 	</main>
@@ -175,22 +149,68 @@
 	</footer>
 
 	<script>
-		const links = [
+		// "Work" section: each entry is a skill-card column. Edit a group's
+		// `title` or its `skills` (emoji + name, plus an optional description).
+		const work = [
 			{
-				name: "blog.snisni.it",
-				descr: "A blog about programming OSS",
-				url: "https://blog.snisni.it",
+				title: "Languages & Frameworks",
+				skills: [
+					{ emoji: "📒", name: "JavaScript (+ TypeScript)", description: "Vue, Nuxt, Svelte, Sapper, Nest, and most of the popular build tools" },
+					{ emoji: "🐘", name: "PHP", description: "Laravel, Symfony" },
+					{ emoji: "💎", name: "Ruby", description: "Ruby On Rails, Jekyll" },
+					{ emoji: "🧰", name: "C#", description: "ASP.NET, .net Core, dotnet, .NET Framework or however it will be called next" },
+					{ emoji: "🐹", name: "Go", description: "Hugo" },
+				],
+			},
+			{
+				title: "Tools & Infrastructure",
+				skills: [
+					{ emoji: "🐳", name: "Docker" },
+					{ emoji: "🟧", name: "AWS Cloud", description: "Infrastructure design and CDK development" },
+					{ emoji: "🐰", name: "RabbitMQ", description: "message broker for async workflows" },
+				],
+			},
+			{
+				title: "Concepts, Architectures & Design Patterns",
+				skills: [
+					{ emoji: "📡", name: "Event-Driven Design", description: "messaging and async workflows" },
+					{ emoji: "🧭", name: "Domain-Driven Design", description: "modeling complex business domains" },
+					{ emoji: "🔌", name: "RESTful API Design", description: "clean, resource-oriented HTTP APIs" },
+					{ emoji: "🕸️", name: "GraphQL", description: "flexible, schema-driven APIs" },
+				],
 			},
 		];
 
-		const games = [
+		// "Extras" section cards. To add or edit a card, just tweak this array —
+		// `variant` is the brand-card color (is-primary, is-dark, is-link).
+		// Use `cta` for a single button or `links` for a list.
+		const extras = [
 			{
-				name: "Tic-Tac-Vue",
-				url: "https://tris.snisni.it",
+				variant: "is-primary",
+				emoji: "📝",
+				eyebrow: "From the blog",
+				title: "The Push",
+				description: "Thoughts on programming, open source, and the things I'm experimenting with.",
+				cta: { label: "Read the blog →", url: "https://blog.snisni.it", solid: true },
 			},
 			{
-				name: "Munchkin Counter",
-				url: "https://munchkin-counter.snisni.it",
+				variant: "is-dark",
+				emoji: "🎮",
+				eyebrow: "Things I built for fun",
+				title: "Games & Toys",
+				description: "Little experiments you can actually play with.",
+				links: [
+					{ name: "Tic-Tac-Vue", url: "https://tris.snisni.it" },
+					{ name: "Munchkin Counter", url: "https://munchkin-counter.snisni.it" },
+				],
+			},
+			{
+				variant: "is-link",
+				emoji: "📷",
+				eyebrow: "Behind the lens",
+				title: "Photography",
+				description: "A growing collection of shots I've taken, free to use over on Pexels.",
+				cta: { label: "View on Pexels →", url: "https://www.pexels.com/@mattia-sinisi-173186222/", solid: false },
 			},
 		];
 

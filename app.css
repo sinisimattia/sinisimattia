@@ -12,17 +12,7 @@
 	--color-strong: var(--color-dark);
 	--color-title: var(--color-dark);
 	--color-link: rgb(0, 76, 255);
-	--color-link-light: rgb(100, 210, 255);
-	--color-success: #48c78e;
 	--color-shadow: rgba(0, 0, 0, 0.5);
-	--color-shadow-light: rgba(0, 0, 0, 0.2);
-	--color-border: rgba(128, 128, 128, 0.5);
-	--color-dot-red-start: rgb(255, 0, 0);
-	--color-dot-red-end: rgb(255, 81, 0);
-	--color-dot-yellow-start: rgb(255, 145, 0);
-	--color-dot-yellow-end: rgb(255, 230, 0);
-	--color-dot-green-start: rgb(6, 184, 0);
-	--color-dot-green-end: rgb(0, 255, 85);
 }
 
 /* Base / Reset */
@@ -105,6 +95,11 @@ h6 {
 	padding: 0.75rem;
 }
 
+/* Breathing room between stacked sections */
+main > section + section {
+	margin-top: 3.5rem;
+}
+
 /* Typography */
 .title {
 	font-family: "Work Sans", sans-serif;
@@ -115,74 +110,69 @@ h6 {
 	margin-bottom: 0.5em;
 }
 
-h3.title {
-	font-size: 2rem;
-}
-
 .content {
 	line-height: 1.6;
-}
-
-.skills-heading {
-	font-family: "Work Sans", sans-serif;
-	font-size: 1.25rem;
-	font-weight: 700;
-	color: var(--color-title);
-	margin-top: 1.5em;
-	margin-bottom: 0.5em;
 }
 
 .content p {
 	margin-bottom: 1em;
 }
 
-.content ul {
-	margin-bottom: 1em;
-	padding-left: 2em;
-	list-style: disc;
+/* Skill category cards */
+.skill-card {
+	height: 100%;
+	background: var(--color-light);
+	border-radius: 16px;
+	padding: 1.5rem 1.5rem 1.75rem;
+	box-shadow: 0 10px 25px -18px var(--color-shadow);
 }
 
-.content li + li {
-	margin-top: 0.25em;
+.skill-card-title {
+	font-family: "Work Sans", sans-serif;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: var(--color-title);
+	margin: 0 0 1.25rem;
 }
 
-/* Components */
+.skill-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
 
+.skill-list li {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0.4rem;
+}
+
+.skill-list li + li {
+	margin-top: 0.9rem;
+}
+
+.skill-emoji {
+	font-size: 1.1rem;
+}
+
+.skill-descr {
+	flex: 1 1 100%;
+	padding-left: 1.6rem;
+	color: var(--color-gray);
+	font-size: 0.9rem;
+}
+
+/* Skill name */
+.tag {
+	font-weight: 700;
+	color: var(--color-title);
+}
+
+/* Footer */
 .footer {
 	background: linear-gradient(to bottom, var(--color-light), transparent);
 	margin-top: 1.5rem;
-}
-
-.footer .has-text-centered {
-	margin-top: 1.5rem;
-}
-
-.image {
-	display: block;
-}
-
-.image.is-128x128 {
-	width: 128px;
-	height: 128px;
-}
-
-.image.is-128x128 img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-/* Utility: Color */
-.has-text-success {
-	color: var(--color-success) !important;
-}
-
-.has-text-link {
-	color: var(--color-link) !important;
-}
-
-.has-text-light {
-	color: var(--color-light) !important;
 }
 
 /* Utility: Text */
@@ -190,30 +180,9 @@ h3.title {
 	font-weight: 600;
 }
 
-.has-text-centered {
-	text-align: center;
-}
-
-/* Utility: Display */
-.is-block {
-	display: block;
-}
-
-.is-flex {
-	display: flex;
-}
-
 /* Utility: Spacing */
 .mt-3 {
 	margin-top: 0.75rem;
-}
-
-.mb-2 {
-	margin-bottom: 0.5rem;
-}
-
-.mb-4 {
-	margin-bottom: 1rem;
 }
 
 /* Banner */
@@ -227,88 +196,100 @@ h3.title {
 	font-size: 50px;
 }
 
-/* Colorful gradient text */
-.colorful {
-	background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary));
-	background-clip: text;
-	-webkit-background-clip: text;
-	color: transparent !important;
-}
-
-/* Terminal */
-.terminal {
-	font-family: "Fira Code", monospace;
-	font-variant-ligatures: normal;
-	border: 1px solid var(--color-dark);
-	border-radius: 15px;
-	padding: 1.25rem;
-	box-shadow: 0 20px 10px -15px var(--color-shadow);
-	margin-bottom: 15px;
-	background-color: var(--color-dark);
-	color: var(--color-white);
-}
-
-.terminal [href] {
-	color: var(--color-link-light) !important;
-}
-
-.terminal .header {
+/* Branded section cards */
+.brand-card {
 	display: flex;
-	margin-bottom: 10px;
+	flex-direction: column;
+	height: 100%;
+	border-radius: 20px;
+	padding: 2rem;
+	box-shadow: 0 20px 30px -15px var(--color-shadow);
+	color: var(--color-white);
+	overflow: hidden;
 }
 
-.terminal .line {
-	margin-bottom: 5px;
+.brand-card .eyebrow {
+	font-family: "Fira Code", monospace;
+	font-size: 0.8rem;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	opacity: 0.85;
+	margin-bottom: 0.5rem;
 }
 
-.terminal .header span {
-	background: rgba(255, 255, 255, 0.2); /* translucent white — not a palette color */
-	margin-inline-end: 10px;
-	padding: 2px;
-	display: block;
-	height: 13px;
-	width: 13px;
-	border-radius: 100%;
+.brand-card .card-title {
+	font-family: "Work Sans", sans-serif;
+	font-size: 1.75rem;
+	font-weight: 700;
+	color: var(--color-white);
+	margin: 0 0 0.5rem;
+	line-height: 1.1;
 }
 
-.terminal .header span:nth-child(1) {
-	background: linear-gradient(var(--color-dot-red-start), var(--color-dot-red-end));
+.brand-card .card-emoji {
+	font-size: 2.5rem;
+	line-height: 1;
+	margin-bottom: 0.75rem;
 }
 
-.terminal .header span:nth-child(2) {
-	background: linear-gradient(var(--color-dot-yellow-start), var(--color-dot-yellow-end));
+.brand-card p {
+	margin: 0 0 1.5rem;
+	opacity: 0.95;
 }
 
-.terminal .header span:nth-child(3) {
-	background: linear-gradient(var(--color-dot-green-start), var(--color-dot-green-end));
+.brand-card .card-body {
+	flex: 1 1 auto;
 }
 
-.terminal ul {
-	list-style: circle;
-	padding-left: 30px;
-	margin-top: none !important;
-	margin-bottom: 5px;
+.brand-card.is-primary {
+	background-image: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
 }
 
-/* Card */
-.card {
-	border-bottom-left-radius: 20px;
-	border-bottom-right-radius: 20px;
+.brand-card.is-dark {
+	background-color: var(--color-dark);
+	background-image: linear-gradient(135deg, rgb(40, 40, 55), var(--color-dark));
 }
 
-/* Project logo */
-.project-logo {
-	filter: drop-shadow(0 5px 7px var(--color-shadow-light));
+.brand-card.is-link {
+	background-image: linear-gradient(135deg, var(--color-link), rgb(0, 180, 216));
 }
 
-/********************************************************************************/
-.with-pattern {
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='rgba(255, 255, 255, .2)' fill-opacity='0.4'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+/* Pill button used inside brand cards */
+.pill {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	padding: 0.55rem 1.1rem;
+	border-radius: 999px;
+	font-weight: 600;
+	background: rgba(255, 255, 255, 0.18);
+	color: var(--color-white) !important;
+	border: 1px solid rgba(255, 255, 255, 0.35);
+	transition: background 0.15s ease, transform 0.15s ease;
 }
 
-#scene3d {
-	border: 1px dashed var(--color-gray);
-	border-radius: 10px;
+.pill:hover {
+	background: rgba(255, 255, 255, 0.3);
+	transform: translateY(-2px);
+}
+
+.brand-card.is-primary .pill.is-solid {
+	background: var(--color-white);
+	color: var(--color-primary) !important;
+	border-color: var(--color-white);
+}
+
+.pill-list {
+	list-style: none !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem;
+}
+
+.pill-list li + li {
+	margin-top: 0 !important;
 }
 
 /* Screen reader only */
