@@ -123,6 +123,15 @@ h3.title {
 	line-height: 1.6;
 }
 
+.skills-heading {
+	font-family: "Work Sans", sans-serif;
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: var(--color-title);
+	margin-top: 1.5em;
+	margin-bottom: 0.5em;
+}
+
 .content p {
 	margin-bottom: 1em;
 }
