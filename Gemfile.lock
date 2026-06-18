@@ -265,9 +265,6 @@ DEPENDENCIES
   github-pages
   google-protobuf (< 3.25)
   jekyll-feed
-  jekyll-include-cache
-  jekyll-paginate
-  jekyll-remote-theme
   jekyll-seo-tag
   jekyll-sitemap
   webrick (~> 1.7)

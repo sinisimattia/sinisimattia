@@ -1,30 +1,18 @@
-# Theme
-remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "default"
-
 # Site
-title: SNISNI
+title: "The Push"
+description: "Thoughts on programming, open source, and the things I'm experimenting with."
+url: "https://snisni.it"
+lang: en
+author:
+  name: "Mattia Sinisi"
+  nickname: "SNISNI"
 permalink: /blog/:slug/
 
-# Plugins (required/recommended by Minimal Mistakes)
+# Plugins
 plugins:
-  - jekyll-remote-theme
-  - jekyll-include-cache
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-paginate
-
-# Author profile (used by author_profile sidebar)
-author:
-  name: "Mattia Sinisi"
-  avatar: "/images/preview.png"
-  bio: "Full-Stack Web Developer"
-  location: "Italy"
-  links:
-    - label: "Website"
-      icon: "fas fa-fw fa-globe"
-      url: "https://snisni.it"
 
 # Default front matter
 defaults:
@@ -32,16 +20,4 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
-      author_profile: false
-      show_overlay_excerpt: false
-      read_time: true
-      share: true
-      related: true
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      author_profile: false
-      show_overlay_excerpt: false
+      layout: post

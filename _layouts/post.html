@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<article class="content article">
+	<h1 class="title">{{ page.title }}</h1>
+	{% if page.subtitle %}<p class="article-subtitle">{{ page.subtitle }}</p>{% endif %}
+	{% include post-meta.html post=page %}
+	{% if page.header.image %}<img class="article-image" src="{{ page.header.image }}" alt="{{ page.title }}">{% endif %}
+	{{ content }}
+	{% include further-reading.html post=page %}
+	<p class="article-back"><a href="/blog">← All articles</a></p>
+</article>

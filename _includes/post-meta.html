@@ -1,0 +1,4 @@
+<p class="post-meta">
+	<time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: "%B %-d, %Y" }}</time>
+	{% if include.post.read_time %} · {{ include.post.read_time }} min read{% endif %}
+</p>

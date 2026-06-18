@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "What a good framework SHOULD do"
 date: 2020-10-05 19:49:31 +0000
 last_modified_at: 2021-03-16 16:05:03 +0000

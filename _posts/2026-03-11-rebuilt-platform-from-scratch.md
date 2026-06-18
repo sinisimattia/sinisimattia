@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "We rebuilt our platform from scratch: here's what we learnt"
 subtitle: "The design patterns, crucial decisions and approaches that made our new codebase cleaner and more easily maintainable"
 date: 2026-03-11 08:22:53 +0000
@@ -11,6 +11,12 @@ header:
   teaser: "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/z03mWBdAq5I/upload/e2d4a042df846220f48fe3df790005e0.jpeg"
   image: "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/z03mWBdAq5I/upload/e2d4a042df846220f48fe3df790005e0.jpeg"
 canonical_url: "https://blog.snisni.it/rebuilt-platform-from-scratch"
+related:
+  - _posts/2021-09-21-anti-patterns.md
+  - _posts/2020-09-23-writing-code-for-others.md
+further_links:
+  - title: "A Philosophy of Software Design"
+    url: "https://www.goodreads.com/book/show/39996759-a-philosophy-of-software-design"
 ---
 
 # Preamble: A bit of context on where I am in my career
@@ -413,13 +419,3 @@ When I first joined I was frustrated at how things were managed both in code and
 I, like everyone else in this world and especially in this line of work, don’t know what the future holds, but I’m ready to face it, to predict it, to build it, and to learn from it.
 
 Thank you for sharing a bit of your time with me, I hope to ave made it worth your while.
-
-* * *
-
-# Further reading
-
-*   [Philosophy of Software Design](https://www.goodreads.com/book/show/39996759-a-philosophy-of-software-design)
-    
-*   [An introduction to Anti-Patterns](https://blog.snisni.it/anti-patterns)
-    
-*   [Writing code for others](https://blog.snisni.it/writing-code-for-others)

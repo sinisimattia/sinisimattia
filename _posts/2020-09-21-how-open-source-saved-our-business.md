@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "How open source saved our business"
 date: 2020-09-21 13:58:07 +0000
 last_modified_at: 2021-10-22 13:04:46 +0000

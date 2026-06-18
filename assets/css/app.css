@@ -218,9 +218,9 @@ main > section + section {
 }
 
 .brand-card .card-title {
-	font-family: "Work Sans", sans-serif;
+	font-family: "Climate Crisis", sans-serif;
 	font-size: 1.75rem;
-	font-weight: 700;
+	font-weight: normal;
 	color: var(--color-white);
 	margin: 0 0 0.5rem;
 	line-height: 1.1;
@@ -265,7 +265,9 @@ main > section + section {
 	background: rgba(255, 255, 255, 0.18);
 	color: var(--color-white) !important;
 	border: 1px solid rgba(255, 255, 255, 0.35);
-	transition: background 0.15s ease, transform 0.15s ease;
+	transition:
+		background 0.15s ease,
+		transform 0.15s ease;
 }
 
 .pill:hover {

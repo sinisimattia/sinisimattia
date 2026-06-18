@@ -1,0 +1,9 @@
+{% if include.post.related or include.post.further_links %}
+<section class="further-reading">
+	<h2 class="title">Further reading</h2>
+	<ul class="post-list">
+		{% for path in include.post.related %}{% assign rp = site.posts | where: "path", path | first %}{% if rp %}{% include post-list-item.html post=rp %}{% endif %}{% endfor %}
+		{% for link in include.post.further_links %}{% include external-card.html link=link %}{% endfor %}
+	</ul>
+</section>
+{% endif %}

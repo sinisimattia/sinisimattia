@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "Writing code for others"
 date: 2020-09-23 13:51:33 +0000
 last_modified_at: 2021-10-22 13:04:34 +0000
