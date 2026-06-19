@@ -11,7 +11,6 @@ read_time: 5
 header:
   teaser: "https://cdn.hashnode.com/res/hashnode/image/upload/v1622981965080/4jov40VMh.png"
   image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1622981965080/4jov40VMh.png"
-canonical_url: "https://blog.snisni.it/anti-patterns"
 tags:
   - "design-patterns"
   - "startups"

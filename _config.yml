@@ -12,7 +12,6 @@ permalink: /blog/:slug/
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-sitemap
 
 # Default front matter
 defaults:

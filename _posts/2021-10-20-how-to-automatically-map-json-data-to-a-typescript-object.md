@@ -10,7 +10,6 @@ read_time: 3
 header:
   teaser: "https://cdn.hashnode.com/res/hashnode/image/upload/v1632295482139/JoGRvoq0T.png"
   image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1632295482139/JoGRvoq0T.png"
-canonical_url: "https://blog.snisni.it/how-to-automatically-map-json-data-to-a-typescript-object"
 tags:
   - "typescript"
   - "javascript"

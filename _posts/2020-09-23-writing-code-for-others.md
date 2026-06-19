@@ -9,7 +9,6 @@ read_time: 3
 header:
   teaser: "https://cdn.hashnode.com/res/hashnode/image/upload/v1600872384129/jvGNhnjKi.png"
   image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1600872384129/jvGNhnjKi.png"
-canonical_url: "https://blog.snisni.it/writing-code-for-others"
 tags:
   - "programming-cikxvrcrl00bwh453cmkktotz"
   - "coding"

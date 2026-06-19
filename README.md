@@ -8,7 +8,7 @@
 
   <h5>
     <a href="https://snisni.it">Website</a> •
-    <a href="https://blog.snisni.it">Blog</a> •
+    <a href="https://snisni.it/blog/">Blog</a> •
     <a href="https://projects.snisni.it/">Curriculum</a> 
   </h5>
 </div>

@@ -10,7 +10,6 @@ read_time: 9
 header:
   teaser: "https://cdn.hashnode.com/res/hashnode/image/upload/v1648291259318/QcxVlmgcd.png"
   image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1648291259318/QcxVlmgcd.png"
-canonical_url: "https://blog.snisni.it/the-giant-list-of-useful-resources"
 tags:
   - "resources"
   - "web-development"

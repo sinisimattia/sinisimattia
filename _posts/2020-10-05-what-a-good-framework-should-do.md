@@ -9,7 +9,6 @@ read_time: 6
 header:
   teaser: "https://cdn.hashnode.com/res/hashnode/image/upload/v1615910694511/X1PnVmMmJ.png"
   image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1615910694511/X1PnVmMmJ.png"
-canonical_url: "https://blog.snisni.it/what-a-good-framework-should-do"
 tags:
   - "programming-ciovqvfcb008mb253jrczo9ye"
   - "framework"
@@ -66,7 +65,7 @@ Using a framework should give you an advantage, not slow you down or make some a
 
 As a framework becomes more and more advanced it will expose more and more methods and parts of its API, this often translates into unending piles of function names and configuration parameters.
 
-At this point, more than ever, the developer could begin to feel overwhelmed by all this functionality if it's not [presented in the right way](https://blog.snisni.it/writing-code-for-others).
+At this point, more than ever, the developer could begin to feel overwhelmed by all this functionality if it's not [presented in the right way](/blog/writing-code-for-others/).
 
 At this point, the way you write in and of itself must be clear, self-documenting even! Let me share with you a perfect example of this from the beautifully cohesive [Laravel](https://laravel.com):
 

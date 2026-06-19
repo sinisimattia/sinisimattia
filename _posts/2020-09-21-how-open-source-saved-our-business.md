@@ -9,7 +9,6 @@ read_time: 2
 header:
   teaser: "https://cdn.hashnode.com/res/hashnode/image/upload/v1600696864089/LojFFo33i.png"
   image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1600696864089/LojFFo33i.png"
-canonical_url: "https://blog.snisni.it/how-open-source-saved-our-business"
 ---
 
 ## Introduction
