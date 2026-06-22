@@ -9,7 +9,7 @@
 
 ___
 
-I'm currently working on building free, open and inclusive online platforms for managing anything from a blog to a school.
+I'm currently working on building free, open and inclusive online platforms and tools.
 
 Have any cool ideas? **Let's talk about them!** I'm always open to collaboration on all sorts of projects.
 
