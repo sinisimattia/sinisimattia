@@ -1,0 +1,30 @@
+# "Extras" section cards, rendered by _includes/home-extras.html.
+# `variant` is the brand-card color (is-primary, is-dark, is-link). Use `cta`
+# for a single button or `links` for a list. The blog card sets `blog: true`,
+# so its title/description and cta url come from `site.blog.*` in _config.yml.
+- variant: "is-primary"
+  emoji: "📝"
+  eyebrow: "From the blog"
+  blog: true
+  cta:
+    label: "Read the blog →"
+    solid: true
+- variant: "is-dark"
+  emoji: "🎮"
+  eyebrow: "Things I built for fun"
+  title: "Games & Toys"
+  description: "Little experiments you can actually play with."
+  links:
+    - name: "Tic-Tac-Vue"
+      url: "https://tris.snisni.it"
+    - name: "Munchkin Counter"
+      url: "https://munchkin-counter.snisni.it"
+- variant: "is-link"
+  emoji: "📷"
+  eyebrow: "Behind the lens"
+  title: "Photography"
+  description: "A growing collection of shots I've taken, free to use over on Pexels."
+  cta:
+    label: "View on Pexels →"
+    url: "https://www.pexels.com/@mattia-sinisi-173186222/"
+    solid: false

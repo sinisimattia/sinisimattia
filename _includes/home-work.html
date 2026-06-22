@@ -1,0 +1,23 @@
+<section>
+	<h2 class="title">Work</h2>
+	<div class="columns">
+		{%- for group in site.data.work %}
+		<div class="column">
+			<div class="skill-card">
+				<h3 class="skill-card-title">{{ group.title }}</h3>
+				<ul class="skill-list">
+					{%- for skill in group.skills %}
+					<li>
+						<span class="skill-emoji">{{ skill.emoji }}</span>
+						<span class="tag">{{ skill.name }}</span>
+						{%- if skill.description %}
+						<span class="skill-descr">{{ skill.description }}</span>
+						{%- endif %}
+					</li>
+					{%- endfor %}
+				</ul>
+			</div>
+		</div>
+		{%- endfor %}
+	</div>
+</section>

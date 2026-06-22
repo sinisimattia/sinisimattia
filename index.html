@@ -6,9 +6,9 @@ layout: null
 <html lang="{{ site.lang | default: 'en' }}">
 
 <!--
-This file has everything bundled-in for MAXIMUM portability (but worse readability, I know).
-Site identity (name, description, url, author, blog) is sourced from _config.yml; the
-content arrays at the bottom of <body> are intentionally kept inline.
+Site identity (name, description, url, author, blog) is sourced from _config.yml.
+Section content lives in _data/{work,extras,contact}.yml and is rendered server-side
+by the _includes/home-*.html components below — no JavaScript involved.
 -->
 
 
@@ -59,8 +59,6 @@ content arrays at the bottom of <body> are intentionally kept inline.
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="/assets/css/app.css">
-
-	<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
 <body>
@@ -73,168 +71,11 @@ content arrays at the bottom of <body> are intentionally kept inline.
 	</header>
 
 	<main class="section container">
-		<section x-data="{ work: work }">
-			<h2 class="title">Work</h2>
-			<div class="columns">
-				<template x-for="group in work" :key="group.title">
-					<div class="column">
-						<div class="skill-card">
-							<h3 class="skill-card-title" x-text="group.title"></h3>
-							<ul class="skill-list">
-								<template x-for="skill in group.skills" :key="skill.name">
-									<li>
-										<span class="skill-emoji" x-text="skill.emoji"></span>
-										<span class="tag" x-text="skill.name"></span>
-										<template x-if="skill.description">
-											<span class="skill-descr" x-text="skill.description"></span>
-										</template>
-									</li>
-								</template>
-							</ul>
-						</div>
-					</div>
-				</template>
-			</div>
-		</section>
-
-		<section x-data="{ extras: extras }">
-			<h2 class="title">Extras</h2>
-
-			<div class="columns">
-				<template x-for="card in extras" :key="card.title">
-					<div class="column">
-						<div class="brand-card" x-bind:class="card.variant">
-							<div class="card-body">
-								<div class="card-emoji" x-text="card.emoji"></div>
-								<p class="eyebrow" x-text="card.eyebrow"></p>
-								<h3 class="card-title" x-text="card.title"></h3>
-								<p x-text="card.description"></p>
-							</div>
-
-							<!-- Card with a single call-to-action link -->
-							<template x-if="card.cta">
-								<a class="pill" x-bind:class="{ 'is-solid': card.cta.solid }" x-bind:href="card.cta.url"
-									x-text="card.cta.label"></a>
-							</template>
-
-							<!-- Card with a list of links -->
-							<template x-if="card.links">
-								<ul class="pill-list">
-									<template x-for="link in card.links" :key="link.url">
-										<li>
-											<a class="pill" x-bind:href="link.url" x-text="link.name"></a>
-										</li>
-									</template>
-								</ul>
-							</template>
-						</div>
-					</div>
-				</template>
-			</div>
-		</section>
+		{% include home-work.html %}
+		{% include home-extras.html %}
 	</main>
 
-	<footer class="section footer">
-		<div class="container">
-			<div>
-				<h2 class="title">Let's connect 💡</h2>
-				<ul class="mt-3" x-data="{links: contactLinks}">
-					<template x-for="link in links">
-						<li>
-							<a x-bind:href="link.url" x-text="link.name"
-								class="has-text-weight-semibold" />
-						</li>
-					</template>
-				</ul>
-			</div>
-
-			<p>Copyright &copy; <strong>Mattia Sinisi</strong></p>
-		</div>
-	</footer>
-
-	<script>
-		// "Work" section: each entry is a skill-card column. Edit a group's
-		// `title` or its `skills` (emoji + name, plus an optional description).
-		const work = [
-			{
-				title: "Languages & Frameworks",
-				skills: [
-					{ emoji: "📒", name: "JavaScript (+ TypeScript)", description: "Vue, Nuxt, Svelte, Sapper, Nest, and most of the popular build tools" },
-					{ emoji: "🐘", name: "PHP", description: "Laravel, Symfony" },
-					{ emoji: "💎", name: "Ruby", description: "Ruby On Rails, Jekyll" },
-					{ emoji: "🧰", name: "C#", description: "ASP.NET, .net Core, dotnet, .NET Framework or however it will be called next" },
-					{ emoji: "🐹", name: "Go", description: "Hugo" },
-				],
-			},
-			{
-				title: "Tools & Infrastructure",
-				skills: [
-					{ emoji: "🐳", name: "Docker" },
-					{ emoji: "🟧", name: "AWS Cloud", description: "Infrastructure design and CDK development" },
-					{ emoji: "🐰", name: "RabbitMQ", description: "message broker for async workflows" },
-				],
-			},
-			{
-				title: "Concepts, Architectures & Design Patterns",
-				skills: [
-					{ emoji: "📡", name: "Event-Driven Design", description: "messaging and async workflows" },
-					{ emoji: "🧭", name: "Domain-Driven Design", description: "modeling complex business domains" },
-					{ emoji: "🔌", name: "RESTful API Design", description: "clean, resource-oriented HTTP APIs" },
-					{ emoji: "🕸️", name: "GraphQL", description: "flexible, schema-driven APIs" },
-					{ emoji: "🧱", name: "SOLID", description: "five principles for maintainable OOP" },
-					{ emoji: "💋", name: "KISS", description: "keep it simple, stupid" },
-				],
-			},
-		];
-
-		// "Extras" section cards. To add or edit a card, just tweak this array —
-		// `variant` is the brand-card color (is-primary, is-dark, is-link).
-		// Use `cta` for a single button or `links` for a list.
-		const extras = [
-			{
-				variant: "is-primary",
-				emoji: "📝",
-				eyebrow: "From the blog",
-				title: "{{ site.blog.title }}",
-				description: "{{ site.blog.description }}",
-				cta: { label: "Read the blog →", url: "{{ site.blog.path }}", solid: true },
-			},
-			{
-				variant: "is-dark",
-				emoji: "🎮",
-				eyebrow: "Things I built for fun",
-				title: "Games & Toys",
-				description: "Little experiments you can actually play with.",
-				links: [
-					{ name: "Tic-Tac-Vue", url: "https://tris.snisni.it" },
-					{ name: "Munchkin Counter", url: "https://munchkin-counter.snisni.it" },
-				],
-			},
-			{
-				variant: "is-link",
-				emoji: "📷",
-				eyebrow: "Behind the lens",
-				title: "Photography",
-				description: "A growing collection of shots I've taken, free to use over on Pexels.",
-				cta: { label: "View on Pexels →", url: "https://www.pexels.com/@mattia-sinisi-173186222/", solid: false },
-			},
-		];
-
-		const contactLinks = [
-			{
-				name: "💌 mattia@snisni.it",
-				url: "mailto:mattia@snisni.it",
-			},
-			{
-				name: "💼 LinkedIn",
-				url: "https://www.linkedin.com/in/sinisimattia"
-			},
-			{
-				name: "🐙 GitHub",
-				url: "https://github.com/sinisimattia"
-			},
-		];
-	</script>
+	{% include home-connect.html %}
 </body>
 
 </html>

@@ -1,0 +1,35 @@
+<section>
+	<h2 class="title">Extras</h2>
+	<div class="columns">
+		{%- for card in site.data.extras %}
+		{%- if card.blog -%}
+			{%- assign card_title = site.blog.title -%}
+			{%- assign card_description = site.blog.description -%}
+			{%- assign cta_url = site.blog.path -%}
+		{%- else -%}
+			{%- assign card_title = card.title -%}
+			{%- assign card_description = card.description -%}
+			{%- assign cta_url = card.cta.url -%}
+		{%- endif -%}
+		<div class="column">
+			<div class="brand-card {{ card.variant }}">
+				<div class="card-body">
+					<div class="card-emoji">{{ card.emoji }}</div>
+					<p class="eyebrow">{{ card.eyebrow }}</p>
+					<h3 class="card-title">{{ card_title }}</h3>
+					<p>{{ card_description }}</p>
+				</div>
+				{%- if card.cta %}
+				<a class="pill{% if card.cta.solid %} is-solid{% endif %}" href="{{ cta_url }}">{{ card.cta.label }}</a>
+				{%- elsif card.links %}
+				<ul class="pill-list">
+					{%- for link in card.links %}
+					<li><a class="pill" href="{{ link.url }}">{{ link.name }}</a></li>
+					{%- endfor %}
+				</ul>
+				{%- endif %}
+			</div>
+		</div>
+		{%- endfor %}
+	</div>
+</section>
