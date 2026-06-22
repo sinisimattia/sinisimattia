@@ -108,7 +108,7 @@ This file has everything bundled-in for MAXIMUM portability (but worse readabili
 							<!-- Card with a single call-to-action link -->
 							<template x-if="card.cta">
 								<a class="pill" x-bind:class="{ 'is-solid': card.cta.solid }" x-bind:href="card.cta.url"
-									target="_blank" rel="noopener" x-text="card.cta.label"></a>
+									x-text="card.cta.label"></a>
 							</template>
 
 							<!-- Card with a list of links -->
@@ -116,8 +116,7 @@ This file has everything bundled-in for MAXIMUM portability (but worse readabili
 								<ul class="pill-list">
 									<template x-for="link in card.links" :key="link.url">
 										<li>
-											<a class="pill" x-bind:href="link.url" target="_blank" rel="noopener"
-												x-text="link.name"></a>
+											<a class="pill" x-bind:href="link.url" x-text="link.name"></a>
 										</li>
 									</template>
 								</ul>
@@ -136,7 +135,7 @@ This file has everything bundled-in for MAXIMUM portability (but worse readabili
 				<ul class="mt-3" x-data="{links: contactLinks}">
 					<template x-for="link in links">
 						<li>
-							<a x-bind:href="link.url" x-text="link.name" target="_blank"
+							<a x-bind:href="link.url" x-text="link.name"
 								class="has-text-weight-semibold" />
 						</li>
 					</template>
