@@ -8,5 +8,5 @@ layout: default
 	{% if page.header.image %}<img class="article-image" src="{{ page.header.image }}" alt="{{ page.title }}">{% endif %}
 	{{ content }}
 	{% include further-reading.html post=page %}
-	<p class="article-back"><a href="/blog">← All articles</a></p>
+	<p class="article-back"><a href="{{ site.blog.path | relative_url }}">← All articles</a></p>
 </article>

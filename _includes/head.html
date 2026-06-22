@@ -1,11 +1,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	{%- assign site_title = site.title | append: site.title_separator | append: site.author.nickname -%}
-	{%- if page.title and page.title != site.title -%}
-	<title>{{ page.title }}{{ site.title_separator }}{{ site_title }}</title>
+	{%- assign blog_title = site.blog.title | append: site.title_separator | append: site.title -%}
+	{%- if page.title and page.title != site.blog.title -%}
+	<title>{{ page.title }}{{ site.title_separator }}{{ blog_title }}</title>
 	{%- else -%}
-	<title>{{ site_title }}</title>
+	<title>{{ blog_title }}</title>
 	{%- endif -%}
 	{% seo title=false %}
 	<link rel="preconnect" href="https://fonts.googleapis.com">

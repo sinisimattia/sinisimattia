@@ -1,5 +1,8 @@
+---
+layout: null
+---
 User-Agent: *
 Allow: /
 Disallow: /pages/
 
-Sitemap: https://snisni.it/sitemap.xml
+Sitemap: {{ "/sitemap.xml" | absolute_url }}

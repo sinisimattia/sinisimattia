@@ -1,9 +1,12 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://snisni.it/sitemap-pages.xml</loc>
+    <loc>{{ "/sitemap-pages.xml" | absolute_url }}</loc>
   </sitemap>
   <sitemap>
-    <loc>https://snisni.it/blog/sitemap.xml</loc>
+    <loc>{{ "/blog/sitemap.xml" | absolute_url }}</loc>
   </sitemap>
 </sitemapindex>

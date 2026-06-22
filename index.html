@@ -1,47 +1,53 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="{{ site.lang | default: 'en' }}">
 
 <!--
-This file has everything bundled-in for MAXIMUM portability (but worse readability, I know)
+This file has everything bundled-in for MAXIMUM portability (but worse readability, I know).
+Site identity (name, description, url, author, blog) is sourced from _config.yml; the
+content arrays at the bottom of <body> are intentionally kept inline.
 -->
 
 
 <head>
 	<meta charset="utf-8">
-	<title>Mattia Sinisi - Full-Stack Web Developer</title>
+	{%- assign home_title = site.author.name | append: " - " | append: site.author.title -%}
+	<title>{{ home_title }}</title>
 
-	<meta name="author" content="Mattia Sinisi" />
+	<meta name="author" content="{{ site.author.name }}" />
 	<meta name="description"
-		content="Hi, my name is Mattia. I'm a Full-Stack web developer and this is my personal website!" />
+		content="{{ site.description }}" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="canonical" href="https://snisni.it/">
+	<link rel="canonical" href="{{ '/' | absolute_url }}">
 
-	<meta property="og:title" content="Mattia Sinisi - Full-Stack Web Developer" />
+	<meta property="og:title" content="{{ home_title }}" />
 	<meta property="og:description"
-		content="Hi, my name is Mattia. I'm a Full-Stack web developer and this is my personal website!">
-	<meta property="og:image" content="https://snisni.it/assets/images/preview.png">
-	<meta property="og:url" content="https://snisni.it/">
+		content="{{ site.description }}">
+	<meta property="og:image" content="{{ '/assets/images/preview.png' | absolute_url }}">
+	<meta property="og:url" content="{{ '/' | absolute_url }}">
 	<meta property="og:type" content="website">
 	<meta property="og:locale" content="en_US">
-	<meta property="og:site_name" content="SNISNI">
+	<meta property="og:site_name" content="{{ site.title }}">
 
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="Mattia Sinisi - Full-Stack Web Developer">
+	<meta name="twitter:title" content="{{ home_title }}">
 	<meta name="twitter:description"
-		content="Hi, my name is Mattia. I'm a Full-Stack web developer and this is my personal website!">
-	<meta name="twitter:image" content="https://snisni.it/assets/images/preview.png">
+		content="{{ site.description }}">
+	<meta name="twitter:image" content="{{ '/assets/images/preview.png' | absolute_url }}">
 
 	<script type="application/ld+json">
 	{
 		"@context": "https://schema.org",
 		"@type": "Person",
-		"name": "Mattia Sinisi",
-		"alternateName": "SNISNI",
-		"url": "https://snisni.it",
-		"jobTitle": "Full-Stack Web Developer",
-		"email": "mailto:mattia@snisni.it",
+		"name": "{{ site.author.name }}",
+		"alternateName": "{{ site.author.nickname }}",
+		"url": "{{ site.url }}",
+		"jobTitle": "{{ site.author.title }}",
+		"email": "mailto:{{ site.author.email }}",
 		"sameAs": [
 			"https://www.linkedin.com/in/sinisimattia",
 			"https://github.com/sinisimattia"
@@ -59,11 +65,11 @@ This file has everything bundled-in for MAXIMUM portability (but worse readabili
 
 <body>
 	<header class="section container banner">
-		<small>Mattia Sinisi a.k.a.</small>
-		<h1 class="title">SNISNI</h1>
-		<summary class="subtitle">Full-Stack Web Developer, Artist, Photographer & Blogger</summary>
-		<span class="is-sr-only">Mattia Sinisi —
-			Full-Stack Web Developer</span>
+		<small>{{ site.author.name }} a.k.a.</small>
+		<h1 class="title">{{ site.title }}</h1>
+		<summary class="subtitle">{{ site.author.tagline }}</summary>
+		<span class="is-sr-only">{{ site.author.name }} —
+			{{ site.author.title }}</span>
 	</header>
 
 	<main class="section container">
@@ -189,9 +195,9 @@ This file has everything bundled-in for MAXIMUM portability (but worse readabili
 				variant: "is-primary",
 				emoji: "📝",
 				eyebrow: "From the blog",
-				title: "The Push",
-				description: "Thoughts on programming, open source, and the things I'm experimenting with.",
-				cta: { label: "Read the blog →", url: "/blog", solid: true },
+				title: "{{ site.blog.title }}",
+				description: "{{ site.blog.description }}",
+				cta: { label: "Read the blog →", url: "{{ site.blog.path }}", solid: true },
 			},
 			{
 				variant: "is-dark",

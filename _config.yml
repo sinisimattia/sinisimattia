@@ -1,11 +1,21 @@
-# Site
-title: "The Push"
-description: "Thoughts on programming, open source, and the things I'm experimenting with."
+# Site (SNISNI)
+title: "SNISNI"
+description: "Hi, my name is Mattia. I'm a Full-Stack web developer and this is my personal website!"
 url: "https://snisni.it"
 lang: en
 author:
   name: "Mattia Sinisi"
   nickname: "SNISNI"
+  title: "Full-Stack Web Developer"
+  tagline: "Full-Stack Web Developer, Artist, Photographer & Blogger"
+  email: "mattia@snisni.it"
+
+# Blog ("The Push")
+blog:
+  title: "The Push"
+  description: "Thoughts on programming, open source, and the things I'm experimenting with."
+  path: "/blog"
+
 permalink: /blog/:slug/
 
 # Separator placed between the page title and the site title in the <title> tag
