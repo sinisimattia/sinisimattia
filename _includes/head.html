@@ -1,13 +1,57 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	{%- assign blog_title = site.blog.title | append: site.title_separator | append: site.title -%}
-	{%- if page.title and page.title != site.blog.title -%}
-	<title>{{ page.title }}{{ site.title_separator }}{{ blog_title }}</title>
+	{%- if page.home -%}
+	{%- assign home_title = site.author.name | append: " - " | append: site.author.title -%}
+	<title>{{ home_title }}</title>
+	{%- elsif page.title -%}
+	<title>{{ page.title }}{{ site.title_separator }}{{ site.title }}</title>
 	{%- else -%}
-	<title>{{ blog_title }}</title>
+	<title>{{ site.title }}</title>
 	{%- endif -%}
+
+	{%- if page.home %}
+	<meta name="author" content="{{ site.author.name }}" />
+	<meta name="description"
+		content="{{ site.description }}" />
+
+	<link rel="canonical" href="{{ '/' | absolute_url }}">
+
+	<meta property="og:title" content="{{ home_title }}" />
+	<meta property="og:description"
+		content="{{ site.description }}">
+	<meta property="og:image" content="{{ '/assets/images/preview.png' | absolute_url }}">
+	<meta property="og:url" content="{{ '/' | absolute_url }}">
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:site_name" content="{{ site.title }}">
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="{{ home_title }}">
+	<meta name="twitter:description"
+		content="{{ site.description }}">
+	<meta name="twitter:image" content="{{ '/assets/images/preview.png' | absolute_url }}">
+
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "{{ site.author.name }}",
+		"alternateName": "{{ site.title }}",
+		"url": "{{ site.url }}",
+		"jobTitle": "{{ site.author.title }}",
+		"email": "mailto:{{ site.author.email }}",
+		"sameAs": [
+			"https://www.linkedin.com/in/sinisimattia",
+			"https://github.com/sinisimattia"
+		],
+		"knowsAbout": ["JavaScript", "TypeScript", "PHP", "Ruby", "C#", "Go", "Docker", "AWS"]
+	}
+	</script>
+	{%- else %}
 	{% seo title=false %}
+	{%- endif %}
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="/assets/css/app.css">

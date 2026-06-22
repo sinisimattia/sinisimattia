@@ -1,81 +1,21 @@
 ---
-layout: null
+layout: default
+home: true
 ---
-<!DOCTYPE html>
+<section>
+	<h2 class="title">Work</h2>
+	<div class="columns">
+		{%- for item in site.data.work %}
+		<div class="column">{% include skill-card.html item=item %}</div>
+		{%- endfor %}
+	</div>
+</section>
 
-<html lang="{{ site.lang | default: 'en' }}">
-
-<!--
-Site identity (name, description, url, author, blog) is sourced from _config.yml.
-Section content lives in _data/{work,extras,contact}.yml and is rendered server-side
-by the _includes/home-*.html components below — no JavaScript involved.
--->
-
-
-<head>
-	<meta charset="utf-8">
-	{%- assign home_title = site.author.name | append: " - " | append: site.author.title -%}
-	<title>{{ home_title }}</title>
-
-	<meta name="author" content="{{ site.author.name }}" />
-	<meta name="description"
-		content="{{ site.description }}" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link rel="canonical" href="{{ '/' | absolute_url }}">
-
-	<meta property="og:title" content="{{ home_title }}" />
-	<meta property="og:description"
-		content="{{ site.description }}">
-	<meta property="og:image" content="{{ '/assets/images/preview.png' | absolute_url }}">
-	<meta property="og:url" content="{{ '/' | absolute_url }}">
-	<meta property="og:type" content="website">
-	<meta property="og:locale" content="en_US">
-	<meta property="og:site_name" content="{{ site.title }}">
-
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="{{ home_title }}">
-	<meta name="twitter:description"
-		content="{{ site.description }}">
-	<meta name="twitter:image" content="{{ '/assets/images/preview.png' | absolute_url }}">
-
-	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "Person",
-		"name": "{{ site.author.name }}",
-		"alternateName": "{{ site.author.nickname }}",
-		"url": "{{ site.url }}",
-		"jobTitle": "{{ site.author.title }}",
-		"email": "mailto:{{ site.author.email }}",
-		"sameAs": [
-			"https://www.linkedin.com/in/sinisimattia",
-			"https://github.com/sinisimattia"
-		],
-		"knowsAbout": ["JavaScript", "TypeScript", "PHP", "Ruby", "C#", "Go", "Docker", "AWS"]
-	}
-	</script>
-
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="/assets/css/app.css">
-</head>
-
-<body>
-	<header class="section container banner">
-		<small>{{ site.author.name }} a.k.a.</small>
-		<h1 class="title">{{ site.title }}</h1>
-		<summary class="subtitle">{{ site.author.tagline }}</summary>
-		<span class="is-sr-only">{{ site.author.name }} —
-			{{ site.author.title }}</span>
-	</header>
-
-	<main class="section container">
-		{% include home-work.html %}
-		{% include home-extras.html %}
-	</main>
-
-	{% include home-connect.html %}
-</body>
-
-</html>
+<section>
+	<h2 class="title">Extras</h2>
+	<div class="columns">
+		{%- for item in site.data.extras %}
+		<div class="column">{% include brand-card.html item=item %}</div>
+		{%- endfor %}
+	</div>
+</section>

@@ -1,0 +1,17 @@
+<div class="brand-card {{ include.item.variant }}">
+	<div class="card-body">
+		<div class="card-emoji">{{ include.item.emoji }}</div>
+		<p class="eyebrow">{{ include.item.eyebrow }}</p>
+		<h3 class="card-title">{{ include.item.title }}</h3>
+		<p>{{ include.item.description }}</p>
+	</div>
+	{%- if include.item.cta %}
+	<a class="pill{% if include.item.cta.solid %} is-solid{% endif %}" href="{{ include.item.cta.url }}">{{ include.item.cta.label }}</a>
+	{%- elsif include.item.links %}
+	<ul class="pill-list">
+		{%- for link in include.item.links %}
+		<li><a class="pill" href="{{ link.url }}">{{ link.name }}</a></li>
+		{%- endfor %}
+	</ul>
+	{%- endif %}
+</div>

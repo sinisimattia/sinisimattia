@@ -1,0 +1,14 @@
+<div class="skill-card">
+	<h3 class="skill-card-title">{{ include.item.title }}</h3>
+	<ul class="skill-list">
+		{%- for skill in include.item.skills %}
+		<li>
+			<span class="skill-emoji">{{ skill.emoji }}</span>
+			<span class="tag">{{ skill.name }}</span>
+			{%- if skill.description %}
+			<span class="skill-descr">{{ skill.description }}</span>
+			{%- endif %}
+		</li>
+		{%- endfor %}
+	</ul>
+</div>

@@ -185,15 +185,25 @@ main > section + section {
 	margin-top: 0.75rem;
 }
 
-/* Banner */
-.banner {
-	position: relative;
+/* Site header (shared wordmark) */
+.site-header {
+	text-align: center;
+	padding-bottom: 1rem;
 }
 
-.banner .title {
+.site-title {
+	display: inline-block;
 	font-family: "Climate Crisis", sans-serif;
 	font-weight: normal;
-	font-size: 50px;
+	font-size: clamp(50px, 12vw, 110px);
+	line-height: 1.1;
+	color: var(--color-dark) !important;
+}
+
+.site-subtitle {
+	margin-top: 0.5rem;
+	color: var(--color-gray);
+	font-weight: 600;
 }
 
 /* Branded section cards */

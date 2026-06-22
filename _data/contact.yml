@@ -1,5 +1,5 @@
-# Contact links for the homepage "Let's connect" footer, rendered by
-# _includes/home-connect.html. `name` keeps its leading emoji.
+# Contact links for the site footer's "Let's connect" block, rendered by
+# _includes/footer.html. `name` keeps its leading emoji.
 - name: "💌 mattia@snisni.it"
   url: "mailto:mattia@snisni.it"
 - name: "💼 LinkedIn"

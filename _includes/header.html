@@ -1,0 +1,6 @@
+<header class="section container site-header">
+	<a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
+	{%- if page.home %}
+	<p class="site-subtitle">{{ site.author.tagline }}</p>
+	{%- endif %}
+</header>

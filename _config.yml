@@ -5,16 +5,9 @@ url: "https://snisni.it"
 lang: en
 author:
   name: "Mattia Sinisi"
-  nickname: "SNISNI"
   title: "Full-Stack Web Developer"
   tagline: "Full-Stack Web Developer, Artist, Photographer & Blogger"
   email: "mattia@snisni.it"
-
-# Blog ("The Push")
-blog:
-  title: "The Push"
-  description: "Thoughts on programming, open source, and the things I'm experimenting with."
-  path: "/blog"
 
 permalink: /blog/:slug/
 
