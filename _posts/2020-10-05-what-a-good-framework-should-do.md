@@ -7,8 +7,8 @@ author: "Mattia Sinisi"
 description: "I'm sure that many of us developers, to make our work easier, had to use - or in some cases build - a variety of frameworks that aim to simplify our workflow. A framework, by definition, is a bit of support logic that helps the developer; following t..."
 read_time: 6
 header:
-  teaser: "/assets/images/thumbnails/X1PnVmMmJ.png"
-  image: "/assets/images/thumbnails/X1PnVmMmJ.png"
+  teaser: "/assets/images/thumbnails/what-a-good-framework-should-do.png"
+  image: "/assets/images/thumbnails/what-a-good-framework-should-do.png"
 tags:
   - "programming-ciovqvfcb008mb253jrczo9ye"
   - "framework"

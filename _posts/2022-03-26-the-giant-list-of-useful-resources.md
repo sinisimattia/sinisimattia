@@ -8,8 +8,8 @@ author: "Mattia Sinisi"
 description: "200+ hand-selected resources for developers and other digital professionals"
 read_time: 9
 header:
-  teaser: "/assets/images/thumbnails/QcxVlmgcd.png"
-  image: "/assets/images/thumbnails/QcxVlmgcd.png"
+  teaser: "/assets/images/thumbnails/the-giant-list-of-useful-resources.png"
+  image: "/assets/images/thumbnails/the-giant-list-of-useful-resources.png"
 tags:
   - "resources"
   - "web-development"

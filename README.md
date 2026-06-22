@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="500px" src="assets/images/LOLLYPOP-BANNER-no-bg.png" />
+  <img width="500px" src="assets/images/readme-banner.png" />
  </div>
 
 <div align="center">

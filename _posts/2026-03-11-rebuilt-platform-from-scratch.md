@@ -8,8 +8,8 @@ description: "A story about evolving quickly in a fast-moving industry, clean co
 seo_title: "We rebuilt our codebase from scratch! Here's what we learnt"
 read_time: 22
 header:
-  teaser: "/assets/images/thumbnails/e2d4a042df846220f48fe3df790005e0.jpeg"
-  image: "/assets/images/thumbnails/e2d4a042df846220f48fe3df790005e0.jpeg"
+  teaser: "/assets/images/thumbnails/rebuilt-platform-from-scratch.jpeg"
+  image: "/assets/images/thumbnails/rebuilt-platform-from-scratch.jpeg"
 related:
   - _posts/2021-09-21-anti-patterns.md
   - _posts/2020-09-23-writing-code-for-others.md

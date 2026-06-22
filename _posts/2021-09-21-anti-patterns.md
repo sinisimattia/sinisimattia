@@ -9,8 +9,8 @@ description: "Keep your code clean and maintainable by avoiding these common mis
 seo_title: "An introduction to Anti-Patterns"
 read_time: 5
 header:
-  teaser: "/assets/images/thumbnails/4jov40VMh.png"
-  image: "/assets/images/thumbnails/4jov40VMh.png"
+  teaser: "/assets/images/thumbnails/anti-patterns.png"
+  image: "/assets/images/thumbnails/anti-patterns.png"
 tags:
   - "design-patterns"
   - "startups"
@@ -39,7 +39,7 @@ Some of these are mistakes I've made and trust me... they're not pretty, especia
 
 ## Optimizing too early
 
-![Early optimization - Solid structures](/assets/images/thumbnails/SpRx_N3GJ.gif)
+![Early optimization - Solid structures](/assets/images/thumbnails/anti-patterns-early-optimization.gif)
 
 ### What is it?
 
@@ -65,7 +65,7 @@ Just like a tattoo, you need to be **really sure** of it.
 
 ## Magic numbers
 
-![Magic Numbers](/assets/images/thumbnails/Oy4ewntcs.png)
+![Magic Numbers](/assets/images/thumbnails/anti-patterns-magic-numbers.png)
 
 ### What is it?
 
@@ -83,7 +83,7 @@ Make at least 99.9% of your variables configurable externally, most applications
 
 ## Re-implementation Hell
 
-![Re-implementation](/assets/images/thumbnails/5HaJaPtvq.png)
+![Re-implementation](/assets/images/thumbnails/anti-patterns-re-implementation.png)
 
 ### What is it?
 
@@ -105,7 +105,7 @@ Instead of writing code for very specific situations try to write it as if it we
 
 Yes, I'm contradicting myself... well, kind of.
 
-![Single Point of Failure](/assets/images/thumbnails/F-JVHZuxa.jpeg)
+![Single Point of Failure](/assets/images/thumbnails/anti-patterns-single-point-of-failure.jpeg)
 
 
 ### What is it?
