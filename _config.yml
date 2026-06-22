@@ -8,6 +8,9 @@ author:
   nickname: "SNISNI"
 permalink: /blog/:slug/
 
+# Separator placed between the page title and the site title in the <title> tag
+title_separator: " — "
+
 # Plugins
 plugins:
   - jekyll-feed

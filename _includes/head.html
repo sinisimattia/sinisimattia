@@ -1,7 +1,13 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	{% seo %}
+	{%- assign site_title = site.title | append: site.title_separator | append: site.author.nickname -%}
+	{%- if page.title and page.title != site.title -%}
+	<title>{{ page.title }}{{ site.title_separator }}{{ site_title }}</title>
+	{%- else -%}
+	<title>{{ site_title }}</title>
+	{%- endif -%}
+	{% seo title=false %}
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="/assets/css/app.css">
