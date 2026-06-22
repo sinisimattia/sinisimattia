@@ -8,8 +8,8 @@ author: "Mattia Sinisi"
 description: "200+ hand-selected resources for developers and other digital professionals"
 read_time: 9
 header:
-  teaser: "https://cdn.hashnode.com/res/hashnode/image/upload/v1648291259318/QcxVlmgcd.png"
-  image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1648291259318/QcxVlmgcd.png"
+  teaser: "/assets/images/thumbnails/QcxVlmgcd.png"
+  image: "/assets/images/thumbnails/QcxVlmgcd.png"
 tags:
   - "resources"
   - "web-development"

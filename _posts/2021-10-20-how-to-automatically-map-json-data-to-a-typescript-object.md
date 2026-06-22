@@ -8,8 +8,8 @@ author: "Mattia Sinisi"
 description: "Introduction Interacting with JSON APIs, files, configs, etc. doesn't have to be such a hassle. Keeping your code clean and maintainable can be difficult when using loosely-typed data that can change at any time and, as I've talked about in my previo..."
 read_time: 3
 header:
-  teaser: "https://cdn.hashnode.com/res/hashnode/image/upload/v1632295482139/JoGRvoq0T.png"
-  image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1632295482139/JoGRvoq0T.png"
+  teaser: "/assets/images/thumbnails/JoGRvoq0T.png"
+  image: "/assets/images/thumbnails/JoGRvoq0T.png"
 tags:
   - "typescript"
   - "javascript"

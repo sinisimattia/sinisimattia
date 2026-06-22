@@ -7,8 +7,8 @@ author: "Mattia Sinisi"
 description: "Today I'd like to talk about collaboration in developer teams of all sizes. Introduction When everyone begins coding it's most likely that they'll learn and experiment all by themselves, that's perfectly fine, It's how I and almost anyone I know firs..."
 read_time: 3
 header:
-  teaser: "https://cdn.hashnode.com/res/hashnode/image/upload/v1600872384129/jvGNhnjKi.png"
-  image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1600872384129/jvGNhnjKi.png"
+  teaser: "/assets/images/thumbnails/jvGNhnjKi.png"
+  image: "/assets/images/thumbnails/jvGNhnjKi.png"
 tags:
   - "programming-cikxvrcrl00bwh453cmkktotz"
   - "coding"

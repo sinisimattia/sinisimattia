@@ -7,8 +7,8 @@ author: "Mattia Sinisi"
 description: "Introduction I'd like to start by giving a little background information about my work experience. Like many developers trying to make a name for themselves, I too started as a freelancer; my work consisted of simple client applications or RESTful AP..."
 read_time: 2
 header:
-  teaser: "https://cdn.hashnode.com/res/hashnode/image/upload/v1600696864089/LojFFo33i.png"
-  image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1600696864089/LojFFo33i.png"
+  teaser: "/assets/images/thumbnails/LojFFo33i.png"
+  image: "/assets/images/thumbnails/LojFFo33i.png"
 ---
 
 ## Introduction
