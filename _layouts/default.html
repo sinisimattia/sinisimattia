@@ -2,7 +2,9 @@
 <html lang="{{ site.lang | default: 'en' }}">
 {% include head.html %}
 <body class="layout-{{ page.layout }}">
-	{% include header.html %}
+	{%- assign header_size = 'large' -%}
+	{%- if page.layout == 'post' -%}{%- assign header_size = 'small' -%}{%- endif -%}
+	{% include header.html size=header_size %}
 	<main class="section container">
 		{{ content }}
 	</main>

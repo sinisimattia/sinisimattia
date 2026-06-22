@@ -3,7 +3,13 @@ layout: default
 home: true
 ---
 <section>
-	<h2 class="title">Work</h2>
+	<div class="intro content">
+		{%- capture intro -%}{%- include intro.md -%}{%- endcapture -%}
+		{{ intro | markdownify }}
+	</div>
+</section>
+
+<section>
 	<div class="columns">
 		{%- for item in site.data.work %}
 		<div class="column">{% include skill-card.html item=item %}</div>

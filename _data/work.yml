@@ -1,6 +1,3 @@
-# "Work" section: each entry is a skill-card column. Edit a group's `title` or
-# its `skills` (emoji + name, plus an optional description). Rendered by
-# _includes/skill-card.html via _includes/card-section.html.
 - title: "Languages & Frameworks"
   skills:
     - emoji: "📒"

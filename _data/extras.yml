@@ -1,6 +1,3 @@
-# "Extras" section cards, rendered by _includes/brand-card.html via _includes/card-section.html.
-# `variant` is the brand-card color (is-primary, is-dark, is-link). Use `cta`
-# for a single button or `links` for a list.
 - variant: "is-primary"
   emoji: "📝"
   eyebrow: "From the blog"

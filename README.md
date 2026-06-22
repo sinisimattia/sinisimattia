@@ -5,11 +5,6 @@
 <div align="center">
   <h3> Hi there </h3>
   <h4> Thank you for visiting my profile. </h4>
-
-  <h5>
-    <a href="https://snisni.it">Website</a> •
-    <a href="https://snisni.it/blog/">Blog</a> •
-  </h5>
 </div>
 
 ___
@@ -24,7 +19,5 @@ or visit my site at [snisni.it](https://snisni.it) 🔗
 <div align='center'>
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sinisimattia&layout=compact&border_color=000000)](https://github.com/anuraghazra/github-readme-stats)
-
-![Trophies](https://github-profile-trophy.vercel.app/?username=sinisimattia)
   
 </div>

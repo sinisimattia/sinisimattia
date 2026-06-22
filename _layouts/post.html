@@ -6,7 +6,7 @@ layout: default
 	{% if page.subtitle %}<p class="article-subtitle">{{ page.subtitle }}</p>{% endif %}
 	{% include post-meta.html post=page %}
 	{% if page.header.image %}<img class="article-image" src="{{ page.header.image }}" alt="{{ page.title }}">{% endif %}
-	{{ content }}
+	<div class="article-body">{{ content }}</div>
 	{% include further-reading.html post=page %}
 	<p class="article-back"><a href="{{ '/blog' | relative_url }}">← All articles</a></p>
 </article>
