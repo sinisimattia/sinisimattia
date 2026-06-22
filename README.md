@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="500px" src="https://i.ibb.co/5FdnhrT/LOLLYPOP-BANNER-no-bg.png" />
+  <img width="500px" src="assets/images/LOLLYPOP-BANNER-no-bg.png" />
  </div>
 
 <div align="center">
