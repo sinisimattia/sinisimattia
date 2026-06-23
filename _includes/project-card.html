@@ -12,6 +12,7 @@
 		<div class="project-card-actions">
 			<a class="pill is-brand" href="{{ include.project.url }}">View project →</a>
 			{% if include.project.external_url %}<a class="pill is-ghost" href="{{ include.project.external_url }}" target="_blank" rel="noopener">Visit site ↗</a>{% endif %}
+			{% if include.project.repo_url %}<a class="pill is-ghost" href="{{ include.project.repo_url }}" target="_blank" rel="noopener">Source ↗</a>{% endif %}
 		</div>
 	</div>
 </article>
