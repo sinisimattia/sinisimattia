@@ -4,15 +4,17 @@ layout: default
 <article class="article project-page" style="--brand: {{ page.brand_color | default: 'var(--color-primary)' }}">
 	<header class="project-hero{% if page.banner %} has-banner is-filled{% elsif page.brand_color %} has-brand-bg is-filled{% endif %}"{% if page.banner %} style="--banner: url('{{ page.banner }}')"{% endif %}>
 		<div class="project-hero-inner">
-			{% if page.logo %}<img class="project-hero-logo" src="{{ page.logo }}" alt="{{ page.title }} logo">{% endif %}
+			<div class="project-hero-heading">
+				{% if page.logo %}<img class="project-hero-logo" src="{{ page.logo }}" alt="{{ page.title }} logo">{% endif %}
+				{% if page.show_title != false %}<h1 class="title project-hero-title">{{ page.title }}</h1>{% endif %}
+			</div>
+			{% if page.description %}<p class="project-hero-descr">{{ page.description }}</p>{% endif %}
 			{% if page.category or page.status %}
 			<p class="project-meta">
 				{% if page.category %}<span class="project-category">{{ page.category }}</span>{% endif %}
 				{% if page.status %}<span class="project-status is-{{ page.status }}">{{ page.status }}</span>{% endif %}
 			</p>
 			{% endif %}
-			<h1 class="title project-hero-title">{{ page.title }}</h1>
-			{% if page.description %}<p class="project-hero-descr">{{ page.description }}</p>{% endif %}
 			{% if page.external_url %}<a class="pill is-brand project-hero-cta" href="{{ page.external_url }}" target="_blank" rel="noopener">Visit site ↗</a>{% endif %}
 				{% if page.repo_url %}<a class="pill is-ghost project-hero-cta" href="{{ page.repo_url }}" target="_blank" rel="noopener">Source ↗</a>{% endif %}
 		</div>

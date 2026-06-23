@@ -2,6 +2,7 @@
 title: "OSTIACORE"
 description: "A home for the hardcore music scene of the Litorale Romano — gigs, bands, and everything happening locally."
 logo: "/assets/images/projects/ostiacore-logo.svg"
+show_title: false
 brand_color: "#2b1a4d"
 featured: true
 category: "client work"
