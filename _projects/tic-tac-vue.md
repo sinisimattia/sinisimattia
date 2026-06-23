@@ -1,6 +1,7 @@
 ---
 title: "Tic-Tac-Vue"
 description: "A tiny, polished take on tic-tac-toe built with Vue — quick to play, fun to build."
+banner: "/assets/images/projects/tic-tac-vue-bg.svg"
 brand_color: "#41b883"
 featured: false
 category: "fun"

@@ -2,6 +2,7 @@
 title: "Sii Come Bill Magazine"
 description: "An online magazine covering culture, style, and ideas — \"l'intelligenza che fa moda\"."
 logo: "/assets/images/projects/sii-come-bill-magazine-logo.png"
+banner: "/assets/images/projects/sii-come-bill-magazine-bg.svg"
 brand_color: "#1d4ed8"
 featured: false
 category: "client work"

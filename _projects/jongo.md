@@ -3,6 +3,7 @@ title: "Jongo"
 description: "A construction company in Italy — building, renovation, and the work that comes with it."
 logo: "/assets/images/projects/jongo-logo.svg"
 show_title: false
+banner: "/assets/images/projects/jongo-bg.svg"
 brand_color: "#ce03fc"
 featured: true
 category: "client work"

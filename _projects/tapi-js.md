@@ -2,6 +2,7 @@
 title: "tapi.js"
 description: "An open-source TypeScript library that maps raw JSON and API responses into strongly-typed objects."
 logo: "/assets/images/projects/tapi-logo.png"
+banner: "/assets/images/projects/tapi-js-bg.svg"
 brand_color: "#e8820c"
 featured: true
 category: "open-source"

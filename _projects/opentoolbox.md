@@ -2,6 +2,7 @@
 title: "The Open Toolbox"
 description: "Free and open websites that collect useful resources, guides, tutorials, frameworks, and tools in one place."
 logo: "/assets/images/projects/opentoolbox-logo.png"
+banner: "/assets/images/projects/opentoolbox-bg.svg"
 brand_color: "#111111"
 featured: false
 category: "open-source"

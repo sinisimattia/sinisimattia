@@ -449,11 +449,12 @@ main > section + section {
 
 .project-card.has-banner,
 .project-hero.has-banner {
+	background-color: var(--brand);
 	background-image:
 		linear-gradient(
 			135deg,
-			color-mix(in srgb, var(--brand) 94%, transparent),
-			color-mix(in srgb, var(--brand) 78%, transparent)
+			color-mix(in srgb, var(--brand) 60%, transparent),
+			color-mix(in srgb, var(--brand) 38%, transparent)
 		),
 		var(--banner);
 	background-size: cover;

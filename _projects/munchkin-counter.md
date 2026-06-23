@@ -1,6 +1,7 @@
 ---
 title: "Munchkin Counter"
 description: "A no-fuss level and bonus tracker for the card game Munchkin — keep your hands free for the cards."
+banner: "/assets/images/projects/munchkin-counter-bg.svg"
 brand_color: "#e67e22"
 featured: false
 category: "fun"
