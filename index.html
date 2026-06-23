@@ -17,7 +17,12 @@ home: true
 	</div>
 </section>
 
-{%- assign featured = site.projects | where: "featured", true | sort: "order" %}
+{%- comment %}Order by status (planned → active → deprecated), alphabetical within each group.{% endcomment %}
+{%- assign planned = site.projects | where: "status", "planned" | sort_natural: "title" %}
+{%- assign active = site.projects | where: "status", "active" | sort_natural: "title" %}
+{%- assign deprecated = site.projects | where: "status", "deprecated" | sort_natural: "title" %}
+{%- assign ordered = planned | concat: active | concat: deprecated %}
+{%- assign featured = ordered | where: "featured", true %}
 {%- if featured.size > 0 %}
 <section>
 	<h2 class="title">Projects</h2>
