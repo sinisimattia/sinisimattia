@@ -1,4 +1,6 @@
 <p class="post-meta">
+	{%- assign post_author = include.post.author | default: site.author.name %}
+	{% if include.show_author and post_author %}<span class="post-author">By {{ post_author }}</span> · {% endif %}
 	<time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: "%B %-d, %Y" }}</time>
 	{% if include.post.read_time %} · {{ include.post.read_time }} min read{% endif %}
 </p>
