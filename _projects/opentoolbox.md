@@ -8,7 +8,6 @@ category: "open-source"
 status: "deprecated"
 external_url: "https://github.com/opentoolbox"
 repo_url: "https://github.com/sinisimattia/the-open-toolbox"
-order: 6
 ---
 
 The Open Toolbox is an open-source initiative behind a set of free, community-minded

@@ -7,7 +7,6 @@ category: "fun"
 status: "deprecated"
 external_url: "https://tris.snisni.it"
 repo_url: "https://github.com/sinisimattia/tic-tac-toe"
-order: 8
 ---
 
 Tic-Tac-Vue is exactly what it sounds like: classic tic-tac-toe, rebuilt as a small

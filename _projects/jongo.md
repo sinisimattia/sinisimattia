@@ -8,7 +8,6 @@ category: "client work"
 status: "active"
 external_url: "https://jongo.it"
 repo_url: "https://github.com/sinisimattia/jongo-website"
-order: 3
 ---
 
 Jongo is an Italian construction company — *la tua prossima azienda edile* — handling

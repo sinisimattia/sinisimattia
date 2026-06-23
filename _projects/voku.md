@@ -7,7 +7,6 @@ featured: true
 category: "personal"
 status: "planned"
 external_url: "https://github.com/voku-app"
-order: 7
 ---
 
 VOKU is an event management app I'm currently in the early stages of planning. The idea

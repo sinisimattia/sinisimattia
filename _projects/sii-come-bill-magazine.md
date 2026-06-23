@@ -7,7 +7,6 @@ featured: false
 category: "client work"
 status: "active"
 external_url: "https://siicomebillmagazine.it"
-order: 1
 ---
 
 Sii Come Bill Magazine is an online publication built around the tagline

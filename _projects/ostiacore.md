@@ -8,7 +8,6 @@ category: "client work"
 status: "active"
 external_url: "https://ostiacore.live"
 repo_url: "https://github.com/sinisimattia/ostiacore"
-order: 4
 ---
 
 OSTIACORE is the home of the hardcore music scene from the Litorale Romano — a hub for

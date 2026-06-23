@@ -7,7 +7,6 @@ category: "fun"
 status: "active"
 external_url: "https://munchkin-counter.snisni.it"
 repo_url: "https://github.com/sinisimattia/munchkin-counter"
-order: 9
 ---
 
 Munchkin Counter is a little companion app for the card game Munchkin. Instead of

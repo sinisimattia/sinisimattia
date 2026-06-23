@@ -7,7 +7,6 @@ featured: false
 category: "client work"
 status: "active"
 external_url: "https://billover.it"
-order: 2
 ---
 
 BillOver 3.0 is a creator collective founded by Andrea Nuzzo and Michele Casula —

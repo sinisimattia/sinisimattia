@@ -8,7 +8,6 @@ category: "open-source"
 status: "active"
 external_url: "https://tapi.js.org"
 repo_url: "https://github.com/sinisimattia/tapi"
-order: 5
 ---
 
 tapi.js is a small open-source JS/TS package I created for turning raw JSON — typically
