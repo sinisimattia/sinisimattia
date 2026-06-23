@@ -17,16 +17,20 @@ home: true
 	</div>
 </section>
 
+{%- assign featured = site.projects | where: "featured", true | sort: "order" %}
+{%- if featured.size > 0 %}
 <section>
 	<h2 class="title">Projects</h2>
-	{%- assign featured = site.projects | where: "featured", true | sort: "order" %}
 	<div class="project-list">
 		{%- for project in featured %}
 		{% include project-card.html project=project %}
 		{%- endfor %}
 	</div>
+	{%- if site.projects.size > 0 %}
 	<p class="projects-viewall"><a href="{{ '/projects' | relative_url }}">View all projects →</a></p>
+	{%- endif %}
 </section>
+{%- endif %}
 
 <section>
 	<h2 class="title">Extras</h2>
