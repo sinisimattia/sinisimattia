@@ -7,16 +7,6 @@
     label: "Read the blog →"
     url: "/blog"
     solid: true
-- variant: "is-dark"
-  emoji: "🎮"
-  eyebrow: "Things I built for fun"
-  title: "Games & Toys"
-  description: "Little experiments you can actually play with."
-  links:
-    - name: "Tic-Tac-Vue"
-      url: "https://tris.snisni.it"
-    - name: "Munchkin Counter"
-      url: "https://munchkin-counter.snisni.it"
 - variant: "is-link"
   emoji: "📷"
   eyebrow: "Behind the lens"
