@@ -9,4 +9,7 @@ layout: null
   <sitemap>
     <loc>{{ "/blog/sitemap.xml" | absolute_url }}</loc>
   </sitemap>
+  <sitemap>
+    <loc>{{ "/projects/sitemap.xml" | absolute_url }}</loc>
+  </sitemap>
 </sitemapindex>

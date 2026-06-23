@@ -1,0 +1,13 @@
+---
+layout: default
+title: "Projects"
+---
+<section>
+	<h1 class="title">Projects</h1>
+	{%- assign projects = site.projects | sort: "order" %}
+	<div class="project-list">
+		{%- for project in projects %}
+		{% include project-card.html project=project %}
+		{%- endfor %}
+	</div>
+</section>

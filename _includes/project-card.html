@@ -1,0 +1,17 @@
+<article class="project-card{% if include.project.banner %} has-banner is-filled{% elsif include.project.brand_color %} has-brand-bg is-filled{% else %} has-no-banner{% endif %}" style="--brand: {{ include.project.brand_color | default: 'var(--color-primary)' }}{% if include.project.banner %}; --banner: url('{{ include.project.banner }}'){% endif %}">
+	<div class="project-card-body">
+		{% if include.project.logo %}<img class="project-card-logo" src="{{ include.project.logo }}" alt="{{ include.project.title }} logo">{% endif %}
+		{% if include.project.category or include.project.status %}
+		<p class="project-meta">
+			{% if include.project.category %}<span class="project-category">{{ include.project.category }}</span>{% endif %}
+			{% if include.project.status %}<span class="project-status is-{{ include.project.status }}">{{ include.project.status }}</span>{% endif %}
+		</p>
+		{% endif %}
+		<h3 class="project-card-title"><a href="{{ include.project.url }}">{{ include.project.title }}</a></h3>
+		<p class="project-card-descr">{{ include.project.description }}</p>
+		<div class="project-card-actions">
+			<a class="pill is-brand" href="{{ include.project.url }}">View project →</a>
+			{% if include.project.external_url %}<a class="pill is-ghost" href="{{ include.project.external_url }}" target="_blank" rel="noopener">Visit site ↗</a>{% endif %}
+		</div>
+	</div>
+</article>

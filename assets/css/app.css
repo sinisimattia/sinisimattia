@@ -371,6 +371,31 @@ main > section + section {
 	border-color: var(--color-white);
 }
 
+/* Pill variants for light backgrounds (project cards), driven by --brand.
+   The bare .pill is white-on-translucent and only reads on colored cards. */
+.pill.is-brand {
+	background: var(--brand, var(--color-primary));
+	color: var(--color-white) !important;
+	border-color: var(--brand, var(--color-primary));
+}
+
+.pill.is-brand:hover {
+	filter: brightness(0.92);
+	transform: translateY(-2px);
+}
+
+.pill.is-ghost {
+	background: transparent;
+	color: var(--brand, var(--color-primary)) !important;
+	border-color: var(--brand, var(--color-primary));
+}
+
+.pill.is-ghost:hover {
+	background: var(--brand, var(--color-primary));
+	color: var(--color-white) !important;
+	transform: translateY(-2px);
+}
+
 .pill-list {
 	list-style: none !important;
 	padding: 0 !important;
@@ -382,6 +407,275 @@ main > section + section {
 
 .pill-list li + li {
 	margin-top: 0 !important;
+}
+
+/* Project cards — one per row. When a banner exists it becomes the card
+   background, tinted with a minimal-opacity overlay of the project's --brand;
+   bannerless cards fall back to a light surface with a brand accent stripe. */
+.project-list {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.projects-viewall {
+	margin: 1.5rem 0 0;
+	text-align: right;
+	font-weight: 600;
+}
+
+.projects-viewall a {
+	color: var(--color-link);
+}
+
+.projects-viewall a:hover {
+	text-decoration: underline !important;
+}
+
+.project-card {
+	--brand: var(--color-primary);
+	position: relative;
+	display: flex;
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0 14px 30px -20px var(--color-shadow);
+}
+
+.project-card.has-no-banner {
+	background: var(--color-light);
+	border-left: 5px solid var(--brand);
+}
+
+.project-card.has-banner,
+.project-hero.has-banner {
+	background-image:
+		linear-gradient(
+			135deg,
+			color-mix(in srgb, var(--brand) 94%, transparent),
+			color-mix(in srgb, var(--brand) 78%, transparent)
+		),
+		var(--banner);
+	background-size: cover;
+	background-position: center;
+	color: var(--color-white);
+}
+
+.project-card.has-banner {
+	min-height: 280px;
+}
+
+/* No banner but a brand color: fill with the brand color */
+.project-card.has-brand-bg,
+.project-hero.has-brand-bg {
+	background: var(--brand);
+	color: var(--color-white);
+}
+
+.project-card-body {
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 1.75rem 2rem;
+}
+
+/* On banner cards push the content to the bottom, hero-style */
+.project-card.has-banner .project-card-body {
+	justify-content: flex-end;
+}
+
+.project-card-logo {
+	height: 2.5rem;
+	width: auto;
+	margin-bottom: 0.85rem;
+}
+
+/* Meta row above the title: category badge + status indicator */
+.project-meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.6rem;
+	margin: 0 0 0.75rem;
+}
+
+/* Category label — brand-tinted pill */
+.project-category {
+	font-family: "Fira Code", monospace;
+	font-size: 0.7rem;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--brand, var(--color-primary));
+	background: color-mix(in srgb, var(--brand, var(--color-primary)) 12%, transparent);
+	border: 1px solid color-mix(in srgb, var(--brand, var(--color-primary)) 35%, transparent);
+	border-radius: 999px;
+	padding: 0.25rem 0.7rem;
+}
+
+/* Status indicator — a color-coded dot + label */
+.project-status {
+	--status-color: var(--color-gray);
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	font-size: 0.78rem;
+	font-weight: 600;
+	text-transform: capitalize;
+	color: var(--color-gray);
+}
+
+.project-status::before {
+	content: "";
+	width: 0.55rem;
+	height: 0.55rem;
+	border-radius: 999px;
+	background: var(--status-color);
+	box-shadow: 0 0 0 3px color-mix(in srgb, var(--status-color) 22%, transparent);
+}
+
+.project-status.is-active {
+	--status-color: #2f9e5c;
+}
+
+.project-status.is-planned {
+	--status-color: #e0a008;
+}
+
+.project-status.is-deprecated {
+	--status-color: #b03636;
+}
+
+.project-card-title {
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin: 0 0 0.5rem;
+}
+
+.project-card-title a {
+	color: var(--color-title) !important;
+}
+
+.project-card-title a:hover {
+	color: var(--brand) !important;
+}
+
+.project-card-descr {
+	margin: 0 0 1.25rem;
+	color: var(--color-body);
+}
+
+.project-card-actions {
+	margin-top: auto;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem;
+}
+
+/* Filled overrides (banner image or solid brand background), shared by the
+   card and the project-page hero: white, legible content. A soft text-shadow
+   keeps text readable regardless of what the banner image looks like under it. */
+.is-filled .project-card-title a,
+.is-filled .project-hero-title {
+	color: var(--color-white) !important;
+	text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+}
+
+.is-filled .project-card-title a:hover {
+	color: var(--color-white) !important;
+	opacity: 0.85;
+}
+
+.is-filled .project-card-descr,
+.is-filled .project-hero-descr {
+	color: var(--color-white);
+	text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+}
+
+.is-filled .project-category {
+	color: var(--color-white);
+	background: rgba(255, 255, 255, 0.2);
+	border-color: rgba(255, 255, 255, 0.45);
+}
+
+.is-filled .project-status {
+	color: var(--color-white);
+}
+
+/* Primary action flips to solid white (brand text) for contrast;
+   the secondary action becomes a white outline. */
+.is-filled .pill.is-brand {
+	background: var(--color-white);
+	color: var(--brand) !important;
+	border-color: var(--color-white);
+}
+
+.is-filled .pill.is-brand:hover {
+	filter: none;
+	opacity: 0.9;
+}
+
+.is-filled .pill.is-ghost {
+	color: var(--color-white) !important;
+	border-color: rgba(255, 255, 255, 0.7);
+}
+
+.is-filled .pill.is-ghost:hover {
+	background: var(--color-white);
+	color: var(--brand) !important;
+}
+
+@media screen and (max-width: 768px) {
+	.project-card.has-banner {
+		min-height: 240px;
+	}
+}
+
+/* Project presentation page — hero with the core info over the banner,
+   reusing the same fill/overlay treatment as the cards. */
+.project-hero {
+	margin-bottom: 2.5rem;
+}
+
+.project-hero.is-filled {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	min-height: 520px;
+	padding: 2.5rem;
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0 18px 36px -22px var(--color-shadow);
+}
+
+.project-hero-inner {
+	width: 100%;
+}
+
+.project-hero-logo {
+	display: block;
+	height: 4.5rem;
+	width: auto;
+	margin: 0 0 1rem;
+}
+
+.project-hero-title {
+	margin: 0 0 0.5rem;
+}
+
+.project-hero-descr {
+	font-size: 1.25rem;
+	color: var(--color-gray);
+	margin: 0;
+	max-width: 60ch;
+}
+
+.project-hero-cta {
+	margin-top: 1.25rem;
+}
+
+.project-page-cta {
+	margin: 1rem 0 1.5rem;
 }
 
 /* Screen reader only */

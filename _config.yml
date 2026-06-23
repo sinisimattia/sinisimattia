@@ -19,6 +19,14 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+# Collections
+# Projects each get their own presentation page; an explicit permalink is
+# required so they don't inherit the global /blog/:slug/ posts namespace.
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
 # Default front matter
 defaults:
   - scope:
@@ -26,3 +34,8 @@ defaults:
       type: posts
     values:
       layout: post
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project

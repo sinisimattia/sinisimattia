@@ -18,6 +18,17 @@ home: true
 </section>
 
 <section>
+	<h2 class="title">Projects</h2>
+	{%- assign featured = site.projects | where: "featured", true | sort: "order" %}
+	<div class="project-list">
+		{%- for project in featured %}
+		{% include project-card.html project=project %}
+		{%- endfor %}
+	</div>
+	<p class="projects-viewall"><a href="{{ '/projects' | relative_url }}">View all projects →</a></p>
+</section>
+
+<section>
 	<h2 class="title">Extras</h2>
 	<div class="columns">
 		{%- for item in site.data.extras %}
