@@ -208,6 +208,40 @@ main > section + section {
 	margin-top: 1.5rem;
 }
 
+/* Pills sit on the light footer, so flip the brand-card pill (white-on-translucent)
+   to a readable dark-text variant while keeping the same shape and hover lift. */
+.footer .pill {
+	background: var(--color-white);
+	color: var(--color-title) !important;
+	border-color: rgba(0, 0, 0, 0.1);
+	box-shadow: 0 10px 25px -20px var(--color-shadow);
+}
+
+.footer .pill:hover {
+	background: var(--color-white);
+	border-color: var(--color-primary);
+	color: var(--color-primary) !important;
+}
+
+/* Stacked label inside the contact pill: name over a small gray handle */
+.footer .pill .pill-text {
+	display: flex;
+	flex-direction: column;
+	line-height: 1.2;
+	text-align: left;
+}
+
+.footer .pill .pill-name {
+	font-weight: 600;
+}
+
+.footer .pill .pill-handle {
+	font-family: "Fira Code", monospace;
+	font-size: 0.75rem;
+	font-weight: 400;
+	color: var(--color-gray);
+}
+
 /* Utility: Text */
 .has-text-weight-semibold {
 	font-weight: 600;

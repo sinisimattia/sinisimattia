@@ -2,9 +2,9 @@
 	<div class="container">
 		<div>
 			<h2 class="title">Let's connect 💡</h2>
-			<ul class="mt-3">
+			<ul class="pill-list mt-3">
 				{%- for link in site.data.contact %}
-				<li><a class="has-text-weight-semibold" href="{{ link.url }}">{{ link.name }}</a></li>
+				<li>{% include contact-card.html link=link %}</li>
 				{%- endfor %}
 			</ul>
 		</div>

@@ -1,0 +1,7 @@
+<a class="pill" href="{{ include.link.url }}"{% if include.link.url contains 'http' %} target="_blank" rel="noopener"{% endif %}>
+	<span class="pill-emoji">{{ include.link.emoji }}</span>
+	<span class="pill-text">
+		<span class="pill-name">{{ include.link.name }}</span>
+		<span class="pill-handle">{{ include.link.handle }}</span>
+	</span>
+</a>
