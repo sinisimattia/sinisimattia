@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600">
+  <!-- Tabletop games — shades of #e67e22. Dice, d20, meeples, a card. -->
+  <defs>
+    <radialGradient id="mk-g" cx="60%" cy="30%" r="98%">
+      <stop offset="0" stop-color="#efab6f"/>
+      <stop offset="55%" stop-color="#e67e22"/>
+      <stop offset="100%" stop-color="#a15818"/>
+    </radialGradient>
+    <path id="mk-meeple" d="M0 -40 C11 -40 20 -31 20 -20 C20 -13 16 -7 11 -3 L48 10 L42 28 L12 20 C16 31 18 41 9 56 L2 56 L5 32 L-5 32 L-2 56 L-9 56 C-18 41 -16 31 -12 20 L-42 28 L-48 10 L-11 -3 C-16 -7 -20 -13 -20 -20 C-20 -31 -11 -40 0 -40 Z"/>
+  </defs>
+  <rect width="1600" height="600" fill="url(#mk-g)"/>
+
+  <!-- six-sided die (five) -->
+  <g transform="translate(190 165) rotate(-8)">
+    <rect x="-66" y="-66" width="132" height="132" rx="26" fill="#f5cba7" opacity="0.5"/>
+    <g fill="#a15818" opacity="0.75">
+      <circle cx="-33" cy="-33" r="11"/><circle cx="33" cy="-33" r="11"/>
+      <circle cx="0" cy="0" r="11"/>
+      <circle cx="-33" cy="33" r="11"/><circle cx="33" cy="33" r="11"/>
+    </g>
+  </g>
+
+  <!-- six-sided die (three) -->
+  <g transform="translate(1440 455) rotate(12)">
+    <rect x="-52" y="-52" width="104" height="104" rx="20" fill="#efab6f" opacity="0.45"/>
+    <g fill="#733f11" opacity="0.6">
+      <circle cx="-25" cy="-25" r="9"/><circle cx="0" cy="0" r="9"/><circle cx="25" cy="25" r="9"/>
+    </g>
+  </g>
+
+  <!-- d20 -->
+  <g transform="translate(1170 175)" fill="none" stroke="#f5cba7" stroke-width="4" stroke-linejoin="round" opacity="0.55">
+    <polygon points="0,-72 62,-36 62,36 0,72 -62,36 -62,-36"/>
+    <polygon points="0,-40 35,20 -35,20"/>
+    <path d="M0,-72 L0,-40 M62,-36 L35,20 M-62,-36 L-35,20 M62,36 L35,20 M-62,36 L-35,20 M0,72 L0,20"/>
+  </g>
+
+  <!-- meeples -->
+  <use href="#mk-meeple" transform="translate(650 415) scale(1.55)" fill="#f5cba7" opacity="0.5"/>
+  <use href="#mk-meeple" transform="translate(1320 115) scale(1.05)" fill="none" stroke="#f5cba7" stroke-width="3.5" opacity="0.5"/>
+  <use href="#mk-meeple" transform="translate(900 520) scale(0.8)" fill="#a15818" opacity="0.4"/>
+
+  <!-- card -->
+  <g transform="translate(400 440) rotate(-14)" fill="none" stroke="#f5cba7" stroke-width="3.5" opacity="0.42">
+    <rect x="-72" y="-98" width="144" height="196" rx="16"/>
+    <circle cx="0" cy="-2" r="24"/>
+    <path d="M-46 64 H46"/>
+  </g>
+
+  <!-- scattered tokens -->
+  <g fill="#f5cba7" opacity="0.4">
+    <circle cx="930" cy="135" r="9"/>
+    <circle cx="1500" cy="180" r="7"/>
+    <circle cx="540" cy="120" r="8"/>
+    <circle cx="1050" cy="430" r="8"/>
+  </g>
+</svg>

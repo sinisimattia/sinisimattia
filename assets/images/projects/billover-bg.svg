@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600">
+  <!-- Abstract — shades of #f00069. Overlapping soft circles + rings. -->
+  <defs>
+    <radialGradient id="bv-g" cx="28%" cy="32%" r="95%">
+      <stop offset="0" stop-color="#f5599e"/>
+      <stop offset="55%" stop-color="#f00069"/>
+      <stop offset="100%" stop-color="#a8004a"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="600" fill="url(#bv-g)"/>
+  <g>
+    <circle cx="1260" cy="110" r="280" fill="#f999c3" opacity="0.20"/>
+    <circle cx="180" cy="540" r="340" fill="#780034" opacity="0.28"/>
+    <circle cx="800" cy="320" r="200" fill="#f5599e" opacity="0.16"/>
+    <circle cx="1430" cy="470" r="160" fill="#f999c3" opacity="0.18"/>
+    <circle cx="520" cy="90" r="120" fill="#a8004a" opacity="0.30"/>
+  </g>
+  <g fill="none" stroke-width="2.5">
+    <circle cx="1260" cy="110" r="210" stroke="#f999c3" opacity="0.30"/>
+    <circle cx="1260" cy="110" r="150" stroke="#f999c3" opacity="0.22"/>
+    <circle cx="180" cy="540" r="250" stroke="#f5599e" opacity="0.22"/>
+    <circle cx="800" cy="320" r="280" stroke="#f999c3" opacity="0.14"/>
+  </g>
+</svg>

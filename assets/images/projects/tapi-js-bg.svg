@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600">
+  <!-- Abstract — shades of #e8820c. Flowing wave ribbons. -->
+  <defs>
+    <linearGradient id="tp-g" x1="0" y1="0" x2="1" y2="0.6">
+      <stop offset="0" stop-color="#f0ae61"/>
+      <stop offset="55%" stop-color="#e8820c"/>
+      <stop offset="100%" stop-color="#a25b08"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="600" fill="url(#tp-g)"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M-60 200 C250 110 460 300 760 220 S1260 110 1680 210" stroke="#f6cd9e" stroke-width="46" opacity="0.18"/>
+    <path d="M-60 330 C260 250 470 430 770 350 S1270 240 1680 340" stroke="#744106" stroke-width="60" opacity="0.20"/>
+    <path d="M-60 470 C250 400 470 560 760 480 S1260 380 1680 470" stroke="#f0ae61" stroke-width="40" opacity="0.16"/>
+    <path d="M-60 120 C260 60 470 200 770 130 S1270 40 1680 120" stroke="#f6cd9e" stroke-width="26" opacity="0.14"/>
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600">
+  <!-- Abstract — shades of #1d4ed8. Overlapping angled panels (stacked sheets). -->
+  <defs>
+    <linearGradient id="sb-g" x1="0" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#2d5ee0"/>
+      <stop offset="55%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#143797"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="600" fill="url(#sb-g)"/>
+  <g>
+    <rect x="80" y="120" width="520" height="360" rx="28" fill="#0f276c" opacity="0.22" transform="rotate(-9 340 300)"/>
+    <rect x="560" y="60" width="560" height="420" rx="30" fill="#6c8ce6" opacity="0.16" transform="rotate(7 840 270)"/>
+    <rect x="980" y="150" width="540" height="380" rx="28" fill="#143797" opacity="0.24" transform="rotate(-6 1250 340)"/>
+    <rect x="300" y="260" width="460" height="320" rx="26" fill="#a5b8ef" opacity="0.12" transform="rotate(12 530 420)"/>
+  </g>
+  <g fill="none" stroke-width="3">
+    <rect x="180" y="90" width="500" height="360" rx="28" stroke="#a5b8ef" opacity="0.28" transform="rotate(-4 430 270)"/>
+    <rect x="760" y="180" width="520" height="380" rx="28" stroke="#6c8ce6" opacity="0.22" transform="rotate(9 1020 370)"/>
+    <rect x="40" y="320" width="380" height="280" rx="24" stroke="#a5b8ef" opacity="0.18" transform="rotate(-13 230 460)"/>
+  </g>
+</svg>

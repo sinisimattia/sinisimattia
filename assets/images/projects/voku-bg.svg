@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600">
+  <!-- Abstract — shades of #8b5cf6. Concentric ripples. -->
+  <defs>
+    <radialGradient id="vk-g" cx="70%" cy="38%" r="100%">
+      <stop offset="0" stop-color="#b495f9"/>
+      <stop offset="55%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#462e7b"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="600" fill="url(#vk-g)"/>
+  <g fill="none" stroke-width="3">
+    <circle cx="1180" cy="200" r="120" stroke="#d1befb" opacity="0.30"/>
+    <circle cx="1180" cy="200" r="220" stroke="#d1befb" opacity="0.22"/>
+    <circle cx="1180" cy="200" r="330" stroke="#b495f9" opacity="0.16"/>
+    <circle cx="1180" cy="200" r="450" stroke="#b495f9" opacity="0.11"/>
+    <circle cx="280" cy="520" r="120" stroke="#d1befb" opacity="0.24"/>
+    <circle cx="280" cy="520" r="230" stroke="#b495f9" opacity="0.16"/>
+    <circle cx="280" cy="520" r="350" stroke="#b495f9" opacity="0.10"/>
+  </g>
+  <g>
+    <circle cx="1180" cy="200" r="70" fill="#d1befb" opacity="0.18"/>
+    <circle cx="280" cy="520" r="60" fill="#6140ac" opacity="0.26"/>
+    <circle cx="720" cy="330" r="40" fill="#d1befb" opacity="0.16"/>
+  </g>
+</svg>
