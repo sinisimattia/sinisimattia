@@ -3,6 +3,7 @@ title: "SNISNI"
 description: "Hi, my name is Mattia. I'm a Full-Stack web developer and this is my personal website!"
 url: "https://snisni.it"
 lang: en
+logo: "/assets/images/favicon.png"
 author:
   name: "Mattia Sinisi"
   title: "Full-Stack Web Developer"
