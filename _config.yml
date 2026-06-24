@@ -29,14 +29,32 @@ collections:
     permalink: /projects/:name/
 
 # Default front matter
+#
+# This block declares the standard front-matter contract for each content
+# type. Values here are FALLBACKS — a document that omits a field inherits the
+# value below, while one that sets it explicitly wins. Jekyll does not enforce
+# required fields, so the "Required" / "Optional" lists below are the
+# documented standard; the `values` keys are only the fields that have a safe
+# default.
 defaults:
+  # ── Posts (_posts/*.md) ───────────────────────────────────────────────
+  # Required: title, date
+  # Optional: subtitle, seo_title, description, last_modified_at, read_time,
+  #           author (falls back to site.author.name), tags[], tag_names[],
+  #           header.teaser, header.image
   - scope:
       path: ""
       type: posts
     values:
       layout: post
+  # ── Projects (_projects/*.md) ─────────────────────────────────────────
+  # Required: title, description, category, status
+  # Optional: logo, banner, brand_color (falls back to var(--color-primary)),
+  #           external_url, repo_url
   - scope:
       path: ""
       type: projects
     values:
       layout: project
+      featured: false    # surfaced in the homepage "featured" section when true
+      show_title: true   # set false to hide the title (e.g. when the logo is the wordmark)
