@@ -7,8 +7,10 @@ author: "Mattia Sinisi"
 description: "Today I'd like to talk about collaboration in developer teams of all sizes. Introduction When everyone begins coding it's most likely that they'll learn and experiment all by themselves, that's perfectly fine, It's how I and almost anyone I know firs..."
 read_time: 3
 header:
-  teaser: "/assets/images/thumbnails/writing-code-for-others.png"
-  image: "/assets/images/thumbnails/writing-code-for-others.png"
+  teaser: "/assets/images/thumbnails/writing-code-for-others.webp"
+  image: "/assets/images/thumbnails/writing-code-for-others.webp"
+  image_width: 1440
+  image_height: 720
 ---
 
 Today I'd like to talk about collaboration in developer teams of all sizes.

@@ -7,8 +7,10 @@ author: "Mattia Sinisi"
 description: "Introduction I'd like to start by giving a little background information about my work experience. Like many developers trying to make a name for themselves, I too started as a freelancer; my work consisted of simple client applications or RESTful AP..."
 read_time: 2
 header:
-  teaser: "/assets/images/thumbnails/how-open-source-saved-our-business.png"
-  image: "/assets/images/thumbnails/how-open-source-saved-our-business.png"
+  teaser: "/assets/images/thumbnails/how-open-source-saved-our-business.webp"
+  image: "/assets/images/thumbnails/how-open-source-saved-our-business.webp"
+  image_width: 1440
+  image_height: 720
 ---
 
 ## Introduction

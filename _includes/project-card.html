@@ -2,7 +2,7 @@
 	<div class="project-card-body">
 		<div class="project-card-main">
 			<div class="project-card-heading">
-				{% if include.project.logo %}<img class="project-card-logo" src="{{ include.project.logo }}" alt="{{ include.project.title }} logo">{% endif %}
+				{% if include.project.logo %}<img class="project-card-logo" src="{{ include.project.logo }}" alt="{{ include.project.title }} logo" width="140" height="140" decoding="async">{% endif %}
 				{% if include.project.show_title != false %}<h3 class="project-card-title"><a href="{{ include.project.url }}">{{ include.project.title }}</a></h3>{% endif %}
 			</div>
 			<p class="project-card-descr">{{ include.project.description }}</p>

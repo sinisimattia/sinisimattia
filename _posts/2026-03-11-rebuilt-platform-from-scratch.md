@@ -7,8 +7,10 @@ author: "Mattia Sinisi"
 description: "A story about evolving quickly in a fast-moving industry, clean codebases, AI-powered development done right, optimized workflows, tips, and way more!"
 read_time: 22
 header:
-  teaser: "/assets/images/thumbnails/rebuilt-platform-from-scratch.jpeg"
-  image: "/assets/images/thumbnails/rebuilt-platform-from-scratch.jpeg"
+  teaser: "/assets/images/thumbnails/rebuilt-platform-from-scratch.webp"
+  image: "/assets/images/thumbnails/rebuilt-platform-from-scratch.webp"
+  image_width: 1440
+  image_height: 1010
 related:
   - _posts/2021-09-21-anti-patterns.md
   - _posts/2020-09-23-writing-code-for-others.md

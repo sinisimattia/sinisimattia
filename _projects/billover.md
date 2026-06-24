@@ -1,7 +1,7 @@
 ---
 title: "BillOver 3.0"
 description: "A creator collective of \"Unfluencers\" founded by Andrea Nuzzo and Michele Casula — experience and heart for communication."
-logo: "/assets/images/projects/billover-logo.png"
+logo: "/assets/images/projects/billover-logo.webp"
 banner: "/assets/images/projects/billover-bg.svg"
 brand_color: "#f00069"
 featured: false

@@ -5,7 +5,7 @@ layout: default
 	<h1 class="title">{{ page.title }}</h1>
 	{% if page.subtitle %}<p class="article-subtitle">{{ page.subtitle }}</p>{% endif %}
 	{% include post-meta.html post=page show_author=true %}
-	{% if page.header.image %}<img class="article-image" src="{{ page.header.image }}" alt="{{ page.title }}">{% endif %}
+	{% if page.header.image %}<img class="article-image" src="{{ page.header.image }}" alt="{{ page.title }}"{% if page.header.image_width %} width="{{ page.header.image_width }}" height="{{ page.header.image_height }}"{% endif %} loading="eager" fetchpriority="high" decoding="async">{% endif %}
 	<div class="article-body">{{ content }}</div>
 	{% include further-reading.html post=page %}
 	<p class="article-back"><a href="{{ '/blog' | relative_url }}">← All articles</a></p>

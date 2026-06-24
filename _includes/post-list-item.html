@@ -1,5 +1,5 @@
 <li class="post-item">
-	{% if include.post.header.teaser %}<a href="{{ include.post.url }}"><img class="post-item-teaser" src="{{ include.post.header.teaser }}" alt="{{ include.post.title }}"></a>{% endif %}
+	{% if include.post.header.teaser %}<a href="{{ include.post.url }}"><img class="post-item-teaser" src="{{ include.post.header.teaser }}" alt="{{ include.post.title }}" width="1600" height="900" loading="lazy" decoding="async"></a>{% endif %}
 	<a class="post-item-title" href="{{ include.post.url }}">{{ include.post.title }}</a>
 	{% include post-meta.html post=include.post %}
 	{% if include.post.description %}<p class="post-item-excerpt">{{ include.post.description }}</p>{% endif %}

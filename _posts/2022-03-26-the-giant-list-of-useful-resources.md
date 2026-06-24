@@ -8,8 +8,10 @@ author: "Mattia Sinisi"
 description: "200+ hand-selected resources for developers and other digital professionals"
 read_time: 9
 header:
-  teaser: "/assets/images/thumbnails/the-giant-list-of-useful-resources.png"
-  image: "/assets/images/thumbnails/the-giant-list-of-useful-resources.png"
+  teaser: "/assets/images/thumbnails/the-giant-list-of-useful-resources.webp"
+  image: "/assets/images/thumbnails/the-giant-list-of-useful-resources.webp"
+  image_width: 1440
+  image_height: 756
 ---
 
 For the past 2 years I, and many others, have been using a lot of small tools, apps, and alike to support us during our development process.

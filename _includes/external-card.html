@@ -1,5 +1,5 @@
 <li class="post-item">
-	{% if include.link.image %}<a href="{{ include.link.url }}" target="_blank" rel="noopener"><img class="post-item-teaser" src="{{ include.link.image }}" alt="{{ include.link.title }}"></a>{% endif %}
+	{% if include.link.image %}<a href="{{ include.link.url }}" target="_blank" rel="noopener"><img class="post-item-teaser" src="{{ include.link.image }}" alt="{{ include.link.title }}" width="1600" height="900" loading="lazy" decoding="async"></a>{% endif %}
 	<a class="post-item-title" href="{{ include.link.url }}" target="_blank" rel="noopener">{{ include.link.title }} ↗</a>
 	<p class="post-meta">{{ include.link.url | split: '//' | last | split: '/' | first }}</p>
 	{% if include.link.description %}<p class="post-item-excerpt">{{ include.link.description }}</p>{% endif %}

@@ -16,8 +16,8 @@ read_time: 5            # estimated minutes; omit to hide the badge
 author: "Mattia Sinisi" # falls back to site.author.name if omitted
 
 header:
-  teaser: "/assets/images/thumbnails/your-slug.png"  # shown in listings
-  image: "/assets/images/thumbnails/your-slug.png"   # shown at top of the article
+  teaser: "/assets/images/thumbnails/your-slug.webp"  # shown in listings
+  image: "/assets/images/thumbnails/your-slug.webp"   # shown at top of the article
 ---
 
 Write the post body here in Markdown.

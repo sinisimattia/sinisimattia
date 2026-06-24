@@ -58,6 +58,9 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	{%- assign google_fonts = "https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979&family=Fira+Code:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" %}
+	<link rel="stylesheet" href="{{ google_fonts }}" media="print" onload="this.media='all'">
+	<noscript><link rel="stylesheet" href="{{ google_fonts }}"></noscript>
 	<link rel="stylesheet" href="/assets/css/app.css">
 	{% feed_meta %}
 </head>

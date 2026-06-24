@@ -8,8 +8,10 @@ author: "Mattia Sinisi"
 description: "Introduction Interacting with JSON APIs, files, configs, etc. doesn't have to be such a hassle. Keeping your code clean and maintainable can be difficult when using loosely-typed data that can change at any time and, as I've talked about in my previo..."
 read_time: 3
 header:
-  teaser: "/assets/images/thumbnails/how-to-automatically-map-json-data-to-a-typescript-object.png"
-  image: "/assets/images/thumbnails/how-to-automatically-map-json-data-to-a-typescript-object.png"
+  teaser: "/assets/images/thumbnails/how-to-automatically-map-json-data-to-a-typescript-object.webp"
+  image: "/assets/images/thumbnails/how-to-automatically-map-json-data-to-a-typescript-object.webp"
+  image_width: 1440
+  image_height: 818
 ---
 
 # Introduction

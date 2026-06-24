@@ -8,8 +8,10 @@ author: "Mattia Sinisi"
 description: "Keep your code clean and maintainable by avoiding these common mistakes."
 read_time: 5
 header:
-  teaser: "/assets/images/thumbnails/anti-patterns.png"
-  image: "/assets/images/thumbnails/anti-patterns.png"
+  teaser: "/assets/images/thumbnails/anti-patterns.webp"
+  image: "/assets/images/thumbnails/anti-patterns.webp"
+  image_width: 1440
+  image_height: 720
 ---
 
 For about a year I've been working in a bigger company than the startups I was used to. Suffice it to say, there's a lot of new lessons I've learned that I want to share with you. Working with experienced developers taught me how much a supposedly "*clean*" solution can fully reveal itself as a pain in the ass during the final steps of a project.
@@ -52,7 +54,7 @@ Just like a tattoo, you need to be **really sure** of it.
 
 ## Magic numbers
 
-![Magic Numbers](/assets/images/thumbnails/anti-patterns-magic-numbers.png)
+![Magic Numbers](/assets/images/thumbnails/anti-patterns-magic-numbers.webp)
 
 ### What is it?
 
@@ -70,7 +72,7 @@ Make at least 99.9% of your variables configurable externally, most applications
 
 ## Re-implementation Hell
 
-![Re-implementation](/assets/images/thumbnails/anti-patterns-re-implementation.png)
+![Re-implementation](/assets/images/thumbnails/anti-patterns-re-implementation.webp)
 
 ### What is it?
 
@@ -92,7 +94,7 @@ Instead of writing code for very specific situations try to write it as if it we
 
 Yes, I'm contradicting myself... well, kind of.
 
-![Single Point of Failure](/assets/images/thumbnails/anti-patterns-single-point-of-failure.jpeg)
+![Single Point of Failure](/assets/images/thumbnails/anti-patterns-single-point-of-failure.webp)
 
 
 ### What is it?
