@@ -10,7 +10,6 @@ date: 2026-06-24 12:00:00 +0000
 
 # Optional
 subtitle: "A short line shown under the title"
-seo_title: "Custom <title> for search engines (defaults to title)"
 description: "Used for the listing excerpt and meta description."
 last_modified_at: 2026-06-24 12:00:00 +0000
 read_time: 5            # estimated minutes; omit to hide the badge

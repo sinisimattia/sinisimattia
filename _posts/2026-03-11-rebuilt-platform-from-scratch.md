@@ -5,7 +5,6 @@ subtitle: "The design patterns, crucial decisions and approaches that made our n
 date: 2026-03-11 08:22:53 +0000
 author: "Mattia Sinisi"
 description: "A story about evolving quickly in a fast-moving industry, clean codebases, AI-powered development done right, optimized workflows, tips, and way more!"
-seo_title: "We rebuilt our codebase from scratch! Here's what we learnt"
 read_time: 22
 header:
   teaser: "/assets/images/thumbnails/rebuilt-platform-from-scratch.jpeg"

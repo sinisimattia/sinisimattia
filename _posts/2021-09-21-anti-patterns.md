@@ -6,7 +6,6 @@ date: 2021-09-21 12:57:19 +0000
 last_modified_at: 2021-10-22 13:04:02 +0000
 author: "Mattia Sinisi"
 description: "Keep your code clean and maintainable by avoiding these common mistakes."
-seo_title: "An introduction to Anti-Patterns"
 read_time: 5
 header:
   teaser: "/assets/images/thumbnails/anti-patterns.png"

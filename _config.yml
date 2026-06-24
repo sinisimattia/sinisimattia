@@ -39,7 +39,7 @@ collections:
 defaults:
   # ── Posts (_posts/*.md) ───────────────────────────────────────────────
   # Required: title, date
-  # Optional: subtitle, seo_title, description, last_modified_at, read_time,
+  # Optional: subtitle, description, last_modified_at, read_time,
   #           author (falls back to site.author.name), tags[], tag_names[],
   #           header.teaser, header.image
   - scope:
