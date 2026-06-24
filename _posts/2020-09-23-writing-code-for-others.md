@@ -9,14 +9,6 @@ read_time: 3
 header:
   teaser: "/assets/images/thumbnails/writing-code-for-others.png"
   image: "/assets/images/thumbnails/writing-code-for-others.png"
-tags:
-  - "programming-cikxvrcrl00bwh453cmkktotz"
-  - "coding"
-  - "collaboration"
-tag_names:
-  - "programming"
-  - "coding"
-  - "Collaboration"
 ---
 
 Today I'd like to talk about collaboration in developer teams of all sizes.

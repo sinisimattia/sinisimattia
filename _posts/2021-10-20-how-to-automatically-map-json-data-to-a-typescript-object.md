@@ -10,16 +10,6 @@ read_time: 3
 header:
   teaser: "/assets/images/thumbnails/how-to-automatically-map-json-data-to-a-typescript-object.png"
   image: "/assets/images/thumbnails/how-to-automatically-map-json-data-to-a-typescript-object.png"
-tags:
-  - "typescript"
-  - "javascript"
-  - "apis"
-  - "automation"
-tag_names:
-  - "TypeScript"
-  - "JavaScript"
-  - "APIs"
-  - "automation"
 ---
 
 # Introduction

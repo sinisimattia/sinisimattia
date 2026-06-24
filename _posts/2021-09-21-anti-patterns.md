@@ -11,18 +11,6 @@ read_time: 5
 header:
   teaser: "/assets/images/thumbnails/anti-patterns.png"
   image: "/assets/images/thumbnails/anti-patterns.png"
-tags:
-  - "design-patterns"
-  - "startups"
-  - "programming-tips"
-  - "productivity"
-  - "programming"
-tag_names:
-  - "design patterns"
-  - "Startups"
-  - "Programming Tips"
-  - "Productivity"
-  - "General Programming"
 ---
 
 For about a year I've been working in a bigger company than the startups I was used to. Suffice it to say, there's a lot of new lessons I've learned that I want to share with you. Working with experienced developers taught me how much a supposedly "*clean*" solution can fully reveal itself as a pain in the ass during the final steps of a project.

@@ -10,18 +10,6 @@ read_time: 9
 header:
   teaser: "/assets/images/thumbnails/the-giant-list-of-useful-resources.png"
   image: "/assets/images/thumbnails/the-giant-list-of-useful-resources.png"
-tags:
-  - "resources"
-  - "web-development"
-  - "research"
-  - "software-engineering"
-  - "software-development"
-tag_names:
-  - "resources"
-  - "Web Development"
-  - "research"
-  - "Software Engineering"
-  - "software development"
 ---
 
 For the past 2 years I, and many others, have been using a lot of small tools, apps, and alike to support us during our development process.

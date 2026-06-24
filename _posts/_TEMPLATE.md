@@ -19,12 +19,6 @@ author: "Mattia Sinisi" # falls back to site.author.name if omitted
 header:
   teaser: "/assets/images/thumbnails/your-slug.png"  # shown in listings
   image: "/assets/images/thumbnails/your-slug.png"   # shown at top of the article
-
-# Tags are paired: `tags` are the slugs/keys, `tag_names` the display labels.
-tags:
-  - "example-tag"
-tag_names:
-  - "Example Tag"
 ---
 
 Write the post body here in Markdown.

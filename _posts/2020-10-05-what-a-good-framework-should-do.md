@@ -9,16 +9,6 @@ read_time: 6
 header:
   teaser: "/assets/images/thumbnails/what-a-good-framework-should-do.png"
   image: "/assets/images/thumbnails/what-a-good-framework-should-do.png"
-tags:
-  - "programming-ciovqvfcb008mb253jrczo9ye"
-  - "framework"
-  - "frameworks"
-  - "opensource"
-tag_names:
-  - "programming"
-  - "framework"
-  - "frameworks"
-  - "Open Source"
 ---
 
 I'm sure that many of us developers, to make our work easier, had to use - or in some cases build - a variety of frameworks that aim to simplify our workflow.
