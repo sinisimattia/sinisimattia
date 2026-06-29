@@ -1,6 +1,21 @@
+{%- comment -%}
+Single card component used by both the blog list and the "Further reading" section.
+Pass post=<post> for an internal article, or link=<hash> for an external link.
+{%- endcomment -%}
+{%- if include.link -%}
+	{%- assign url = include.link.url -%}
+	{%- assign title = include.link.title -%}
+	{%- assign teaser = include.link.image -%}
+	{%- assign description = include.link.description -%}
+{%- else -%}
+	{%- assign url = include.post.url -%}
+	{%- assign title = include.post.title -%}
+	{%- assign teaser = include.post.header.teaser -%}
+	{%- assign description = include.post.description -%}
+{%- endif -%}
 <li class="post-item">
-	{% if include.post.header.teaser %}<a href="{{ include.post.url }}"><img class="post-item-teaser" src="{{ include.post.header.teaser }}" alt="{{ include.post.title }}" width="1600" height="900" loading="lazy" decoding="async"></a>{% endif %}
-	<a class="post-item-title" href="{{ include.post.url }}">{{ include.post.title }}</a>
-	{% include post-meta.html post=include.post %}
-	{% if include.post.description %}<p class="post-item-excerpt">{{ include.post.description }}</p>{% endif %}
+	{% if teaser %}<a href="{{ url }}"{% if include.link %} target="_blank" rel="noopener"{% endif %}><img class="post-item-teaser" src="{{ teaser }}" alt="{{ title }}" width="1600" height="900" loading="lazy" decoding="async"></a>{% endif %}
+	<a class="post-item-title" href="{{ url }}"{% if include.link %} target="_blank" rel="noopener"{% endif %}>{{ title }}{% if include.link %} ↗{% endif %}</a>
+	{% if include.link %}<p class="post-meta">{{ url | split: '//' | last | split: '/' | first }}</p>{% else %}{% include post-meta.html post=include.post %}{% endif %}
+	{% if description %}<p class="post-item-excerpt">{{ description }}</p>{% endif %}
 </li>
