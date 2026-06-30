@@ -1,7 +1,8 @@
 ---
 title: "VOKU"
 description: "An event management app for planning, organising, and running events end to end."
-logo: "/assets/images/projects/voku-logo.webp"
+logo: "/assets/images/projects/voku-logo.svg"
+show_title: false
 banner: "/assets/images/projects/voku-bg.svg"
 brand_color: "#8b5cf6"
 featured: true
