@@ -326,6 +326,38 @@ And the last thing, which is a bit awkward to write directly under a recommendat
 
 If your routing layer can't swap the orchestrator for a different model in an afternoon, you've rebuilt the exact dependency this whole article is about escaping, only with more steps. Keep the interface between "who plans" and "who works" boring and explicit. Today my recommendation is Claude. Ask me again in a year and I'd like to be free to give you a different one.
 
+## Building the seat
+
+Which raises the obvious question: what actually holds the two tiers together? For a long time the answer was "you write it yourself", and that was a real barrier.
+
+It isn't anymore. [opencode](https://opencode.ai) is an MIT-licensed coding agent that treats the model as configuration rather than as an identity. It reaches 75+ providers through Models.dev, including local ones, and it ships two switchable primary agents out of the box: `build`, with full access, and `plan`, which is read-only and denies file edits by default. That plan/build separation is the orchestrator/executor split, already there, before you configure anything.
+
+The part that matters most for this article is that **each agent can be given its own model**. A local provider is declared by pointing at its endpoint, and cloud providers live in the same config file:
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama (local)",
+      "options": { "baseURL": "http://localhost:11434/v1" },
+      "models": { "qwen3-coder-next": { "name": "Qwen3 Coder Next" } }
+    }
+  },
+  "agent": {
+    "plan":  { "model": "anthropic/claude-opus-5" },
+    "build": { "model": "ollama/qwen3-coder-next" }
+  }
+}
+```
+
+That's a sketch rather than a config I'm promising will run untouched, so check it against the current docs. But look at what it says: **expensive model plans, local model executes.** The entire thesis of this article, expressed in about fifteen lines of JSON, in a file you own and can put under version control.
+
+There's a detail that pushes it further. By default, if you don't set a model on an agent, primary agents take the global one and *subagents inherit from the primary agent that invoked them*. Set that deliberately and a Claude orchestrator can dispatch a fleet of local sub-agents. It also supports variants, so you can define a cheap low-reasoning profile for mechanical work and a deeper one for the hard calls, which is the same idea as the effort dial from earlier applied across a whole fleet.
+
+I'm not claiming this is the only tool that can do it, and it's worth saying plainly that opencode is itself a young project moving fast. But it's the clearest existence proof I know of that the hybrid architecture is a configuration decision now, not an infrastructure project. If you want to try the thesis of this article this week rather than next quarter, that config file is where I'd start.
+
 * * *
 
 # Where to start
@@ -338,7 +370,7 @@ I don't want this to be one of those articles that gestures at a future and leav
     
 3.  **Build the eval harness BEFORE the infrastructure.** I cannot stress this enough, and it's the easiest mistake to make. You cannot route work you cannot measure. Without evals you have no idea whether the local model is doing a fine job or quietly making your test suite worse, and you'll end up deciding on vibes.
     
-4.  **Route by task class, not by preference.** Decide in advance which shapes of work go local, and escalate to the frontier *on failure*, not by default. Defaults are how you ended up here.
+4.  **Route by task class, not by preference.** Decide in advance which shapes of work go local, and escalate to the frontier *on failure*, not by default. Defaults are how you ended up here. In practice this is a config file, not a project: see the opencode example above.
     
 5.  **If you're a team, treat the executor tier as platform.** Owned, versioned, documented, monitored, boring. Exactly like CI. Not a clever thing one enthusiastic developer runs on their own machine, because the day they go on holiday you'll find out how load-bearing they were.
     
