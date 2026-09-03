@@ -13,9 +13,11 @@ further_links:
     url: "https://arxiv.org/abs/2506.02153"
   - title: "Can Small Agents Collaborate to Beat a Single Large Language Model?"
     url: "https://arxiv.org/abs/2601.11327"
-# header:
-#   teaser: "/assets/images/thumbnails/investing-in-local-models.webp"
-#   image: "/assets/images/thumbnails/investing-in-local-models.webp"
+header:
+  teaser: "/assets/images/thumbnails/investing-in-local-models.webp"
+  image: "/assets/images/thumbnails/investing-in-local-models.webp"
+  image_width: 1440
+  image_height: 960
 ---
 
 Picture a morning where the office internet goes down. Nothing dramatic, a cut cable somewhere in the building, the kind of outage that used to mean "great, a quiet morning to actually finish something".
