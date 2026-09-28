@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600">
+  <!-- Abstract — shades of #290087. Ruled grid with measuring ticks. -->
+  <defs>
+    <linearGradient id="rg-g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5a33c4"/>
+      <stop offset="50%" stop-color="#290087"/>
+      <stop offset="100%" stop-color="#14004a"/>
+    </linearGradient>
+    <pattern id="rg-grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0 L0 0 0 80" fill="none" stroke="#b9a6f0" stroke-width="1.5"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="600" fill="url(#rg-g)"/>
+  <rect width="1600" height="600" fill="url(#rg-grid)" opacity="0.12"/>
+  <g stroke="#d6caf7" stroke-linecap="round">
+    <path d="M0 520 H1600" stroke-width="3" opacity="0.28"/>
+    <path d="M0 520 V490 M160 520 V490 M320 520 V490 M480 520 V490 M640 520 V490 M800 520 V490 M960 520 V490 M1120 520 V490 M1280 520 V490 M1440 520 V490 M1600 520 V490" stroke-width="3" opacity="0.28"/>
+    <path d="M80 520 V503 M240 520 V503 M400 520 V503 M560 520 V503 M720 520 V503 M880 520 V503 M1040 520 V503 M1200 520 V503 M1360 520 V503 M1520 520 V503" stroke-width="2" opacity="0.22"/>
+  </g>
+  <g fill="none" stroke-width="3">
+    <ellipse cx="1220" cy="220" rx="300" ry="140" stroke="#d6caf7" opacity="0.20"/>
+    <ellipse cx="1220" cy="220" rx="420" ry="210" stroke="#b9a6f0" opacity="0.12"/>
+  </g>
+  <path d="M1000 90 Q1006 114 1030 120 Q1006 126 1000 150 Q994 126 970 120 Q994 114 1000 90 Z" fill="#d6caf7" opacity="0.30"/>
+</svg>

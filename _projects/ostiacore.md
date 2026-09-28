@@ -5,7 +5,7 @@ logo: "/assets/images/projects/ostiacore-logo.svg"
 banner: "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGMwMHptam15dGI1cWl3b215bnZyeTBtdGJhYXQxM2U1bWgyZWgzcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xqJNV627VB8BUenwEy/giphy.gif"
 show_title: false
 brand_color: "#2b1a4d"
-featured: true
+featured: false
 category: "client work"
 status: "active"
 external_url: "https://ostiacore.live"

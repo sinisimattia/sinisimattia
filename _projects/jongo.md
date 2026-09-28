@@ -5,7 +5,7 @@ logo: "/assets/images/projects/jongo-logo.svg"
 show_title: false
 banner: "/assets/images/projects/jongo-bg.svg"
 brand_color: "#ce03fc"
-featured: true
+featured: false
 category: "client work"
 status: "active"
 external_url: "https://jongo.it"
