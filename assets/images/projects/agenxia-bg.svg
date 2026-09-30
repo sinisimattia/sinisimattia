@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600">
+  <!-- Abstract — charcoal with a deep wine undertone (#d0112b accent). Soft wine pours and glass rims. -->
+  <defs>
+    <linearGradient id="ax-g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3a3536"/>
+      <stop offset="55%" stop-color="#2a2425"/>
+      <stop offset="100%" stop-color="#1c1415"/>
+    </linearGradient>
+    <radialGradient id="ax-r" cx="0.85" cy="0.9" r="0.7">
+      <stop offset="0" stop-color="#7a0f1f" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#7a0f1f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="600" fill="url(#ax-g)"/>
+  <rect width="1600" height="600" fill="url(#ax-r)"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M-40 470 C 260 390, 520 540, 820 460 S 1380 380, 1660 450" stroke="#d0112b" stroke-width="4" opacity="0.30"/>
+    <path d="M-40 520 C 300 450, 560 590, 860 510 S 1400 440, 1660 500" stroke="#a2001b" stroke-width="3" opacity="0.28"/>
+    <path d="M-40 420 C 220 350, 500 480, 780 410 S 1340 330, 1660 400" stroke="#e6d6d8" stroke-width="2" opacity="0.10"/>
+  </g>
+  <g fill="none" stroke-width="3">
+    <ellipse cx="1260" cy="170" rx="230" ry="60" stroke="#e6d6d8" opacity="0.14"/>
+    <ellipse cx="1260" cy="170" rx="330" ry="92" stroke="#d0112b" opacity="0.14"/>
+    <ellipse cx="260" cy="130" rx="170" ry="44" stroke="#e6d6d8" opacity="0.10"/>
+  </g>
+</svg>
