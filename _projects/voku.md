@@ -5,7 +5,7 @@ logo: "/assets/images/projects/voku-logo.svg"
 show_title: false
 banner: "/assets/images/projects/voku-bg.svg"
 brand_color: "#8b5cf6"
-featured: true
+featured: false
 category: "personal"
 status: "planned"
 external_url: "https://github.com/voku-app"
