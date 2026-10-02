@@ -418,6 +418,111 @@ main > section + section {
 	gap: 1.5rem;
 }
 
+/* Projects page heading — title, a one-line lede (the page description) and
+   jump chips to each category group, sharing the groups' light surface. */
+.projects-lede {
+	font-size: 1.15rem;
+	max-width: 40rem;
+	margin: 0 0 1.25rem;
+}
+
+.projects-jump {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem;
+}
+
+.projects-jump-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.45rem 0.55rem 0.45rem 1rem;
+	border-radius: 999px;
+	background: var(--color-light);
+	color: var(--color-title) !important;
+	font-weight: 600;
+	transition:
+		color 0.15s ease,
+		transform 0.15s ease;
+}
+
+.projects-jump-link:hover {
+	color: var(--color-primary) !important;
+	transform: translateY(-2px);
+}
+
+.projects-jump-count {
+	font-family: "Fira Code", monospace;
+	font-size: 0.75rem;
+	font-weight: 500;
+	color: var(--color-gray);
+	background: var(--color-white);
+	border-radius: 999px;
+	padding: 0.05rem 0.5rem;
+}
+
+/* Projects page — one group per category. Each group is enclosed in a light
+   panel holding its heading row (name + mono count) and cards, so section
+   breaks read at a glance between the full-bleed colored cards. The panel
+   radius is the card radius (20px) plus the padding, keeping corners concentric. */
+.project-group {
+	--group-pad: 1.25rem;
+	margin-top: 2.5rem;
+	scroll-margin-top: 1.5rem; /* breathing room when reached via a jump chip */
+	padding: var(--group-pad);
+	background: var(--color-light);
+	border-radius: calc(20px + var(--group-pad));
+}
+
+.project-group + .project-group {
+	margin-top: 2.5rem;
+}
+
+.project-group-header {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 0.5rem 0.75rem 0;
+	margin-bottom: 1.25rem;
+}
+
+.project-group-title {
+	font-size: 1.75rem;
+	font-weight: 800;
+	line-height: 1.125;
+	color: var(--color-title);
+	margin: 0;
+}
+
+.project-group-count {
+	font-family: "Fira Code", monospace;
+	font-size: 0.8rem;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	color: var(--color-gray);
+	white-space: nowrap;
+}
+
+/* Bannerless cards default to the light surface; lift them off the panel. */
+.project-group .project-card.has-no-banner {
+	background: var(--color-white);
+}
+
+@media screen and (max-width: 768px) {
+	.project-group {
+		--group-pad: 0.75rem;
+	}
+
+	.project-group-header {
+		padding: 0.5rem 0.5rem 0;
+	}
+
+	.project-group-title {
+		font-size: 1.4rem;
+	}
+}
+
 .projects-viewall {
 	margin: 1.5rem 0 0;
 	text-align: right;
@@ -536,6 +641,11 @@ main > section + section {
 	padding: 0.1rem 0.45rem;
 }
 
+.project-card .project-meta .project-tag {
+	font-size: 0.62rem;
+	padding: 0.1rem 0.5rem;
+}
+
 .project-card .project-meta .project-status {
 	font-size: 0.66rem;
 	gap: 0.3rem;
@@ -558,6 +668,18 @@ main > section + section {
 	border: 1px solid color-mix(in srgb, var(--brand, var(--color-primary)) 35%, transparent);
 	border-radius: 999px;
 	padding: 0.25rem 0.7rem;
+}
+
+/* Tag chip — a soft, borderless, lowercase pill, so it reads as a different
+   kind of label from the outlined uppercase category pill */
+.project-tag {
+	font-family: "Fira Code", monospace;
+	font-size: 0.72rem;
+	font-weight: 500;
+	color: var(--brand, var(--color-primary));
+	background: color-mix(in srgb, var(--brand, var(--color-primary)) 12%, transparent);
+	border-radius: 999px;
+	padding: 0.2rem 0.65rem;
 }
 
 /* Status indicator — a color-coded dot + label */
@@ -644,6 +766,11 @@ main > section + section {
 
 .is-filled .project-status {
 	color: var(--color-white);
+}
+
+.is-filled .project-tag {
+	color: var(--color-white);
+	background: rgba(255, 255, 255, 0.2);
 }
 
 /* Primary action flips to solid white (brand text) for contrast;

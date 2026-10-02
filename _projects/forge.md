@@ -6,7 +6,8 @@ show_title: false
 banner: "/assets/images/projects/forge-bg.svg"
 brand_color: "#00bf63"
 featured: true
-category: "open-source"
+category: "personal"
+tags: ["open-source"]
 status: "active"
 repo_url: "https://github.com/sinisimattia/forge"
 ---

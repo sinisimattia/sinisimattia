@@ -1,3 +1,6 @@
+{%- comment %}Pass show_category=false to hide the category badge (e.g. when the surrounding page already groups by category).{% endcomment -%}
+{%- assign card_category = include.project.category -%}
+{%- if include.show_category == false %}{% assign card_category = nil %}{% endif -%}
 <article class="project-card{% if include.project.banner %} has-banner is-filled{% elsif include.project.brand_color %} has-brand-bg is-filled{% else %} has-no-banner{% endif %}" style="--brand: {{ include.project.brand_color | default: 'var(--color-primary)' }}{% if include.project.banner %}; --banner: url('{{ include.project.banner }}'){% endif %}">
 	<div class="project-card-body">
 		<div class="project-card-main">
@@ -12,11 +15,12 @@
 				{% if include.project.repo_url %}<a class="pill is-ghost" href="{{ include.project.repo_url }}" target="_blank" rel="noopener">Source ↗</a>{% endif %}
 			</div>
 		</div>
-		{% if include.project.category or include.project.status %}
+		{% if card_category or include.project.tags.size > 0 or include.project.status %}
 		<aside class="project-card-meta-col">
 			<p class="project-meta">
-				{% if include.project.category %}<span class="project-category">{{ include.project.category }}</span>{% endif %}
+				{% if card_category %}<span class="project-category">{{ card_category }}</span>{% endif %}
 				{% if include.project.status %}<span class="project-status is-{{ include.project.status }}">{{ include.project.status }}</span>{% endif %}
+				{% for tag in include.project.tags %}<span class="project-tag">{{ tag }}</span>{% endfor %}
 			</p>
 		</aside>
 		{% endif %}

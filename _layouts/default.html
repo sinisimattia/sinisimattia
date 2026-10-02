@@ -4,6 +4,7 @@
 <body class="layout-{{ page.layout }}">
 	{%- assign header_size = 'large' -%}
 	{%- if page.layout == 'post' or page.layout == 'project' -%}{%- assign header_size = 'small' -%}{%- endif -%}
+	{%- if page.header_size -%}{%- assign header_size = page.header_size -%}{%- endif -%}
 	{% include header.html size=header_size %}
 	<main class="section container">
 		{{ content }}

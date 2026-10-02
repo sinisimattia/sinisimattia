@@ -6,7 +6,8 @@ show_title: false
 banner: "/assets/images/projects/regula-bg.svg"
 brand_color: "#290087"
 featured: true
-category: "open-source"
+category: "personal"
+tags: ["open-source"]
 status: "active"
 repo_url: "https://github.com/sinisimattia/regula"
 ---

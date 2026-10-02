@@ -5,7 +5,8 @@ logo: "/assets/images/projects/tapi-logo.webp"
 banner: "/assets/images/projects/tapi-js-bg.svg"
 brand_color: "#e8820c"
 featured: true
-category: "open-source"
+category: "personal"
+tags: ["open-source"]
 status: "active"
 external_url: "https://tapi.js.org"
 repo_url: "https://github.com/sinisimattia/tapi"

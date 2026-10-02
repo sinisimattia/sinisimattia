@@ -5,7 +5,8 @@ logo: "/assets/images/projects/opentoolbox-logo.webp"
 banner: "/assets/images/projects/opentoolbox-bg.svg"
 brand_color: "#111111"
 featured: false
-category: "open-source"
+category: "personal"
+tags: ["open-source"]
 status: "deprecated"
 external_url: "https://github.com/opentoolbox"
 repo_url: "https://github.com/sinisimattia/the-open-toolbox"

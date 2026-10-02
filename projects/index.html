@@ -1,17 +1,42 @@
 ---
 layout: default
 title: "Projects"
+description: "Things I've built for clients, for myself, and a few just for fun — some of them are even finished."
+header_size: small  # "small" or "large"; overrides the layout default in _layouts/default.html
 ---
 <section>
-	<h1 class="title">Projects</h1>
 	{%- comment %}Order by status (planned → active → deprecated), alphabetical within each group.{% endcomment %}
 	{%- assign planned = site.projects | where: "status", "planned" | sort_natural: "title" %}
 	{%- assign active = site.projects | where: "status", "active" | sort_natural: "title" %}
 	{%- assign deprecated = site.projects | where: "status", "deprecated" | sort_natural: "title" %}
 	{%- assign projects = planned | concat: active | concat: deprecated %}
-	<div class="project-list">
-		{%- for project in projects %}
-		{% include project-card.html project=project %}
-		{%- endfor %}
+
+	{%- comment %}Group by category; group_by keeps first-appearance order, so both the groups and the projects within them follow the status order above.{% endcomment %}
+	{%- assign groups = projects | group_by: "category" %}
+
+	<header class="projects-header">
+		<h1 class="title">Projects</h1>
+		{%- if page.description %}
+		<p class="projects-lede">{{ page.description }}</p>
+		{%- endif %}
+		<nav class="projects-jump" aria-label="Project categories">
+			{%- for group in groups %}
+			<a class="projects-jump-link" href="#{{ group.name | slugify }}">{{ group.name | capitalize }} <span class="projects-jump-count">{{ group.size }}</span></a>
+			{%- endfor %}
+		</nav>
+	</header>
+
+	{%- for group in groups %}
+	<div class="project-group" id="{{ group.name | slugify }}">
+		<header class="project-group-header">
+			<h2 class="project-group-title">{{ group.name | capitalize }}</h2>
+			<span class="project-group-count">{{ group.size }} {% if group.size == 1 %}project{% else %}projects{% endif %}</span>
+		</header>
+		<div class="project-list">
+			{%- for project in group.items %}
+			{% include project-card.html project=project show_category=false %}
+			{%- endfor %}
+		</div>
 	</div>
+	{%- endfor %}
 </section>

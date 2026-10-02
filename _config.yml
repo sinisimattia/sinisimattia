@@ -48,8 +48,10 @@ defaults:
     values:
       layout: post
   # ── Projects (_projects/*.md) ─────────────────────────────────────────
-  # Required: title, description, category, status
-  # Optional: logo, banner, brand_color (falls back to var(--color-primary)),
+  # Required: title, description, category ("personal", "client work" or
+  #           "fun" — the projects page groups by it), status
+  # Optional: tags[] (YAML list, e.g. ["open-source"]), logo, banner,
+  #           brand_color (falls back to var(--color-primary)),
   #           external_url, repo_url
   - scope:
       path: ""

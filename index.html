@@ -25,7 +25,7 @@ home: true
 {%- assign featured = ordered | where: "featured", true %}
 {%- if featured.size > 0 %}
 <section>
-	<h2 class="title">Projects</h2>
+	<h2 class="title">Featured Projects</h2>
 	<div class="project-list">
 		{%- for project in featured %}
 		{% include project-card.html project=project %}

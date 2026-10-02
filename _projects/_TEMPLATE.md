@@ -8,10 +8,11 @@ published: false
 # Required
 title: "Project name"
 description: "One or two sentences describing the project."
-category: "client work"  # e.g. "client work", "open-source", "fun"
+category: "client work"  # "personal", "client work" or "fun" (the projects page groups by it)
 status: "active"          # e.g. "active", "deprecated" (drives the status pill style)
 
 # Optional
+tags: ["open-source"]     # keep it a YAML list; a plain string is split on spaces
 logo: "/assets/images/projects/your-slug-logo.svg"  # shown in hero and card
 banner: "/assets/images/projects/your-slug-bg.svg"  # hero/card background (image or gif URL)
 brand_color: "#000000"     # accent color; falls back to var(--color-primary)
