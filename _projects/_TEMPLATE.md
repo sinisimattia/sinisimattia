@@ -15,7 +15,7 @@ status: "active"          # e.g. "active", "deprecated" (drives the status pill 
 tags: ["open-source"]     # keep it a YAML list; a plain string is split on spaces
 logo: "/assets/images/projects/your-slug-logo.svg"  # shown in hero and card
 banner: "/assets/images/projects/your-slug-bg.svg"  # hero/card background (image or gif URL)
-brand_color: "#000000"     # accent color; falls back to var(--color-primary)
+brand_color: "#000000"     # accent color; falls back to var(--color-brand)
 external_url: "https://example.com"
 repo_url: "https://github.com/sinisimattia/your-repo"
 

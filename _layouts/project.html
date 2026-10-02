@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article class="article project-page" style="--brand: {{ page.brand_color | default: 'var(--color-primary)' }}">
+<article class="article project-page" style="--brand: {{ page.brand_color | default: 'var(--color-brand)' }}">
 	<header class="project-hero{% if page.banner %} has-banner is-filled{% elsif page.brand_color %} has-brand-bg is-filled{% endif %}"{% if page.banner %} style="--banner: url('{{ page.banner }}')"{% endif %}>
 		<div class="project-hero-inner">
 			<div class="project-hero-heading">

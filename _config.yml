@@ -51,7 +51,7 @@ defaults:
   # Required: title, description, category ("personal", "client work" or
   #           "fun" — the projects page groups by it), status
   # Optional: tags[] (YAML list, e.g. ["open-source"]), logo, banner,
-  #           brand_color (falls back to var(--color-primary)),
+  #           brand_color (falls back to var(--color-brand)),
   #           external_url, repo_url
   - scope:
       path: ""

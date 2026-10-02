@@ -1,18 +1,61 @@
 /* Fonts are loaded non-render-blocking via <link> in _includes/head.html. */
 
-/* Variables */
+/* Color tokens — named for what they're used for, never for what they look
+   like. Raw color values live only here: components reference the tokens, and
+   dark mode redefines the same names below, so no component needs its own
+   dark-mode rule. */
 :root {
-	--color-primary: rgb(199, 0, 109);
-	--color-secondary: rgb(255, 102, 0);
-	--color-dark: rgb(26, 26, 26);
-	--color-white: #fff;
-	--color-light: #f5f5f5;
-	--color-gray: rgb(128, 128, 128);
-	--color-body: var(--color-dark);
-	--color-strong: var(--color-dark);
-	--color-title: var(--color-dark);
-	--color-link: rgb(0, 76, 255);
+	color-scheme: light dark;
+
+	/* Page */
+	--color-bg: #fff;                    /* page background */
+	--color-surface: #f5f5f5;            /* panels and chips on the page */
+	--color-surface-raised: #fff;        /* elements sitting on a surface */
+	--color-divider: #f5f5f5;            /* rules between stacked items */
+	--color-border: rgba(0, 0, 0, 0.1);  /* outlines on raised elements */
 	--color-shadow: rgba(0, 0, 0, 0.5);
+
+	/* Text on the page */
+	--color-text: #1a1a1a;
+	--color-text-muted: #6b6b6b;         /* meta, counts, subtitles; ≥ 4.5:1 on bg and surface */
+	--color-link: #004cff;
+	--color-accent: #c7006d;             /* emphasis on the page: hovers, rules */
+
+	/* Code blocks — dark in both modes */
+	--color-code-bg: #1a1a1a;
+	--color-code-text: #f5f5f5;
+
+	/* Fills — brand-colored backgrounds, identical in both modes, so anything
+	   placed on them uses --color-on-fill */
+	--color-brand: #c7006d;              /* site brand; default project --brand */
+	--color-on-fill: #fff;
+	--gradient-brand: linear-gradient(135deg, var(--color-brand), #ff6600);
+	--gradient-link: linear-gradient(135deg, #004cff, #00b4d8);
+
+	/* Project status dots */
+	--color-status-active: #2f9e5c;
+	--color-status-planned: #e0a008;
+	--color-status-deprecated: #b03636;
+}
+
+/* Dark mode — follows the system preference. Only the tokens that sit on the
+   page flip; fills, code blocks and status dots read the same on both. */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-bg: #141414;
+		--color-surface: #1f1f1f;
+		--color-surface-raised: #2a2a2a;
+		--color-divider: #2a2a2a;
+		--color-border: rgba(255, 255, 255, 0.12);
+		--color-shadow: rgba(0, 0, 0, 0.8);
+
+		--color-text: #ececec;
+		--color-text-muted: #a3a3a3;
+		--color-link: #7aa2ff;
+		--color-accent: #ff4fa3;
+
+		--color-code-bg: #1f1f1f;
+	}
 }
 
 /* Base / Reset */
@@ -26,15 +69,15 @@ body {
 	font-family: "Work Sans", sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
-	color: var(--color-body);
-	background: var(--color-white);
+	color: var(--color-text);
+	background: var(--color-bg);
 	margin: 0;
 	padding: 0;
 }
 
 strong,
 b {
-	color: var(--color-strong);
+	color: var(--color-text);
 	font-weight: 700;
 }
 
@@ -97,7 +140,7 @@ main > section + section {
 	font-family: "Work Sans", sans-serif;
 	font-size: 2rem;
 	font-weight: 700;
-	color: var(--color-title);
+	color: var(--color-text);
 	line-height: 1.125;
 	margin-bottom: 0.5em;
 }
@@ -125,13 +168,13 @@ main > section + section {
 .content blockquote {
 	margin: 1.5em 0;
 	padding: 0.5em 1.25em;
-	border-left: 4px solid var(--color-primary);
-	color: var(--color-gray);
+	border-left: 4px solid var(--color-accent);
+	color: var(--color-text-muted);
 }
 
 .content pre {
-	background: var(--color-dark);
-	color: var(--color-light);
+	background: var(--color-code-bg);
+	color: var(--color-code-text);
 	padding: 1rem 1.25rem;
 	border-radius: 12px;
 	overflow-x: auto;
@@ -140,7 +183,7 @@ main > section + section {
 .content code {
 	font-family: "Fira Code", monospace;
 	font-size: 0.85em;
-	background: var(--color-light);
+	background: var(--color-surface);
 	padding: 0.15em 0.4em;
 	border-radius: 6px;
 }
@@ -154,7 +197,7 @@ main > section + section {
 /* Skill category cards */
 .skill-card {
 	height: 100%;
-	background: var(--color-light);
+	background: var(--color-surface);
 	border-radius: 16px;
 	padding: 1.5rem 1.5rem 1.75rem;
 	box-shadow: 0 10px 25px -18px var(--color-shadow);
@@ -164,7 +207,7 @@ main > section + section {
 	font-family: "Work Sans", sans-serif;
 	font-size: 1.5rem;
 	font-weight: 700;
-	color: var(--color-title);
+	color: var(--color-text);
 	margin: 0 0 1.25rem;
 }
 
@@ -192,35 +235,35 @@ main > section + section {
 .skill-descr {
 	flex: 1 1 100%;
 	padding-left: 1.6rem;
-	color: var(--color-gray);
+	color: var(--color-text-muted);
 	font-size: 0.9rem;
 }
 
 /* Skill name */
 .tag {
 	font-weight: 700;
-	color: var(--color-title);
+	color: var(--color-text);
 }
 
 /* Footer */
 .footer {
-	background: linear-gradient(to bottom, var(--color-light), transparent);
+	background: linear-gradient(to bottom, var(--color-surface), transparent);
 	margin-top: 1.5rem;
 }
 
 /* Pills sit on the light footer, so flip the brand-card pill (white-on-translucent)
    to a readable dark-text variant while keeping the same shape and hover lift. */
 .footer .pill {
-	background: var(--color-white);
-	color: var(--color-title) !important;
-	border-color: rgba(0, 0, 0, 0.1);
+	background: var(--color-surface-raised);
+	color: var(--color-text) !important;
+	border-color: var(--color-border);
 	box-shadow: 0 10px 25px -20px var(--color-shadow);
 }
 
 .footer .pill:hover {
-	background: var(--color-white);
-	border-color: var(--color-primary);
-	color: var(--color-primary) !important;
+	background: var(--color-surface-raised);
+	border-color: var(--color-accent);
+	color: var(--color-accent) !important;
 }
 
 /* Stacked label inside the contact pill: name over a small gray handle */
@@ -239,7 +282,7 @@ main > section + section {
 	font-family: "Fira Code", monospace;
 	font-size: 0.75rem;
 	font-weight: 400;
-	color: var(--color-gray);
+	color: var(--color-text-muted);
 }
 
 /* Utility: Text */
@@ -263,7 +306,7 @@ main > section + section {
 	font-family: "Climate Crisis", sans-serif;
 	font-weight: normal;
 	line-height: 1.1;
-	color: var(--color-dark) !important;
+	color: var(--color-text) !important;
 }
 
 .site-header--large .site-title {
@@ -276,14 +319,14 @@ main > section + section {
 
 .site-subtitle {
 	margin-top: 0.5rem;
-	color: var(--color-gray);
+	color: var(--color-text-muted);
 	font-weight: 600;
 }
 
 /* Home introduction (content lives in _includes/intro.md) */
 .intro {
 	font-size: 1.15rem;
-	color: var(--color-body);
+	color: var(--color-text);
 }
 
 /* Branded section cards */
@@ -294,7 +337,7 @@ main > section + section {
 	border-radius: 20px;
 	padding: 2rem;
 	box-shadow: 0 20px 30px -15px var(--color-shadow);
-	color: var(--color-white);
+	color: var(--color-on-fill);
 	overflow: hidden;
 }
 
@@ -311,7 +354,7 @@ main > section + section {
 	font-family: "Climate Crisis", sans-serif;
 	font-size: 1.75rem;
 	font-weight: normal;
-	color: var(--color-white);
+	color: var(--color-on-fill);
 	margin: 0 0 0.5rem;
 	line-height: 1.1;
 }
@@ -332,16 +375,11 @@ main > section + section {
 }
 
 .brand-card.is-primary {
-	background-image: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-}
-
-.brand-card.is-dark {
-	background-color: var(--color-dark);
-	background-image: linear-gradient(135deg, rgb(40, 40, 55), var(--color-dark));
+	background-image: var(--gradient-brand);
 }
 
 .brand-card.is-link {
-	background-image: linear-gradient(135deg, var(--color-link), rgb(0, 180, 216));
+	background-image: var(--gradient-link);
 }
 
 /* Pill button used inside brand cards */
@@ -352,31 +390,31 @@ main > section + section {
 	padding: 0.55rem 1.1rem;
 	border-radius: 999px;
 	font-weight: 600;
-	background: rgba(255, 255, 255, 0.18);
-	color: var(--color-white) !important;
-	border: 1px solid rgba(255, 255, 255, 0.35);
+	background: color-mix(in srgb, var(--color-on-fill) 18%, transparent);
+	color: var(--color-on-fill) !important;
+	border: 1px solid color-mix(in srgb, var(--color-on-fill) 35%, transparent);
 	transition:
 		background 0.15s ease,
 		transform 0.15s ease;
 }
 
 .pill:hover {
-	background: rgba(255, 255, 255, 0.3);
+	background: color-mix(in srgb, var(--color-on-fill) 30%, transparent);
 	transform: translateY(-2px);
 }
 
 .brand-card.is-primary .pill.is-solid {
-	background: var(--color-white);
-	color: var(--color-primary) !important;
-	border-color: var(--color-white);
+	background: var(--color-on-fill);
+	color: var(--color-brand) !important;
+	border-color: var(--color-on-fill);
 }
 
 /* Pill variants for light backgrounds (project cards), driven by --brand.
    The bare .pill is white-on-translucent and only reads on colored cards. */
 .pill.is-brand {
-	background: var(--brand, var(--color-primary));
-	color: var(--color-white) !important;
-	border-color: var(--brand, var(--color-primary));
+	background: var(--brand, var(--color-brand));
+	color: var(--color-on-fill) !important;
+	border-color: var(--brand, var(--color-brand));
 }
 
 .pill.is-brand:hover {
@@ -386,13 +424,13 @@ main > section + section {
 
 .pill.is-ghost {
 	background: transparent;
-	color: var(--brand, var(--color-primary)) !important;
-	border-color: var(--brand, var(--color-primary));
+	color: var(--brand, var(--color-brand)) !important;
+	border-color: var(--brand, var(--color-brand));
 }
 
 .pill.is-ghost:hover {
-	background: var(--brand, var(--color-primary));
-	color: var(--color-white) !important;
+	background: var(--brand, var(--color-brand));
+	color: var(--color-on-fill) !important;
 	transform: translateY(-2px);
 }
 
@@ -438,8 +476,8 @@ main > section + section {
 	gap: 0.5rem;
 	padding: 0.45rem 0.55rem 0.45rem 1rem;
 	border-radius: 999px;
-	background: var(--color-light);
-	color: var(--color-title) !important;
+	background: var(--color-surface);
+	color: var(--color-text) !important;
 	font-weight: 600;
 	transition:
 		color 0.15s ease,
@@ -447,7 +485,7 @@ main > section + section {
 }
 
 .projects-jump-link:hover {
-	color: var(--color-primary) !important;
+	color: var(--color-accent) !important;
 	transform: translateY(-2px);
 }
 
@@ -455,8 +493,8 @@ main > section + section {
 	font-family: "Fira Code", monospace;
 	font-size: 0.75rem;
 	font-weight: 500;
-	color: var(--color-gray);
-	background: var(--color-white);
+	color: var(--color-text-muted);
+	background: var(--color-surface-raised);
 	border-radius: 999px;
 	padding: 0.05rem 0.5rem;
 }
@@ -470,7 +508,7 @@ main > section + section {
 	margin-top: 2.5rem;
 	scroll-margin-top: 1.5rem; /* breathing room when reached via a jump chip */
 	padding: var(--group-pad);
-	background: var(--color-light);
+	background: var(--color-surface);
 	border-radius: calc(20px + var(--group-pad));
 }
 
@@ -491,7 +529,7 @@ main > section + section {
 	font-size: 1.75rem;
 	font-weight: 800;
 	line-height: 1.125;
-	color: var(--color-title);
+	color: var(--color-text);
 	margin: 0;
 }
 
@@ -500,13 +538,13 @@ main > section + section {
 	font-size: 0.8rem;
 	letter-spacing: 0.15em;
 	text-transform: uppercase;
-	color: var(--color-gray);
+	color: var(--color-text-muted);
 	white-space: nowrap;
 }
 
 /* Bannerless cards default to the light surface; lift them off the panel. */
 .project-group .project-card.has-no-banner {
-	background: var(--color-white);
+	background: var(--color-surface-raised);
 }
 
 @media screen and (max-width: 768px) {
@@ -538,7 +576,7 @@ main > section + section {
 }
 
 .project-card {
-	--brand: var(--color-primary);
+	--brand: var(--color-brand);
 	position: relative;
 	display: flex;
 	min-height: 280px;
@@ -548,7 +586,7 @@ main > section + section {
 }
 
 .project-card.has-no-banner {
-	background: var(--color-light);
+	background: var(--color-surface);
 	border-left: 5px solid var(--brand);
 }
 
@@ -564,7 +602,7 @@ main > section + section {
 		var(--banner);
 	background-size: cover;
 	background-position: center;
-	color: var(--color-white);
+	color: var(--color-on-fill);
 }
 
 
@@ -572,7 +610,7 @@ main > section + section {
 .project-card.has-brand-bg,
 .project-hero.has-brand-bg {
 	background: var(--brand);
-	color: var(--color-white);
+	color: var(--color-on-fill);
 }
 
 /* Two columns: main content + a dedicated meta section. Stacks on mobile. */
@@ -663,9 +701,9 @@ main > section + section {
 	font-weight: 600;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
-	color: var(--brand, var(--color-primary));
-	background: color-mix(in srgb, var(--brand, var(--color-primary)) 12%, transparent);
-	border: 1px solid color-mix(in srgb, var(--brand, var(--color-primary)) 35%, transparent);
+	color: var(--brand, var(--color-brand));
+	background: color-mix(in srgb, var(--brand, var(--color-brand)) 12%, transparent);
+	border: 1px solid color-mix(in srgb, var(--brand, var(--color-brand)) 35%, transparent);
 	border-radius: 999px;
 	padding: 0.25rem 0.7rem;
 }
@@ -676,22 +714,22 @@ main > section + section {
 	font-family: "Fira Code", monospace;
 	font-size: 0.72rem;
 	font-weight: 500;
-	color: var(--brand, var(--color-primary));
-	background: color-mix(in srgb, var(--brand, var(--color-primary)) 12%, transparent);
+	color: var(--brand, var(--color-brand));
+	background: color-mix(in srgb, var(--brand, var(--color-brand)) 12%, transparent);
 	border-radius: 999px;
 	padding: 0.2rem 0.65rem;
 }
 
 /* Status indicator — a color-coded dot + label */
 .project-status {
-	--status-color: var(--color-gray);
+	--status-color: var(--color-text-muted);
 	display: inline-flex;
 	align-items: center;
 	gap: 0.4rem;
 	font-size: 0.78rem;
 	font-weight: 600;
 	text-transform: capitalize;
-	color: var(--color-gray);
+	color: var(--color-text-muted);
 }
 
 .project-status::before {
@@ -704,15 +742,15 @@ main > section + section {
 }
 
 .project-status.is-active {
-	--status-color: #2f9e5c;
+	--status-color: var(--color-status-active);
 }
 
 .project-status.is-planned {
-	--status-color: #e0a008;
+	--status-color: var(--color-status-planned);
 }
 
 .project-status.is-deprecated {
-	--status-color: #b03636;
+	--status-color: var(--color-status-deprecated);
 }
 
 .project-card-title {
@@ -723,7 +761,7 @@ main > section + section {
 }
 
 .project-card-title a {
-	color: var(--color-title) !important;
+	color: var(--color-text) !important;
 }
 
 .project-card-title a:hover {
@@ -732,7 +770,7 @@ main > section + section {
 
 .project-card-descr {
 	margin: 0 0 1.25rem;
-	color: var(--color-body);
+	color: var(--color-text);
 }
 
 .project-card-actions {
@@ -745,40 +783,40 @@ main > section + section {
    card and the project-page hero: white, legible content. */
 .is-filled .project-card-title a,
 .is-filled .project-hero-title {
-	color: var(--color-white) !important;
+	color: var(--color-on-fill) !important;
 }
 
 .is-filled .project-card-title a:hover {
-	color: var(--color-white) !important;
+	color: var(--color-on-fill) !important;
 	opacity: 0.85;
 }
 
 .is-filled .project-card-descr,
 .is-filled .project-hero-descr {
-	color: var(--color-white);
+	color: var(--color-on-fill);
 }
 
 .is-filled .project-category {
-	color: var(--color-white);
-	background: rgba(255, 255, 255, 0.2);
-	border-color: rgba(255, 255, 255, 0.45);
+	color: var(--color-on-fill);
+	background: color-mix(in srgb, var(--color-on-fill) 20%, transparent);
+	border-color: color-mix(in srgb, var(--color-on-fill) 45%, transparent);
 }
 
 .is-filled .project-status {
-	color: var(--color-white);
+	color: var(--color-on-fill);
 }
 
 .is-filled .project-tag {
-	color: var(--color-white);
-	background: rgba(255, 255, 255, 0.2);
+	color: var(--color-on-fill);
+	background: color-mix(in srgb, var(--color-on-fill) 20%, transparent);
 }
 
 /* Primary action flips to solid white (brand text) for contrast;
    the secondary action becomes a white outline. */
 .is-filled .pill.is-brand {
-	background: var(--color-white);
+	background: var(--color-on-fill);
 	color: var(--brand) !important;
-	border-color: var(--color-white);
+	border-color: var(--color-on-fill);
 }
 
 .is-filled .pill.is-brand:hover {
@@ -787,12 +825,12 @@ main > section + section {
 }
 
 .is-filled .pill.is-ghost {
-	color: var(--color-white) !important;
-	border-color: rgba(255, 255, 255, 0.7);
+	color: var(--color-on-fill) !important;
+	border-color: color-mix(in srgb, var(--color-on-fill) 70%, transparent);
 }
 
 .is-filled .pill.is-ghost:hover {
-	background: var(--color-white);
+	background: var(--color-on-fill);
 	color: var(--brand) !important;
 }
 
@@ -867,7 +905,7 @@ main > section + section {
 
 .project-hero-descr {
 	font-size: 1.25rem;
-	color: var(--color-gray);
+	color: var(--color-text-muted);
 	margin: 0;
 	max-width: 60ch;
 }
@@ -899,7 +937,7 @@ main > section + section {
 .post-meta {
 	font-family: "Fira Code", monospace;
 	font-size: 0.8rem;
-	color: var(--color-gray);
+	color: var(--color-text-muted);
 }
 
 /* Article */
@@ -912,7 +950,7 @@ main > section + section {
 
 .article-subtitle {
 	font-size: 1.25rem;
-	color: var(--color-gray);
+	color: var(--color-text-muted);
 	margin-top: -0.25rem;
 }
 
@@ -932,7 +970,7 @@ main > section + section {
 .further-reading {
 	margin-top: 3rem;
 	padding-top: 2rem;
-	border-top: 1px solid var(--color-light);
+	border-top: 1px solid var(--color-divider);
 }
 
 /* Post list */
@@ -945,7 +983,7 @@ main > section + section {
 .post-item + .post-item {
 	margin-top: 2rem;
 	padding-top: 2rem;
-	border-top: 1px solid var(--color-light);
+	border-top: 1px solid var(--color-divider);
 }
 
 /* Article-list page: 2-column card grid */
@@ -981,12 +1019,12 @@ main > section + section {
 .post-item-title {
 	font-size: 1.5rem;
 	font-weight: 700;
-	color: var(--color-title) !important;
+	color: var(--color-text) !important;
 }
 
 .post-item-excerpt {
 	margin-top: 0.5rem;
-	color: var(--color-body);
+	color: var(--color-text);
 }
 
 /* Syntax highlighting — Rouge base16.dark; .content pre owns the container box */
@@ -994,7 +1032,7 @@ main > section + section {
 .highlight table pre { margin: 0; }
 .highlight, .highlight .w {
   color: #d0d0d0;
-  background-color: #151515;
+  background-color: var(--color-code-bg);
 }
 .highlight .err {
   color: #151515;
@@ -1023,7 +1061,7 @@ main > section + section {
 }
 .highlight .gh {
   color: #6a9fb5;
-  background-color: #151515;
+  background-color: var(--color-code-bg);
   font-weight: bold;
 }
 .highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
